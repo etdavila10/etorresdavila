@@ -1,3 +1,15 @@
 body {
-    font-family: "Arial";
+  padding-top: 3.4rem;
+  min-height: 100em;
+  margin: 0px;
+}
+
+#main-bg {
+    padding: 10rem 5rem;
+    background-image: url("static/images/main-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#main-name {
+    text-shadow: 0px 2px 10px #000;
 }
