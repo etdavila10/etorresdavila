@@ -1,7 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
-  padding-top: 3.4rem;
-  min-height: 100em;
-  margin: 0px;
+    padding-top: 3.4rem;
+    min-height: 100em;
+    margin: 0px;
 }
 
 #main-bg {
