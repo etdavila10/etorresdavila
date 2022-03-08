@@ -12,9 +12,10 @@
   <link rel="stylesheet" href="style.css">
   <title>Eduardo Torres Davila</title>
 </head>
+<!-- Start of the body -->
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark p-0" id="navbar">
-    <div class="container-fluid px-5 py-3">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="navbar">
+    <div class="container-fluid py-3">
       <a class="navbar-brand nav-link px-0 active" href="#">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -43,7 +44,10 @@
       </div>
     </div>
   </nav>
-  <main class="fluid-container">
+  <main class="container-fluid px-0">
+    <div class="bg-danger bg-opacity-50 p-5 text-white text-center">
+      <h1 class="display-6 m-0"><i class="fa-solid fa-pen-ruler"></i> This website is still under heavy construction! <i class="fa-solid fa-pen-ruler"></i></h1>
+    </div>
     <div class="bg-success bg-opacity-75 text-white text-center" id="main-bg">
       <h1 class="display-1" id="main-name"><strong>Eduardo Torres Davila</strong></h1>
     </div>
@@ -58,7 +62,7 @@
         <div class="col-md-8 p-5">
           <h1 class="display-6 mb-2"><u>About me</u></h1>
           <div class="text-muted">
-            <p class="lead">Hello and welcome to my website! My name is Eduardo and I am currently a second-year math PhD student at the <a href="https://twin-cities.umn.edu" target="_blank">University of Minnesota</a>. I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and a minor in Computer Science from <a href="https://www.sdsu.edu" target="_blank">San Diego State University</a>. While at San Diego State, my main interest was in Algrebraic Combinatorics and in particular Numerical Semigroups and Polytopes which was research conducted under <a href="https://cdoneill.sdsu.edu">Christopher O'Neill</a>. I also participated in <a href="https://www.msri.org/msri_ups/920">MSRI-UP</a> where I had the opportunity to work with Lie Algebras under <a href="https://www.pamelaeharris.com">Pamela E. Harris</a>. Since starting graduate school.</p>
+            <p class="lead">Hello and welcome to my website! My name is Eduardo and I am currently a second-year math PhD student at the <a href="https://twin-cities.umn.edu" target="_blank">University of Minnesota</a>. I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and a minor in Computer Science from <a href="https://www.sdsu.edu" target="_blank">San Diego State University</a>. While at San Diego State, my main interest was in Algrebraic Combinatorics and in particular Numerical Semigroups and Polytopes which was research conducted under <a href="https://cdoneill.sdsu.edu" target="_blank">Dr. Christopher O'Neill</a>. I also participated in <a href="https://www.msri.org/msri_ups/920" target="_blank">MSRI-UP</a> where I had the opportunity to work with Lie Algebras under <a href="https://www.pamelaeharris.com" target="_blank">Dr. Pamela E. Harris</a>. Since starting graduate school, I found myself drawn to the application of mathematics to real world problems. Because of this, I have started reading about the mathematics behind climate change under <a href="https://www-users.cse.umn.edu/~mcgehee/" target="_blank">Dr. Richard McGehee</a>.</p>
           </div>
           <h1 class="display-6 mb-2"><u>Contact me</u></h1>
           <div class="text-muted">
@@ -75,42 +79,96 @@
     </div>
     <div class="bg-dark text-white p-5" id="cv">
       <div class="py-3"></div>
-      <h1 class="display-4 m-0">For my Curriculum Vitae</h1>
-      <h1 class="display-4 m-0">For my Resume</h1>
+      <div class="row">
+        <div class="col">
+          <h1 class="display-4 m-0">For my Curriculum Vitae</h1>
+          <div>
+            <p>A link to my CV will go here</p>
+          </div>
+        </div>
+        <div class="col">
+          <h1 class="display-4 m-0">For my Resume</h1>
+          <div>
+            <p>A link to my Resume will go here</p>
+          </div>
+        </div>
+      </div>
       <div class="py-3"></div>
     </div>
     <div class="bg-success bg-opacity-75 text-white p-5" id="research">
       <div class="py-3"></div>
-      <h1 class="display-4 m-0">Research</h1>
+      <h1 class="display-4 m-0 mb-3">Research</h1>
+      <div>
+        <h1>Research Project 1: Arithmetic Numerical Semigroups</h1>
+      </div>
+      <div>
+        <h1>Research Project 2: Kostant's Weight Multiplicity Formula</h1>
+      </div>
+      <div>
+        <h1>Research Project 3: Face Dimensions of the Kunz Polyhedron</h1>
+      </div>
+      <div>
+        <h1>Research Project 4: Numerical Semigroup Ideal Free Resolutions</h1>
+      </div>
       <div class="py-3"></div>
     </div>
     <div class="bg-dark bg-opacity-10 p-5" id="projects">
       <div class="py-3"></div>
-      <h1 class="display-4 m-0">Projects</h1>
+      <h1 class="display-4 m-0 mb-3">Projects</h1>
+      <div>
+        <h1>Project 1: MatrixManipulator</h1>
+      </div>
+      <div>
+        <h1>Project 2: Weyl Diagrams</h1>
+      </div>
+      <div>
+        <h1>Project 3: Numerical Semigroups Python Package</h1>
+      </div>
       <div class="py-3"></div>
     </div>
     <div class="bg-dark text-white p-5" id="teaching">
       <div class="py-3"></div>
       <h1 class="display-4 m-0">Teaching</h1>
+      <div>
+        <p>Spring 2022 - MATH 1271: Calculus I</p>
+      </div>
       <div class="py-3"></div>
     </div>
     <div class="bg-success bg-opacity-75 text-white p-5" id="hobbies">
       <div class="py-3"></div>
       <h1 class="display-4 m-0">Outside Hobbies</h1>
+      <div>
+        <p>I like to motorcycle.</p>
+        <p>I like to go rock climbing.</p>
+        <p>I am currently learning to play the guitar.</p>
+        <p>I like camping.</p>
+        <p>I love food!</p>
+        <p>I like coding! Preferably Python!</p>
+        <p>I love board games</p>
+        <p>I am a part of CAUSE</p>
+        <p>I like video games</p>
+        <p>Keyboards!!! Duh</p>
+        <p>I like to read</p>
+        <p>Some of my favorite books</p>
+        <p>I like to travel</p>
+        <p>Maybe a map of place where I've been?</p>
+        <p>Family is everything to me</p>
+        <p>I love my dog Freddy</p>
+        <p>I like to build computers</p>
+      </div>
       <div class="py-3"></div>
     </div>
   </main>
-  <div class="fluid-container bg-dark bg-opacity-10">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center p-5">
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="text-muted">&copy; Copyright 2022 Eduardo Torres Davila</span>
+  <div class="container-fluid bg-dark bg-opacity-10">
+    <footer class="row">
+      <div class="col-md-8 p-5 text-sm-center text-md-start">
+        <span class="text-muted">&copy; Copyright 2022 Eduardo Torres Davila &bull; created with <a class="strap" href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" target="_blank">Bootstrap</a></span>
       </div>
 
-      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-github fa-2xl"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
-        <li class="ms-3"><a class="text-muted" href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+      <ul class="col-md-4 list-unstyled text-sm-center text-md-end p-md-5 pb-sm-5 pt-sm-1">
+        <li class="d-inline ms-3"><a class="text-muted" href="https://github.com/etdavila10" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></li>
+        <li class="d-inline ms-3"><a class="text-muted" href="https://www.linkedin.com/in/etorres10/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+        <li class="d-inline ms-3"><a class="text-muted" href="https://www.facebook.com/eduardo.torresdavila.39" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
       </ul>
     </footer>
   </div>
