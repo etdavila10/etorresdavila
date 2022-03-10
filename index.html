@@ -11,6 +11,7 @@
         crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <title>Eduardo Torres Davila</title>
+  <link rel="icon" type="image/jpg" href="static/images/favicon.jpg">
 </head>
 <!-- Start of the body -->
 <body>
@@ -51,7 +52,7 @@
       <h1 class="display-1" id="main-name"><strong>Eduardo Torres Davila</strong></h1>
     </div>
     <!-- Giraffe animation -->
-    <div class="row" >
+    <div class="row" id="about">
       <div class="m-auto overflow-hidden col-lg-4 text-sm-center text-md-center">
         <img class="border-bottom border-3"style="width: 400px; margin: 0 0 -1.3em 0;" src="static/images/giraffe_1.gif" alt="giraffe gif">
       </div>
@@ -64,7 +65,7 @@
       </div>
     </div>
     <!-- About me section -->
-    <div class="bg-dark bg-opacity-10" id="about">
+    <div class="bg-dark bg-opacity-10">
       <div class="py-3"></div>
       <div class="row">
         <div class="col-xl-5 p-5 my-auto">
@@ -90,12 +91,11 @@
       <div class="py-3"></div>
     </div>
     <!-- SETUP FOR PIXEL TRANSITION -->
-    <div class="overflow-hidden">
+    <div class="overflow-hidden" id="cv">
       <img style="width: 100%" src="static/images/download.png" alt="transition">
     </div>
     <!-- CV section -->
-    <div class="bg-dark text-white p-5" id="cv">
-      <div class="py-3"></div>
+    <div class="bg-dark text-white p-5">
       <div class="row">
         <div class="col-md-6 col-12">
           <h1 class="text-center display-4">Curriculum Vitae</h1>
@@ -123,7 +123,7 @@
       <div class="py-3"></div>
     </div>
     <!-- Giraffe 2 animation -->
-    <div class="row" >
+    <div class="row" id="research">
       <div class="col-lg-7 text-center m-auto">
         <div class="m-5 border border-2 border-success">
           <div class="m-3 border border-2 border-success">
@@ -138,26 +138,69 @@
       </div>
     </div>
     <!-- Research section -->
-    <div class="bg-success bg-opacity-75 text-white p-5" id="research">
-      <div class="py-3"></div>
-      <div>
-        <h1>Research Project 1: Arithmetic Numerical Semigroups</h1>
+    <div>
+      <div class="accordion accordion-flush text-black" id="accordionFlushExample">
+        <div class="bg-light accordion-item border-white rounded-top-3">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button border-0 collapsed research-btn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <h1 class="display-6 fs-1 m-0 p-0">Minimal presentations and face dimension</h1>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <h1 class="display-6 fs-5 m-0 p-0">
+                Research Title: Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension
+              </h1>
+          </div>
+          </div>
+        </div>
+        <div class="bg-light accordion-item border-white">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed research-btn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <h1 class="display-6 fs-1 m-0 p-0">Locating certain families of semigroups</h1>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <h1 class="display-6 fs-5 m-0 p-0">
+                Research Title: Numerical semigroups, polyhedra, and posets II: locating certain families of semigroups
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-light border-0">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed research-btn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <h1 class="display-6 fs-1 m-0 p-0">Kostant's Weight Multiplicity Formula</h1>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <h1 class="display-6 fs-5 m-0 p-0">
+                Research Title: Visualizing the Support of Kostant's Weight Multiplicity Formula for the Rank Two Lie Algebras
+              </h1>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h1>Research Project 2: Kostant's Weight Multiplicity Formula</h1>
+    </div>
+    <!-- Giraffe 3 animation: Projects -->
+    <div class="row" id="projects">
+      <div class="col-lg-7 text-center m-auto">
+        <div class="m-5 border border-2 border-success">
+          <div class="m-3 border border-2 border-success">
+            <div class="m-3 border border-2 border-success">
+              <h1 class="px-1 py-2 py-sm-5 display-1 align-middle">Projects</h1>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <h1>Research Project 3: Face Dimensions of the Kunz Polyhedron</h1>
-      </div>
-      <div>
-        <h1>Research Project 4: Numerical Semigroup Ideal Free Resolutions</h1>
-      </div>
-      <div class="py-3"></div>
+      <!-- <div class="col-lg-5 text-sm-center text-md-center text-lg-end"> -->
+        <!-- <img class="rotate180" style="width: 400px;" src="static/images/giraffe_3.gif" alt="giraffe gif"> -->
+      <!-- </div> -->
     </div>
     <!-- Projects section -->
-    <div class="bg-dark bg-opacity-10 p-5" id="projects">
-      <div class="py-3"></div>
-      <h1 class="display-4 m-0 mb-3">Projects</h1>
+    <div class="bg-dark bg-opacity-10 p-5">
       <div>
         <h1>Project 1: MatrixManipulator</h1>
       </div>
@@ -167,20 +210,18 @@
       <div>
         <h1>Project 3: Numerical Semigroups Python Package</h1>
       </div>
-      <div class="py-3"></div>
     </div>
     <!-- Teaching section -->
     <div class="bg-dark text-white p-5" id="teaching">
-      <div class="py-3"></div>
       <h1 class="display-4 m-0">Teaching</h1>
-      <div>
-        <p>Spring 2022 - MATH 1271: Calculus I</p>
+      <div class="pt-5">
+        <ul>
+         <li><p class="lead fs-4">Spring 2022 - MATH 1271: Calculus I</p></li>
+        </ul>
       </div>
-      <div class="py-3"></div>
     </div>
     <!-- Outside hobbies section -->
     <div class="bg-success bg-opacity-75 text-white p-5" id="hobbies">
-      <div class="py-3"></div>
       <h1 class="display-4 m-0">Outside Hobbies</h1>
       <div>
         <p>I like to motorcycle.</p>
@@ -202,7 +243,6 @@
         <p>I like to build computers</p>
         <p>And as you can see from this website I really like giraffes!</p>
       </div>
-      <div class="py-3"></div>
     </div>
   </main>
   <div class="container-fluid bg-dark bg-opacity-10">
@@ -212,6 +252,7 @@
       </div>
 
       <ul class="col-md-4 list-unstyled text-center text-sm-center text-md-end p-md-5 pb-sm-5 pt-sm-1">
+        <li class="d-inline ms-3"><a class="text-muted" href="mailto:torre680@umn.edu" target="_blank"><i class="fa-solid fa-at fa-2xl"></i></a></li>
         <li class="d-inline ms-3"><a class="text-muted" href="https://github.com/etdavila10" target="_blank"><i class="fa-brands fa-github fa-2xl"></i></a></li>
         <li class="d-inline ms-3"><a class="text-muted" href="https://www.linkedin.com/in/etorres10/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
         <li class="d-inline ms-3"><a class="text-muted" href="https://www.facebook.com/eduardo.torresdavila.39" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>

@@ -41,7 +41,7 @@ $(".nav-link").click(function() {
         }, 800);
     } else {
         $('html, body').animate({
-            scrollTop: $("#"+pageId).offset().top
+            scrollTop: $("#"+pageId).offset().top - 88
         }, 800);
     }
 });
