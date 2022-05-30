@@ -1,6 +1,6 @@
 title: Eduardo Torres Davila
 url: "https://etdavila10.github.io"
-baseurl: "/"
+baseurl: ""
 
 markdown: kramdown
 
@@ -8,7 +8,7 @@ tracking_id: #
 
 footer: yes
 footer_url: "https://github.com/etdavila10"
-footer_text: Page design by Ankit Sultana
+footer_text:
 
 sass:
   style: compressed
