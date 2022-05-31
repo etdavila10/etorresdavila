@@ -25,6 +25,7 @@
 
   <meta name="description" content="{{ desc }}">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
   {% if site.favicon %}
     <link rel="icon" type="image/ico" href="{{ site.favicon_location }}">
@@ -41,6 +42,7 @@
 </head>
 <body>
   <div class="wrapper">
+    <!-- The beginning of the navbar -->
     <div class="navbar container">
       {% if site.ins_logo %}
         <img id="ins-logo" src="{{ site.ins_logo }}">
@@ -48,31 +50,28 @@
       <a id="author-name" class="alignable pull-left" href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
       <ul id="navlist" class="alignable pull-right navbar-ul">
         {% for x in site.nav %}
-          {% if x.name == "Resume" %}
+          {% if x.name == "CV" %}
             <li class="alignable pull-left nav-list">
-              <a target="_blank" href="{{ x.link }}">
-                {{ x.name }}
-              </a>
+              <a target="_blank" href="{{ x.link }}">{{ x.name }}</a>
           {% else %}
             <li class="alignable pull-left nav-list">
-              <a target="_blank" href="{{ x.link }}">
-                {{ x.name }}
-              </a>
+              <a href="{{ x.link }}">{{ x.name }}</a>
           {% endif %}
           {% if forloop.last == false %}
             /
           {% endif %}
-            </li>
+          </li>
         {% endfor %}
       </ul>
     </div>
     <div style="clear:both"></div>
     <hr>
+    <!-- The beginning of the page content -->
     {% if page.is_contact == true %}
       <div class="container content contact">
     {% else %}
       <div class="container content">
-        {% endif %}
+    {% endif %}
 
         {{ content }}
 
@@ -88,5 +87,8 @@
         {% endif %}
       </div>
   </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
