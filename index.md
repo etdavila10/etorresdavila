@@ -24,16 +24,16 @@ I am about to enter my third year of my PhD program. For the Summer of 2022 I pl
 
 ## Glimpse Into My World
 
-<div id="imagesCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
+<div id="imagesCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
     {% for slide in site.car_images %}
       {% if forloop.first == true %}
-        <li data-target="#imagesCarousel" data-slide-to="{{ forloop.index0 }}" class="active"></li>
+        <button type="button" data-bs-target="#imagesCarousel" data-bs-slide-to="{{ forloop.index0 }}" class="active" aria-current="true" aria-label="Slide {{ forloop.index0 }}"></button>
       {% else %}
-        <li data-target="#imagesCarousel" data-slide-to="{{ forloop.index0 }}"></li>
+        <button type="button" data-bs-target="#imagesCarousel" data-bs-slide-to="{{ forloop.index0 }}" aria-label="Slide {{ forloop.index0 }}"></button>
       {% endif %}
     {% endfor %}
-  </ol>
+  </div>
   <div class="carousel-inner">
     {% for slide in site.car_images %}
       {% if forloop.first == true %}
@@ -47,13 +47,13 @@ I am about to enter my third year of my PhD program. For the Summer of 2022 I pl
       {% endif %}
     {% endfor %}
   </div>
-  <a class="carousel-control-prev" href="#imagesCarousel" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#imagesCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#imagesCarousel" role="button" data-slide="next">
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#imagesCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
