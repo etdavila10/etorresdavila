@@ -82,7 +82,9 @@
         {{ content }}
 
         <blockquote class="blockquote">
-          <p class="mb-0">Mathematical Quote.</p>
+          {% assign quote = site.data.quotes | sample %}
+          <p class="mb-0">{{ quote.quote }}</p>
+          <p>- {{ quote.author }}</p>
         </blockquote>
 
         {% if site.footer == true %}
