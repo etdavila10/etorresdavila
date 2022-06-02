@@ -73,31 +73,27 @@
     <div style="clear:both"></div>
     <hr>
     <!-- The beginning of the page content -->
-    {% if page.is_contact == true %}
-      <div class="container content contact">
-    {% else %}
-      <div class="container content">
-    {% endif %}
+    <div class="container content">
 
-        {{ content }}
+      {{ content }}
 
-        <blockquote class="blockquote">
-          {% assign quote = site.data.quotes | sample %}
-          <p class="mb-0">{{ quote.quote }}</p>
-          <p>- {{ quote.author }}</p>
-        </blockquote>
+      <blockquote class="blockquote">
+        {% assign quote = site.data.quotes | sample %}
+        <p class="mb-0">{{ quote.quote }}</p>
+        <p>- {{ quote.author }}</p>
+      </blockquote>
 
-        {% if site.footer == true %}
-          <hr>
-          <p style="text-align: center; margin-bottom: 10px;">
-            <a target="_blank" href="{{ site.footer_url }}" style="color: black">
-              <small>
-                {{ site.footer_text }}
-              </small>
-            </a>
-          </p>
-        {% endif %}
-      </div>
+      {% if site.footer == true %}
+        <hr>
+        <p style="text-align: center; margin-bottom: 10px;">
+          <a target="_blank" href="{{ site.footer_url }}" style="color: black">
+            <small>
+              {{ site.footer_text }}
+            </small>
+          </a>
+        </p>
+      {% endif %}
+    </div>
   </div>
  </body>
 </html>

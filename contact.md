@@ -1,6 +1,5 @@
 ---
 layout: default
-is_contact: true
 ---
 
 ## Contact Me
@@ -12,6 +11,8 @@ is_contact: true
 ---
 ## Social
 
-1. [Facebook](#)
-2. [Github](#)
-3. [LinkedIn](#)
+<i class="fa-brands fa-facebook"></i> [Facebook](https://www.facebook.com/eduardo.torresdavila.39/)
+
+<i class="fa-brands fa-github"></i> [Github](https://github.com/etdavila10/)
+
+<i class="fa-brands fa-linkedin"></i> [LinkedIn](https://www.linkedin.com/in/etorres10/)

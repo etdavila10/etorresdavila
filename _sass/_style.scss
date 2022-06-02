@@ -13,6 +13,7 @@ html {
 body {
   margin: 0;
   font-family: "Inconsolata";
+  font-size: 18px;
   height: 100%;
 }
 
@@ -24,6 +25,10 @@ a {
 a:hover {
   text-decoration: underline;
   color: $accent;
+}
+
+h2 {
+  margin-top: 30px;
 }
 
 hr {
