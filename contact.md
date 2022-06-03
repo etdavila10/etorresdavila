@@ -8,7 +8,8 @@ layout: default
 
 * Office: Vincent Hall 424
 
----
+----
+
 ## Social
 
 <i class="fa-brands fa-facebook"></i> [Facebook](https://www.facebook.com/eduardo.torresdavila.39/)

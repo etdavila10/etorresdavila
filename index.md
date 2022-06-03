@@ -12,11 +12,11 @@ I am also one of many leaders of the *Council for the Advancement of Underrepres
 
 Outside of academics, my main hobby is climbing. After a long day, there is nothing better than turning your brain off and attacking some difficult bouldering problems. I was initially introduced to the world of bouldering, but recently I have been attempting more top-roping routes which I have been enjoying more than bouldering. So far, I have only climbed indoors, but I hope to go outdoor climbing very soon! Aside from climbing I enjoy learning new things, reading, and camping.
 
-## What I am Doing Now
+## What I'm Doing Now
 
 I am about to enter my third year of my PhD program. For the Summer of 2022, I plan to study for the Complex Preliminary Exam which I will be taking in the Fall of 2022. I will also be a mentor for the [PolyMath Jr.](https://geometrynyc.wixsite.com/polymathreu) REU. In particular, I will be involved in the special topic this year on [Ramsey Theory](https://geometrynyc.wixsite.com/polymathreu/ramsey2022).
 
-## Some of my Skills
+## Some of My Skills
 * Python Development
 * SageMath Development
 * Web Development (HTML/CSS/Javascript)
@@ -24,7 +24,7 @@ I am about to enter my third year of my PhD program. For the Summer of 2022, I p
 * Math Teaching/Tutoring
 * Bilingual (English/Spanish)
 
-## Glimpse Into My World
+## A Glimpse Into My World
 
 <div id="imagesCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
