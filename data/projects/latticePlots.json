@@ -1,0 +1,10 @@
+{
+  "title": "lattice_plot",
+  "description": "Python scripts for building Weyl alternation diagrams for Lie algebras of type D\u2082, B\u2082, C\u2082, and G\u2082.",
+  "associatedPaper": "Visualizing the support of Kostant's weight multiplicity formula for the rank two Lie algebras",
+  "coAuthors": ["Pamela E. Harris", "Juan Ramirez", "Fabrice Ulysse"],
+  "languages": ["Python"],
+  "frameworks": ["Matplotlib", "NumPy"],
+  "url": "https://github.com/etdavila10/lattice_plot",
+  "id": "latticeplots2019"
+}
