@@ -1,0 +1,9 @@
+{
+  "title": "MatrixManipulator",
+  "description": "A web application to perform row operations on matrices representing free resolutions.",
+  "coAuthors": ["Tara Gomes", "Christopher O'Neill"],
+  "languages": ["SageMath", "JavaScript"],
+  "frameworks": ["jQuery"],
+  "url": "https://etdavila10.github.io/MatrixManipulator/",
+  "id": "matrixmanipulator2020"
+}

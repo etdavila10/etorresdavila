@@ -1,0 +1,10 @@
+{
+  "title": "weyldiagrams",
+  "description": "A web application to build the Weyl alternation diagrams from the lattice_plot project.",
+  "associatedPaper": "Visualizing the support of Kostant's weight multiplicity formula for the rank two Lie algebras",
+  "coAuthors": ["Pamela E. Harris", "Juan Ramirez", "Fabrice Ulysse"],
+  "languages": ["JavaScript"],
+  "frameworks": ["D3"],
+  "url": "https://etdavila10.github.io/weyldiagrams/",
+  "id": "weyldiagrams2019"
+}
