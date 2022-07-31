@@ -114,6 +114,7 @@ header {
   #welcome {
     h1 {
       font-size: $h1-font-size;
+      font-family: 'Pacifico';
       border-bottom: 0.25rem solid $accent-color;
       margin-top: 0;
     }
@@ -179,6 +180,7 @@ header {
           margin-left: 2rem;
           text-decoration: none;
           font-size: $h2-font-size;
+          font-family: 'Pacifico';
           color: $bg-2-color;
           div {
             width: 10rem;
@@ -207,6 +209,7 @@ header {
       font-size: $h1-font-size;
       border-bottom: 0.25rem solid $accent-color;
       margin-top: 0rem;
+      font-family: 'Pacifico';
     }
     h2 {
       margin: 0;
@@ -243,6 +246,7 @@ header {
       font-size: $h1-font-size;
       border-bottom: 0.25rem solid $accent-color;
       margin-top: 0rem;
+      font-family: 'Pacifico';
     }
     .project-section {
       .project {
@@ -272,6 +276,7 @@ header {
       font-size: $h1-font-size;
       border-bottom: 0.25rem solid $accent-color;
       margin-top: 0rem;
+      font-family: 'Pacifico';
     }
     h2 {
       margin: 0;
