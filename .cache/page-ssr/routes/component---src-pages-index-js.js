@@ -1,29 +1,66 @@
-exports.id = "component---src-pages-index-js";
-exports.ids = ["component---src-pages-index-js"];
+exports.id = 678;
+exports.ids = [678];
 exports.modules = {
 
-/***/ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js ***!
-  \********************************************************************/
+/***/ 6945:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", ({value:true}));exports.AnchorLink=AnchorLink;var _react=_interopRequireDefault(__webpack_require__(6295));var _gatsby=__webpack_require__(7609);var _propTypes=_interopRequireDefault(__webpack_require__(5697));var _utils=__webpack_require__(2284);function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj};}function ownKeys(object,enumerableOnly){var keys=Object.keys(object);if(Object.getOwnPropertySymbols){var symbols=Object.getOwnPropertySymbols(object);if(enumerableOnly)symbols=symbols.filter(function(sym){return Object.getOwnPropertyDescriptor(object,sym).enumerable;});keys.push.apply(keys,symbols);}return keys;}function _objectSpread(target){for(var i=1;i<arguments.length;i++){var source=arguments[i]!=null?arguments[i]:{};if(i%2){ownKeys(Object(source),true).forEach(function(key){_defineProperty(target,key,source[key]);});}else if(Object.getOwnPropertyDescriptors){Object.defineProperties(target,Object.getOwnPropertyDescriptors(source));}else{ownKeys(Object(source)).forEach(function(key){Object.defineProperty(target,key,Object.getOwnPropertyDescriptor(source,key));});}}return target;}function _defineProperty(obj,key,value){if(key in obj){Object.defineProperty(obj,key,{value:value,enumerable:true,configurable:true,writable:true});}else{obj[key]=value;}return obj;}AnchorLink.propTypes={to:_propTypes["default"].string.isRequired,title:_propTypes["default"].string,className:_propTypes["default"].string,stripHash:_propTypes["default"].bool,gatsbyLinkProps:_propTypes["default"].object,onAnchorLinkClick:_propTypes["default"].func,children:_propTypes["default"].node};function AnchorLink(_ref){var to=_ref.to,title=_ref.title,children=_ref.children,className=_ref.className,_ref$stripHash=_ref.stripHash,stripHash=_ref$stripHash===void 0?false:_ref$stripHash,_ref$gatsbyLinkProps=_ref.gatsbyLinkProps,gatsbyLinkProps=_ref$gatsbyLinkProps===void 0?{}:_ref$gatsbyLinkProps,onAnchorLinkClick=_ref.onAnchorLinkClick;var onClickHandler=stripHash?_utils.handleStrippedLinkClick:_utils.handleLinkClick;var linkProps=_objectSpread(_objectSpread({},gatsbyLinkProps),{},{/**
+     * Spread optional gatsbyLinkProps object in fist, so our specific props will override
+     */to:stripHash?(0,_utils.stripHashedLocation)(to):to,onClick:function onClick(e){return onClickHandler(to,e,onAnchorLinkClick);}});/**
+   * Optional props
+   */if(title)linkProps.title=title;if(className)linkProps.className=className;return/*#__PURE__*/_react["default"].createElement(_gatsby.Link,linkProps,children?children:title);}
+
+/***/ }),
+
+/***/ 3138:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", ({value:true}));exports.INVALID_HASH=exports.IMPROPPER_FORMATTING=void 0;var IMPROPPER_FORMATTING='Anchor path should contain an absolute root path `/` and selector `#` Ex: `/about#team`';exports.IMPROPPER_FORMATTING=IMPROPPER_FORMATTING;var INVALID_HASH='Anchor Links plugin attempted to scroll to an invalid hash on route change.';exports.INVALID_HASH=INVALID_HASH;
+
+/***/ }),
+
+/***/ 3089:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+var __webpack_unused_export__;
+__webpack_unused_export__ = ({value:true});Object.defineProperty(exports, "P", ({enumerable:true,get:function get(){return _AnchorLink.AnchorLink;}}));var _AnchorLink=__webpack_require__(6945);
+
+/***/ }),
+
+/***/ 2284:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+function _typeof(obj){"@babel/helpers - typeof";if(typeof Symbol==="function"&&typeof Symbol.iterator==="symbol"){_typeof=function _typeof(obj){return typeof obj;};}else{_typeof=function _typeof(obj){return obj&&typeof Symbol==="function"&&obj.constructor===Symbol&&obj!==Symbol.prototype?"symbol":typeof obj;};}return _typeof(obj);}Object.defineProperty(exports, "__esModule", ({value:true}));exports.logWarning=logWarning;exports.scroller=scroller;exports.handleLinkClick=handleLinkClick;exports.handleStrippedLinkClick=handleStrippedLinkClick;exports.stripHashedLocation=stripHashedLocation;exports.checkHash=checkHash;exports.isDevelopment=exports.isBrowser=void 0;var _scrollToElement=_interopRequireDefault(__webpack_require__(2618));var _gatsby=__webpack_require__(7609);var errorTypes=_interopRequireWildcard(__webpack_require__(3138));function _getRequireWildcardCache(){if(typeof WeakMap!=="function")return null;var cache=new WeakMap();_getRequireWildcardCache=function _getRequireWildcardCache(){return cache;};return cache;}function _interopRequireWildcard(obj){if(obj&&obj.__esModule){return obj;}if(obj===null||_typeof(obj)!=="object"&&typeof obj!=="function"){return{"default":obj};}var cache=_getRequireWildcardCache();if(cache&&cache.has(obj)){return cache.get(obj);}var newObj={};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc);}else{newObj[key]=obj[key];}}}newObj["default"]=obj;if(cache){cache.set(obj,newObj);}return newObj;}function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{"default":obj};}function _slicedToArray(arr,i){return _arrayWithHoles(arr)||_iterableToArrayLimit(arr,i)||_unsupportedIterableToArray(arr,i)||_nonIterableRest();}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}function _unsupportedIterableToArray(o,minLen){if(!o)return;if(typeof o==="string")return _arrayLikeToArray(o,minLen);var n=Object.prototype.toString.call(o).slice(8,-1);if(n==="Object"&&o.constructor)n=o.constructor.name;if(n==="Map"||n==="Set")return Array.from(o);if(n==="Arguments"||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))return _arrayLikeToArray(o,minLen);}function _arrayLikeToArray(arr,len){if(len==null||len>arr.length)len=arr.length;for(var i=0,arr2=new Array(len);i<len;i++){arr2[i]=arr[i];}return arr2;}function _iterableToArrayLimit(arr,i){if(typeof Symbol==="undefined"||!(Symbol.iterator in Object(arr)))return;var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"]!=null)_i["return"]();}finally{if(_d)throw _e;}}return _arr;}function _arrayWithHoles(arr){if(Array.isArray(arr))return arr;}var isBrowser=typeof window!=='undefined';exports.isBrowser=isBrowser;var isDevelopment="production"!=='production';exports.isDevelopment=isDevelopment;function logWarning(message){if(isDevelopment)console.warn(message);}function scroller(target){var offset=arguments.length>1&&arguments[1]!==undefined?arguments[1]:0;var duration=arguments.length>2&&arguments[2]!==undefined?arguments[2]:1000;(0,_scrollToElement["default"])(target,{duration:duration,offset:offset});}function handleLinkClick(to,e,onAnchorLinkClick){/**
+   * Log warnings on click
+   */var improperFormatting=!to.includes('/')||!to.includes('#');if(improperFormatting)logWarning(errorTypes.IMPROPPER_FORMATTING);if(isBrowser&&to.includes('#')){var _to$split=to.split('#'),_to$split2=_slicedToArray(_to$split,2),anchorPath=_to$split2[0],anchor=_to$split2[1];if(window.location.pathname===(0,_gatsby.withPrefix)(anchorPath)){e.preventDefault();scroller("#".concat(anchor),window.gatsby_scroll_offset,window.gatsby_scroll_duration);}}if(onAnchorLinkClick)onAnchorLinkClick();}function handleStrippedLinkClick(to,e,onAnchorLinkClick){/**
+   * Log warnings on click
+   */var improperFormatting=!to.includes('/')||!to.includes('#');if(improperFormatting)logWarning(errorTypes.IMPROPPER_FORMATTING);var _to$split3=to.split('#'),_to$split4=_slicedToArray(_to$split3,2),anchorPath=_to$split4[0],anchor=_to$split4[1];/**
+   * Determine location, run scroller or set window variable
+   */var isSamePage=isBrowser&&window.location.pathname===anchorPath;var isDifferentPage=isBrowser&&window.location.pathname!==anchorPath;if(isSamePage){e.preventDefault();scroller("#".concat(anchor),window.gatsby_scroll_offset,window.gatsby_scroll_duration);}if(isDifferentPage){window.gatsby_scroll_hash="#".concat(anchor);}if(onAnchorLinkClick)onAnchorLinkClick();}function stripHashedLocation(to){return to.split('#')[0];}function checkHash(location,offset){var hash=location.hash,selector=hash?hash.substr(1):null,validElement=selector?document.getElementById(selector):null;if(hash&&Boolean(validElement))scroller(hash,offset);else if(hash&&selector&&!validElement)logWarning(errorTypes.INVALID_HASH);}
+
+/***/ }),
+
+/***/ 663:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "api": () => (/* binding */ api),
-/* harmony export */   "config": () => (/* binding */ config$1),
-/* harmony export */   "counter": () => (/* binding */ counter),
-/* harmony export */   "dom": () => (/* binding */ dom$1),
-/* harmony export */   "findIconDefinition": () => (/* binding */ findIconDefinition$1),
-/* harmony export */   "icon": () => (/* binding */ icon),
-/* harmony export */   "layer": () => (/* binding */ layer),
-/* harmony export */   "library": () => (/* binding */ library$1),
-/* harmony export */   "noAuto": () => (/* binding */ noAuto$1),
-/* harmony export */   "parse": () => (/* binding */ parse$1),
-/* harmony export */   "text": () => (/* binding */ text),
-/* harmony export */   "toHtml": () => (/* binding */ toHtml$1)
-/* harmony export */ });
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ pages)
+});
+
+// EXTERNAL MODULE: external "/Users/etdavila/Documents/etdavila10.github.io/node_modules/react/index.js"
+var index_js_ = __webpack_require__(6295);
+var index_js_default = /*#__PURE__*/__webpack_require__.n(index_js_);
+;// CONCATENATED MODULE: ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js
 /*!
  * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -297,7 +334,7 @@ var MUTATION_APPROACH_ASYNC = 'async';
 var TAGNAMES_TO_SKIP_FOR_PSEUDOELEMENTS = ['HTML', 'HEAD', 'STYLE', 'SCRIPT'];
 var PRODUCTION = function () {
   try {
-    return "development" === 'production';
+    return "production" === 'production';
   } catch (e) {
     return false;
   }
@@ -2975,498 +3012,446 @@ var parse$1 = api.parse;
 var findIconDefinition$1 = api.findIconDefinition;
 var toHtml$1 = api.toHtml;
 var icon = api.icon;
-var layer = api.layer;
-var text = api.text;
+var index_es_layer = api.layer;
+var index_es_text = api.text;
 var counter = api.counter;
 
 
 
+// EXTERNAL MODULE: ./node_modules/prop-types/index.js
+var prop_types = __webpack_require__(5697);
+var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
+;// CONCATENATED MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
 
-/***/ }),
 
-/***/ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@fortawesome/free-brands-svg-icons/index.es.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fa42Group": () => (/* binding */ fa42Group),
-/* harmony export */   "fa500px": () => (/* binding */ fa500px),
-/* harmony export */   "faAccessibleIcon": () => (/* binding */ faAccessibleIcon),
-/* harmony export */   "faAccusoft": () => (/* binding */ faAccusoft),
-/* harmony export */   "faAdn": () => (/* binding */ faAdn),
-/* harmony export */   "faAdversal": () => (/* binding */ faAdversal),
-/* harmony export */   "faAffiliatetheme": () => (/* binding */ faAffiliatetheme),
-/* harmony export */   "faAirbnb": () => (/* binding */ faAirbnb),
-/* harmony export */   "faAlgolia": () => (/* binding */ faAlgolia),
-/* harmony export */   "faAlipay": () => (/* binding */ faAlipay),
-/* harmony export */   "faAmazon": () => (/* binding */ faAmazon),
-/* harmony export */   "faAmazonPay": () => (/* binding */ faAmazonPay),
-/* harmony export */   "faAmilia": () => (/* binding */ faAmilia),
-/* harmony export */   "faAndroid": () => (/* binding */ faAndroid),
-/* harmony export */   "faAngellist": () => (/* binding */ faAngellist),
-/* harmony export */   "faAngrycreative": () => (/* binding */ faAngrycreative),
-/* harmony export */   "faAngular": () => (/* binding */ faAngular),
-/* harmony export */   "faAppStore": () => (/* binding */ faAppStore),
-/* harmony export */   "faAppStoreIos": () => (/* binding */ faAppStoreIos),
-/* harmony export */   "faApper": () => (/* binding */ faApper),
-/* harmony export */   "faApple": () => (/* binding */ faApple),
-/* harmony export */   "faApplePay": () => (/* binding */ faApplePay),
-/* harmony export */   "faArtstation": () => (/* binding */ faArtstation),
-/* harmony export */   "faAsymmetrik": () => (/* binding */ faAsymmetrik),
-/* harmony export */   "faAtlassian": () => (/* binding */ faAtlassian),
-/* harmony export */   "faAudible": () => (/* binding */ faAudible),
-/* harmony export */   "faAutoprefixer": () => (/* binding */ faAutoprefixer),
-/* harmony export */   "faAvianex": () => (/* binding */ faAvianex),
-/* harmony export */   "faAviato": () => (/* binding */ faAviato),
-/* harmony export */   "faAws": () => (/* binding */ faAws),
-/* harmony export */   "faBandcamp": () => (/* binding */ faBandcamp),
-/* harmony export */   "faBattleNet": () => (/* binding */ faBattleNet),
-/* harmony export */   "faBehance": () => (/* binding */ faBehance),
-/* harmony export */   "faBehanceSquare": () => (/* binding */ faBehanceSquare),
-/* harmony export */   "faBilibili": () => (/* binding */ faBilibili),
-/* harmony export */   "faBimobject": () => (/* binding */ faBimobject),
-/* harmony export */   "faBitbucket": () => (/* binding */ faBitbucket),
-/* harmony export */   "faBitcoin": () => (/* binding */ faBitcoin),
-/* harmony export */   "faBity": () => (/* binding */ faBity),
-/* harmony export */   "faBlackTie": () => (/* binding */ faBlackTie),
-/* harmony export */   "faBlackberry": () => (/* binding */ faBlackberry),
-/* harmony export */   "faBlogger": () => (/* binding */ faBlogger),
-/* harmony export */   "faBloggerB": () => (/* binding */ faBloggerB),
-/* harmony export */   "faBluetooth": () => (/* binding */ faBluetooth),
-/* harmony export */   "faBluetoothB": () => (/* binding */ faBluetoothB),
-/* harmony export */   "faBootstrap": () => (/* binding */ faBootstrap),
-/* harmony export */   "faBots": () => (/* binding */ faBots),
-/* harmony export */   "faBtc": () => (/* binding */ faBtc),
-/* harmony export */   "faBuffer": () => (/* binding */ faBuffer),
-/* harmony export */   "faBuromobelexperte": () => (/* binding */ faBuromobelexperte),
-/* harmony export */   "faBuyNLarge": () => (/* binding */ faBuyNLarge),
-/* harmony export */   "faBuysellads": () => (/* binding */ faBuysellads),
-/* harmony export */   "faCanadianMapleLeaf": () => (/* binding */ faCanadianMapleLeaf),
-/* harmony export */   "faCcAmazonPay": () => (/* binding */ faCcAmazonPay),
-/* harmony export */   "faCcAmex": () => (/* binding */ faCcAmex),
-/* harmony export */   "faCcApplePay": () => (/* binding */ faCcApplePay),
-/* harmony export */   "faCcDinersClub": () => (/* binding */ faCcDinersClub),
-/* harmony export */   "faCcDiscover": () => (/* binding */ faCcDiscover),
-/* harmony export */   "faCcJcb": () => (/* binding */ faCcJcb),
-/* harmony export */   "faCcMastercard": () => (/* binding */ faCcMastercard),
-/* harmony export */   "faCcPaypal": () => (/* binding */ faCcPaypal),
-/* harmony export */   "faCcStripe": () => (/* binding */ faCcStripe),
-/* harmony export */   "faCcVisa": () => (/* binding */ faCcVisa),
-/* harmony export */   "faCentercode": () => (/* binding */ faCentercode),
-/* harmony export */   "faCentos": () => (/* binding */ faCentos),
-/* harmony export */   "faChrome": () => (/* binding */ faChrome),
-/* harmony export */   "faChromecast": () => (/* binding */ faChromecast),
-/* harmony export */   "faCloudflare": () => (/* binding */ faCloudflare),
-/* harmony export */   "faCloudscale": () => (/* binding */ faCloudscale),
-/* harmony export */   "faCloudsmith": () => (/* binding */ faCloudsmith),
-/* harmony export */   "faCloudversify": () => (/* binding */ faCloudversify),
-/* harmony export */   "faCmplid": () => (/* binding */ faCmplid),
-/* harmony export */   "faCodepen": () => (/* binding */ faCodepen),
-/* harmony export */   "faCodiepie": () => (/* binding */ faCodiepie),
-/* harmony export */   "faConfluence": () => (/* binding */ faConfluence),
-/* harmony export */   "faConnectdevelop": () => (/* binding */ faConnectdevelop),
-/* harmony export */   "faContao": () => (/* binding */ faContao),
-/* harmony export */   "faCottonBureau": () => (/* binding */ faCottonBureau),
-/* harmony export */   "faCpanel": () => (/* binding */ faCpanel),
-/* harmony export */   "faCreativeCommons": () => (/* binding */ faCreativeCommons),
-/* harmony export */   "faCreativeCommonsBy": () => (/* binding */ faCreativeCommonsBy),
-/* harmony export */   "faCreativeCommonsNc": () => (/* binding */ faCreativeCommonsNc),
-/* harmony export */   "faCreativeCommonsNcEu": () => (/* binding */ faCreativeCommonsNcEu),
-/* harmony export */   "faCreativeCommonsNcJp": () => (/* binding */ faCreativeCommonsNcJp),
-/* harmony export */   "faCreativeCommonsNd": () => (/* binding */ faCreativeCommonsNd),
-/* harmony export */   "faCreativeCommonsPd": () => (/* binding */ faCreativeCommonsPd),
-/* harmony export */   "faCreativeCommonsPdAlt": () => (/* binding */ faCreativeCommonsPdAlt),
-/* harmony export */   "faCreativeCommonsRemix": () => (/* binding */ faCreativeCommonsRemix),
-/* harmony export */   "faCreativeCommonsSa": () => (/* binding */ faCreativeCommonsSa),
-/* harmony export */   "faCreativeCommonsSampling": () => (/* binding */ faCreativeCommonsSampling),
-/* harmony export */   "faCreativeCommonsSamplingPlus": () => (/* binding */ faCreativeCommonsSamplingPlus),
-/* harmony export */   "faCreativeCommonsShare": () => (/* binding */ faCreativeCommonsShare),
-/* harmony export */   "faCreativeCommonsZero": () => (/* binding */ faCreativeCommonsZero),
-/* harmony export */   "faCriticalRole": () => (/* binding */ faCriticalRole),
-/* harmony export */   "faCss3": () => (/* binding */ faCss3),
-/* harmony export */   "faCss3Alt": () => (/* binding */ faCss3Alt),
-/* harmony export */   "faCuttlefish": () => (/* binding */ faCuttlefish),
-/* harmony export */   "faDAndD": () => (/* binding */ faDAndD),
-/* harmony export */   "faDAndDBeyond": () => (/* binding */ faDAndDBeyond),
-/* harmony export */   "faDailymotion": () => (/* binding */ faDailymotion),
-/* harmony export */   "faDashcube": () => (/* binding */ faDashcube),
-/* harmony export */   "faDeezer": () => (/* binding */ faDeezer),
-/* harmony export */   "faDelicious": () => (/* binding */ faDelicious),
-/* harmony export */   "faDeploydog": () => (/* binding */ faDeploydog),
-/* harmony export */   "faDeskpro": () => (/* binding */ faDeskpro),
-/* harmony export */   "faDev": () => (/* binding */ faDev),
-/* harmony export */   "faDeviantart": () => (/* binding */ faDeviantart),
-/* harmony export */   "faDhl": () => (/* binding */ faDhl),
-/* harmony export */   "faDiaspora": () => (/* binding */ faDiaspora),
-/* harmony export */   "faDigg": () => (/* binding */ faDigg),
-/* harmony export */   "faDigitalOcean": () => (/* binding */ faDigitalOcean),
-/* harmony export */   "faDiscord": () => (/* binding */ faDiscord),
-/* harmony export */   "faDiscourse": () => (/* binding */ faDiscourse),
-/* harmony export */   "faDochub": () => (/* binding */ faDochub),
-/* harmony export */   "faDocker": () => (/* binding */ faDocker),
-/* harmony export */   "faDraft2digital": () => (/* binding */ faDraft2digital),
-/* harmony export */   "faDribbble": () => (/* binding */ faDribbble),
-/* harmony export */   "faDribbbleSquare": () => (/* binding */ faDribbbleSquare),
-/* harmony export */   "faDropbox": () => (/* binding */ faDropbox),
-/* harmony export */   "faDrupal": () => (/* binding */ faDrupal),
-/* harmony export */   "faDyalog": () => (/* binding */ faDyalog),
-/* harmony export */   "faEarlybirds": () => (/* binding */ faEarlybirds),
-/* harmony export */   "faEbay": () => (/* binding */ faEbay),
-/* harmony export */   "faEdge": () => (/* binding */ faEdge),
-/* harmony export */   "faEdgeLegacy": () => (/* binding */ faEdgeLegacy),
-/* harmony export */   "faElementor": () => (/* binding */ faElementor),
-/* harmony export */   "faEllo": () => (/* binding */ faEllo),
-/* harmony export */   "faEmber": () => (/* binding */ faEmber),
-/* harmony export */   "faEmpire": () => (/* binding */ faEmpire),
-/* harmony export */   "faEnvira": () => (/* binding */ faEnvira),
-/* harmony export */   "faErlang": () => (/* binding */ faErlang),
-/* harmony export */   "faEthereum": () => (/* binding */ faEthereum),
-/* harmony export */   "faEtsy": () => (/* binding */ faEtsy),
-/* harmony export */   "faEvernote": () => (/* binding */ faEvernote),
-/* harmony export */   "faExpeditedssl": () => (/* binding */ faExpeditedssl),
-/* harmony export */   "faFacebook": () => (/* binding */ faFacebook),
-/* harmony export */   "faFacebookF": () => (/* binding */ faFacebookF),
-/* harmony export */   "faFacebookMessenger": () => (/* binding */ faFacebookMessenger),
-/* harmony export */   "faFacebookSquare": () => (/* binding */ faFacebookSquare),
-/* harmony export */   "faFantasyFlightGames": () => (/* binding */ faFantasyFlightGames),
-/* harmony export */   "faFedex": () => (/* binding */ faFedex),
-/* harmony export */   "faFedora": () => (/* binding */ faFedora),
-/* harmony export */   "faFigma": () => (/* binding */ faFigma),
-/* harmony export */   "faFirefox": () => (/* binding */ faFirefox),
-/* harmony export */   "faFirefoxBrowser": () => (/* binding */ faFirefoxBrowser),
-/* harmony export */   "faFirstOrder": () => (/* binding */ faFirstOrder),
-/* harmony export */   "faFirstOrderAlt": () => (/* binding */ faFirstOrderAlt),
-/* harmony export */   "faFirstdraft": () => (/* binding */ faFirstdraft),
-/* harmony export */   "faFlickr": () => (/* binding */ faFlickr),
-/* harmony export */   "faFlipboard": () => (/* binding */ faFlipboard),
-/* harmony export */   "faFly": () => (/* binding */ faFly),
-/* harmony export */   "faFontAwesome": () => (/* binding */ faFontAwesome),
-/* harmony export */   "faFontAwesomeAlt": () => (/* binding */ faFontAwesomeAlt),
-/* harmony export */   "faFontAwesomeFlag": () => (/* binding */ faFontAwesomeFlag),
-/* harmony export */   "faFontAwesomeLogoFull": () => (/* binding */ faFontAwesomeLogoFull),
-/* harmony export */   "faFonticons": () => (/* binding */ faFonticons),
-/* harmony export */   "faFonticonsFi": () => (/* binding */ faFonticonsFi),
-/* harmony export */   "faFortAwesome": () => (/* binding */ faFortAwesome),
-/* harmony export */   "faFortAwesomeAlt": () => (/* binding */ faFortAwesomeAlt),
-/* harmony export */   "faForumbee": () => (/* binding */ faForumbee),
-/* harmony export */   "faFoursquare": () => (/* binding */ faFoursquare),
-/* harmony export */   "faFreeCodeCamp": () => (/* binding */ faFreeCodeCamp),
-/* harmony export */   "faFreebsd": () => (/* binding */ faFreebsd),
-/* harmony export */   "faFulcrum": () => (/* binding */ faFulcrum),
-/* harmony export */   "faGalacticRepublic": () => (/* binding */ faGalacticRepublic),
-/* harmony export */   "faGalacticSenate": () => (/* binding */ faGalacticSenate),
-/* harmony export */   "faGetPocket": () => (/* binding */ faGetPocket),
-/* harmony export */   "faGg": () => (/* binding */ faGg),
-/* harmony export */   "faGgCircle": () => (/* binding */ faGgCircle),
-/* harmony export */   "faGit": () => (/* binding */ faGit),
-/* harmony export */   "faGitAlt": () => (/* binding */ faGitAlt),
-/* harmony export */   "faGitSquare": () => (/* binding */ faGitSquare),
-/* harmony export */   "faGithub": () => (/* binding */ faGithub),
-/* harmony export */   "faGithubAlt": () => (/* binding */ faGithubAlt),
-/* harmony export */   "faGithubSquare": () => (/* binding */ faGithubSquare),
-/* harmony export */   "faGitkraken": () => (/* binding */ faGitkraken),
-/* harmony export */   "faGitlab": () => (/* binding */ faGitlab),
-/* harmony export */   "faGitter": () => (/* binding */ faGitter),
-/* harmony export */   "faGlide": () => (/* binding */ faGlide),
-/* harmony export */   "faGlideG": () => (/* binding */ faGlideG),
-/* harmony export */   "faGofore": () => (/* binding */ faGofore),
-/* harmony export */   "faGolang": () => (/* binding */ faGolang),
-/* harmony export */   "faGoodreads": () => (/* binding */ faGoodreads),
-/* harmony export */   "faGoodreadsG": () => (/* binding */ faGoodreadsG),
-/* harmony export */   "faGoogle": () => (/* binding */ faGoogle),
-/* harmony export */   "faGoogleDrive": () => (/* binding */ faGoogleDrive),
-/* harmony export */   "faGooglePay": () => (/* binding */ faGooglePay),
-/* harmony export */   "faGooglePlay": () => (/* binding */ faGooglePlay),
-/* harmony export */   "faGooglePlus": () => (/* binding */ faGooglePlus),
-/* harmony export */   "faGooglePlusG": () => (/* binding */ faGooglePlusG),
-/* harmony export */   "faGooglePlusSquare": () => (/* binding */ faGooglePlusSquare),
-/* harmony export */   "faGoogleWallet": () => (/* binding */ faGoogleWallet),
-/* harmony export */   "faGratipay": () => (/* binding */ faGratipay),
-/* harmony export */   "faGrav": () => (/* binding */ faGrav),
-/* harmony export */   "faGripfire": () => (/* binding */ faGripfire),
-/* harmony export */   "faGrunt": () => (/* binding */ faGrunt),
-/* harmony export */   "faGuilded": () => (/* binding */ faGuilded),
-/* harmony export */   "faGulp": () => (/* binding */ faGulp),
-/* harmony export */   "faHackerNews": () => (/* binding */ faHackerNews),
-/* harmony export */   "faHackerNewsSquare": () => (/* binding */ faHackerNewsSquare),
-/* harmony export */   "faHackerrank": () => (/* binding */ faHackerrank),
-/* harmony export */   "faHashnode": () => (/* binding */ faHashnode),
-/* harmony export */   "faHips": () => (/* binding */ faHips),
-/* harmony export */   "faHireAHelper": () => (/* binding */ faHireAHelper),
-/* harmony export */   "faHive": () => (/* binding */ faHive),
-/* harmony export */   "faHooli": () => (/* binding */ faHooli),
-/* harmony export */   "faHornbill": () => (/* binding */ faHornbill),
-/* harmony export */   "faHotjar": () => (/* binding */ faHotjar),
-/* harmony export */   "faHouzz": () => (/* binding */ faHouzz),
-/* harmony export */   "faHtml5": () => (/* binding */ faHtml5),
-/* harmony export */   "faHubspot": () => (/* binding */ faHubspot),
-/* harmony export */   "faIdeal": () => (/* binding */ faIdeal),
-/* harmony export */   "faImdb": () => (/* binding */ faImdb),
-/* harmony export */   "faInnosoft": () => (/* binding */ faInnosoft),
-/* harmony export */   "faInstagram": () => (/* binding */ faInstagram),
-/* harmony export */   "faInstagramSquare": () => (/* binding */ faInstagramSquare),
-/* harmony export */   "faInstalod": () => (/* binding */ faInstalod),
-/* harmony export */   "faIntercom": () => (/* binding */ faIntercom),
-/* harmony export */   "faInternetExplorer": () => (/* binding */ faInternetExplorer),
-/* harmony export */   "faInvision": () => (/* binding */ faInvision),
-/* harmony export */   "faIoxhost": () => (/* binding */ faIoxhost),
-/* harmony export */   "faItchIo": () => (/* binding */ faItchIo),
-/* harmony export */   "faItunes": () => (/* binding */ faItunes),
-/* harmony export */   "faItunesNote": () => (/* binding */ faItunesNote),
-/* harmony export */   "faJava": () => (/* binding */ faJava),
-/* harmony export */   "faJediOrder": () => (/* binding */ faJediOrder),
-/* harmony export */   "faJenkins": () => (/* binding */ faJenkins),
-/* harmony export */   "faJira": () => (/* binding */ faJira),
-/* harmony export */   "faJoget": () => (/* binding */ faJoget),
-/* harmony export */   "faJoomla": () => (/* binding */ faJoomla),
-/* harmony export */   "faJs": () => (/* binding */ faJs),
-/* harmony export */   "faJsSquare": () => (/* binding */ faJsSquare),
-/* harmony export */   "faJsfiddle": () => (/* binding */ faJsfiddle),
-/* harmony export */   "faKaggle": () => (/* binding */ faKaggle),
-/* harmony export */   "faKeybase": () => (/* binding */ faKeybase),
-/* harmony export */   "faKeycdn": () => (/* binding */ faKeycdn),
-/* harmony export */   "faKickstarter": () => (/* binding */ faKickstarter),
-/* harmony export */   "faKickstarterK": () => (/* binding */ faKickstarterK),
-/* harmony export */   "faKorvue": () => (/* binding */ faKorvue),
-/* harmony export */   "faLaravel": () => (/* binding */ faLaravel),
-/* harmony export */   "faLastfm": () => (/* binding */ faLastfm),
-/* harmony export */   "faLastfmSquare": () => (/* binding */ faLastfmSquare),
-/* harmony export */   "faLeanpub": () => (/* binding */ faLeanpub),
-/* harmony export */   "faLess": () => (/* binding */ faLess),
-/* harmony export */   "faLine": () => (/* binding */ faLine),
-/* harmony export */   "faLinkedin": () => (/* binding */ faLinkedin),
-/* harmony export */   "faLinkedinIn": () => (/* binding */ faLinkedinIn),
-/* harmony export */   "faLinode": () => (/* binding */ faLinode),
-/* harmony export */   "faLinux": () => (/* binding */ faLinux),
-/* harmony export */   "faLyft": () => (/* binding */ faLyft),
-/* harmony export */   "faMagento": () => (/* binding */ faMagento),
-/* harmony export */   "faMailchimp": () => (/* binding */ faMailchimp),
-/* harmony export */   "faMandalorian": () => (/* binding */ faMandalorian),
-/* harmony export */   "faMarkdown": () => (/* binding */ faMarkdown),
-/* harmony export */   "faMastodon": () => (/* binding */ faMastodon),
-/* harmony export */   "faMaxcdn": () => (/* binding */ faMaxcdn),
-/* harmony export */   "faMdb": () => (/* binding */ faMdb),
-/* harmony export */   "faMedapps": () => (/* binding */ faMedapps),
-/* harmony export */   "faMedium": () => (/* binding */ faMedium),
-/* harmony export */   "faMediumM": () => (/* binding */ faMediumM),
-/* harmony export */   "faMedrt": () => (/* binding */ faMedrt),
-/* harmony export */   "faMeetup": () => (/* binding */ faMeetup),
-/* harmony export */   "faMegaport": () => (/* binding */ faMegaport),
-/* harmony export */   "faMendeley": () => (/* binding */ faMendeley),
-/* harmony export */   "faMicroblog": () => (/* binding */ faMicroblog),
-/* harmony export */   "faMicrosoft": () => (/* binding */ faMicrosoft),
-/* harmony export */   "faMix": () => (/* binding */ faMix),
-/* harmony export */   "faMixcloud": () => (/* binding */ faMixcloud),
-/* harmony export */   "faMixer": () => (/* binding */ faMixer),
-/* harmony export */   "faMizuni": () => (/* binding */ faMizuni),
-/* harmony export */   "faModx": () => (/* binding */ faModx),
-/* harmony export */   "faMonero": () => (/* binding */ faMonero),
-/* harmony export */   "faNapster": () => (/* binding */ faNapster),
-/* harmony export */   "faNeos": () => (/* binding */ faNeos),
-/* harmony export */   "faNfcDirectional": () => (/* binding */ faNfcDirectional),
-/* harmony export */   "faNfcSymbol": () => (/* binding */ faNfcSymbol),
-/* harmony export */   "faNimblr": () => (/* binding */ faNimblr),
-/* harmony export */   "faNode": () => (/* binding */ faNode),
-/* harmony export */   "faNodeJs": () => (/* binding */ faNodeJs),
-/* harmony export */   "faNpm": () => (/* binding */ faNpm),
-/* harmony export */   "faNs8": () => (/* binding */ faNs8),
-/* harmony export */   "faNutritionix": () => (/* binding */ faNutritionix),
-/* harmony export */   "faOctopusDeploy": () => (/* binding */ faOctopusDeploy),
-/* harmony export */   "faOdnoklassniki": () => (/* binding */ faOdnoklassniki),
-/* harmony export */   "faOdnoklassnikiSquare": () => (/* binding */ faOdnoklassnikiSquare),
-/* harmony export */   "faOldRepublic": () => (/* binding */ faOldRepublic),
-/* harmony export */   "faOpencart": () => (/* binding */ faOpencart),
-/* harmony export */   "faOpenid": () => (/* binding */ faOpenid),
-/* harmony export */   "faOpera": () => (/* binding */ faOpera),
-/* harmony export */   "faOptinMonster": () => (/* binding */ faOptinMonster),
-/* harmony export */   "faOrcid": () => (/* binding */ faOrcid),
-/* harmony export */   "faOsi": () => (/* binding */ faOsi),
-/* harmony export */   "faPadlet": () => (/* binding */ faPadlet),
-/* harmony export */   "faPage4": () => (/* binding */ faPage4),
-/* harmony export */   "faPagelines": () => (/* binding */ faPagelines),
-/* harmony export */   "faPalfed": () => (/* binding */ faPalfed),
-/* harmony export */   "faPatreon": () => (/* binding */ faPatreon),
-/* harmony export */   "faPaypal": () => (/* binding */ faPaypal),
-/* harmony export */   "faPerbyte": () => (/* binding */ faPerbyte),
-/* harmony export */   "faPeriscope": () => (/* binding */ faPeriscope),
-/* harmony export */   "faPhabricator": () => (/* binding */ faPhabricator),
-/* harmony export */   "faPhoenixFramework": () => (/* binding */ faPhoenixFramework),
-/* harmony export */   "faPhoenixSquadron": () => (/* binding */ faPhoenixSquadron),
-/* harmony export */   "faPhp": () => (/* binding */ faPhp),
-/* harmony export */   "faPiedPiper": () => (/* binding */ faPiedPiper),
-/* harmony export */   "faPiedPiperAlt": () => (/* binding */ faPiedPiperAlt),
-/* harmony export */   "faPiedPiperHat": () => (/* binding */ faPiedPiperHat),
-/* harmony export */   "faPiedPiperPp": () => (/* binding */ faPiedPiperPp),
-/* harmony export */   "faPiedPiperSquare": () => (/* binding */ faPiedPiperSquare),
-/* harmony export */   "faPinterest": () => (/* binding */ faPinterest),
-/* harmony export */   "faPinterestP": () => (/* binding */ faPinterestP),
-/* harmony export */   "faPinterestSquare": () => (/* binding */ faPinterestSquare),
-/* harmony export */   "faPix": () => (/* binding */ faPix),
-/* harmony export */   "faPlaystation": () => (/* binding */ faPlaystation),
-/* harmony export */   "faProductHunt": () => (/* binding */ faProductHunt),
-/* harmony export */   "faPushed": () => (/* binding */ faPushed),
-/* harmony export */   "faPython": () => (/* binding */ faPython),
-/* harmony export */   "faQq": () => (/* binding */ faQq),
-/* harmony export */   "faQuinscape": () => (/* binding */ faQuinscape),
-/* harmony export */   "faQuora": () => (/* binding */ faQuora),
-/* harmony export */   "faRProject": () => (/* binding */ faRProject),
-/* harmony export */   "faRaspberryPi": () => (/* binding */ faRaspberryPi),
-/* harmony export */   "faRavelry": () => (/* binding */ faRavelry),
-/* harmony export */   "faReact": () => (/* binding */ faReact),
-/* harmony export */   "faReacteurope": () => (/* binding */ faReacteurope),
-/* harmony export */   "faReadme": () => (/* binding */ faReadme),
-/* harmony export */   "faRebel": () => (/* binding */ faRebel),
-/* harmony export */   "faRedRiver": () => (/* binding */ faRedRiver),
-/* harmony export */   "faReddit": () => (/* binding */ faReddit),
-/* harmony export */   "faRedditAlien": () => (/* binding */ faRedditAlien),
-/* harmony export */   "faRedditSquare": () => (/* binding */ faRedditSquare),
-/* harmony export */   "faRedhat": () => (/* binding */ faRedhat),
-/* harmony export */   "faRenren": () => (/* binding */ faRenren),
-/* harmony export */   "faReplyd": () => (/* binding */ faReplyd),
-/* harmony export */   "faResearchgate": () => (/* binding */ faResearchgate),
-/* harmony export */   "faResolving": () => (/* binding */ faResolving),
-/* harmony export */   "faRev": () => (/* binding */ faRev),
-/* harmony export */   "faRocketchat": () => (/* binding */ faRocketchat),
-/* harmony export */   "faRockrms": () => (/* binding */ faRockrms),
-/* harmony export */   "faRust": () => (/* binding */ faRust),
-/* harmony export */   "faSafari": () => (/* binding */ faSafari),
-/* harmony export */   "faSalesforce": () => (/* binding */ faSalesforce),
-/* harmony export */   "faSass": () => (/* binding */ faSass),
-/* harmony export */   "faSchlix": () => (/* binding */ faSchlix),
-/* harmony export */   "faScreenpal": () => (/* binding */ faScreenpal),
-/* harmony export */   "faScribd": () => (/* binding */ faScribd),
-/* harmony export */   "faSearchengin": () => (/* binding */ faSearchengin),
-/* harmony export */   "faSellcast": () => (/* binding */ faSellcast),
-/* harmony export */   "faSellsy": () => (/* binding */ faSellsy),
-/* harmony export */   "faServicestack": () => (/* binding */ faServicestack),
-/* harmony export */   "faShirtsinbulk": () => (/* binding */ faShirtsinbulk),
-/* harmony export */   "faShopify": () => (/* binding */ faShopify),
-/* harmony export */   "faShopware": () => (/* binding */ faShopware),
-/* harmony export */   "faSimplybuilt": () => (/* binding */ faSimplybuilt),
-/* harmony export */   "faSistrix": () => (/* binding */ faSistrix),
-/* harmony export */   "faSith": () => (/* binding */ faSith),
-/* harmony export */   "faSitrox": () => (/* binding */ faSitrox),
-/* harmony export */   "faSketch": () => (/* binding */ faSketch),
-/* harmony export */   "faSkyatlas": () => (/* binding */ faSkyatlas),
-/* harmony export */   "faSkype": () => (/* binding */ faSkype),
-/* harmony export */   "faSlack": () => (/* binding */ faSlack),
-/* harmony export */   "faSlackHash": () => (/* binding */ faSlackHash),
-/* harmony export */   "faSlideshare": () => (/* binding */ faSlideshare),
-/* harmony export */   "faSnapchat": () => (/* binding */ faSnapchat),
-/* harmony export */   "faSnapchatGhost": () => (/* binding */ faSnapchatGhost),
-/* harmony export */   "faSnapchatSquare": () => (/* binding */ faSnapchatSquare),
-/* harmony export */   "faSoundcloud": () => (/* binding */ faSoundcloud),
-/* harmony export */   "faSourcetree": () => (/* binding */ faSourcetree),
-/* harmony export */   "faSpeakap": () => (/* binding */ faSpeakap),
-/* harmony export */   "faSpeakerDeck": () => (/* binding */ faSpeakerDeck),
-/* harmony export */   "faSpotify": () => (/* binding */ faSpotify),
-/* harmony export */   "faSquareFontAwesome": () => (/* binding */ faSquareFontAwesome),
-/* harmony export */   "faSquareFontAwesomeStroke": () => (/* binding */ faSquareFontAwesomeStroke),
-/* harmony export */   "faSquarespace": () => (/* binding */ faSquarespace),
-/* harmony export */   "faStackExchange": () => (/* binding */ faStackExchange),
-/* harmony export */   "faStackOverflow": () => (/* binding */ faStackOverflow),
-/* harmony export */   "faStackpath": () => (/* binding */ faStackpath),
-/* harmony export */   "faStaylinked": () => (/* binding */ faStaylinked),
-/* harmony export */   "faSteam": () => (/* binding */ faSteam),
-/* harmony export */   "faSteamSquare": () => (/* binding */ faSteamSquare),
-/* harmony export */   "faSteamSymbol": () => (/* binding */ faSteamSymbol),
-/* harmony export */   "faStickerMule": () => (/* binding */ faStickerMule),
-/* harmony export */   "faStrava": () => (/* binding */ faStrava),
-/* harmony export */   "faStripe": () => (/* binding */ faStripe),
-/* harmony export */   "faStripeS": () => (/* binding */ faStripeS),
-/* harmony export */   "faStudiovinari": () => (/* binding */ faStudiovinari),
-/* harmony export */   "faStumbleupon": () => (/* binding */ faStumbleupon),
-/* harmony export */   "faStumbleuponCircle": () => (/* binding */ faStumbleuponCircle),
-/* harmony export */   "faSuperpowers": () => (/* binding */ faSuperpowers),
-/* harmony export */   "faSupple": () => (/* binding */ faSupple),
-/* harmony export */   "faSuse": () => (/* binding */ faSuse),
-/* harmony export */   "faSwift": () => (/* binding */ faSwift),
-/* harmony export */   "faSymfony": () => (/* binding */ faSymfony),
-/* harmony export */   "faTeamspeak": () => (/* binding */ faTeamspeak),
-/* harmony export */   "faTelegram": () => (/* binding */ faTelegram),
-/* harmony export */   "faTelegramPlane": () => (/* binding */ faTelegramPlane),
-/* harmony export */   "faTencentWeibo": () => (/* binding */ faTencentWeibo),
-/* harmony export */   "faTheRedYeti": () => (/* binding */ faTheRedYeti),
-/* harmony export */   "faThemeco": () => (/* binding */ faThemeco),
-/* harmony export */   "faThemeisle": () => (/* binding */ faThemeisle),
-/* harmony export */   "faThinkPeaks": () => (/* binding */ faThinkPeaks),
-/* harmony export */   "faTiktok": () => (/* binding */ faTiktok),
-/* harmony export */   "faTradeFederation": () => (/* binding */ faTradeFederation),
-/* harmony export */   "faTrello": () => (/* binding */ faTrello),
-/* harmony export */   "faTumblr": () => (/* binding */ faTumblr),
-/* harmony export */   "faTumblrSquare": () => (/* binding */ faTumblrSquare),
-/* harmony export */   "faTwitch": () => (/* binding */ faTwitch),
-/* harmony export */   "faTwitter": () => (/* binding */ faTwitter),
-/* harmony export */   "faTwitterSquare": () => (/* binding */ faTwitterSquare),
-/* harmony export */   "faTypo3": () => (/* binding */ faTypo3),
-/* harmony export */   "faUber": () => (/* binding */ faUber),
-/* harmony export */   "faUbuntu": () => (/* binding */ faUbuntu),
-/* harmony export */   "faUikit": () => (/* binding */ faUikit),
-/* harmony export */   "faUmbraco": () => (/* binding */ faUmbraco),
-/* harmony export */   "faUncharted": () => (/* binding */ faUncharted),
-/* harmony export */   "faUniregistry": () => (/* binding */ faUniregistry),
-/* harmony export */   "faUnity": () => (/* binding */ faUnity),
-/* harmony export */   "faUnsplash": () => (/* binding */ faUnsplash),
-/* harmony export */   "faUntappd": () => (/* binding */ faUntappd),
-/* harmony export */   "faUps": () => (/* binding */ faUps),
-/* harmony export */   "faUsb": () => (/* binding */ faUsb),
-/* harmony export */   "faUsps": () => (/* binding */ faUsps),
-/* harmony export */   "faUssunnah": () => (/* binding */ faUssunnah),
-/* harmony export */   "faVaadin": () => (/* binding */ faVaadin),
-/* harmony export */   "faViacoin": () => (/* binding */ faViacoin),
-/* harmony export */   "faViadeo": () => (/* binding */ faViadeo),
-/* harmony export */   "faViadeoSquare": () => (/* binding */ faViadeoSquare),
-/* harmony export */   "faViber": () => (/* binding */ faViber),
-/* harmony export */   "faVimeo": () => (/* binding */ faVimeo),
-/* harmony export */   "faVimeoSquare": () => (/* binding */ faVimeoSquare),
-/* harmony export */   "faVimeoV": () => (/* binding */ faVimeoV),
-/* harmony export */   "faVine": () => (/* binding */ faVine),
-/* harmony export */   "faVk": () => (/* binding */ faVk),
-/* harmony export */   "faVnv": () => (/* binding */ faVnv),
-/* harmony export */   "faVuejs": () => (/* binding */ faVuejs),
-/* harmony export */   "faWatchmanMonitoring": () => (/* binding */ faWatchmanMonitoring),
-/* harmony export */   "faWaze": () => (/* binding */ faWaze),
-/* harmony export */   "faWeebly": () => (/* binding */ faWeebly),
-/* harmony export */   "faWeibo": () => (/* binding */ faWeibo),
-/* harmony export */   "faWeixin": () => (/* binding */ faWeixin),
-/* harmony export */   "faWhatsapp": () => (/* binding */ faWhatsapp),
-/* harmony export */   "faWhatsappSquare": () => (/* binding */ faWhatsappSquare),
-/* harmony export */   "faWhmcs": () => (/* binding */ faWhmcs),
-/* harmony export */   "faWikipediaW": () => (/* binding */ faWikipediaW),
-/* harmony export */   "faWindows": () => (/* binding */ faWindows),
-/* harmony export */   "faWirsindhandwerk": () => (/* binding */ faWirsindhandwerk),
-/* harmony export */   "faWix": () => (/* binding */ faWix),
-/* harmony export */   "faWizardsOfTheCoast": () => (/* binding */ faWizardsOfTheCoast),
-/* harmony export */   "faWodu": () => (/* binding */ faWodu),
-/* harmony export */   "faWolfPackBattalion": () => (/* binding */ faWolfPackBattalion),
-/* harmony export */   "faWordpress": () => (/* binding */ faWordpress),
-/* harmony export */   "faWordpressSimple": () => (/* binding */ faWordpressSimple),
-/* harmony export */   "faWpbeginner": () => (/* binding */ faWpbeginner),
-/* harmony export */   "faWpexplorer": () => (/* binding */ faWpexplorer),
-/* harmony export */   "faWpforms": () => (/* binding */ faWpforms),
-/* harmony export */   "faWpressr": () => (/* binding */ faWpressr),
-/* harmony export */   "faWsh": () => (/* binding */ faWsh),
-/* harmony export */   "faXbox": () => (/* binding */ faXbox),
-/* harmony export */   "faXing": () => (/* binding */ faXing),
-/* harmony export */   "faXingSquare": () => (/* binding */ faXingSquare),
-/* harmony export */   "faYCombinator": () => (/* binding */ faYCombinator),
-/* harmony export */   "faYahoo": () => (/* binding */ faYahoo),
-/* harmony export */   "faYammer": () => (/* binding */ faYammer),
-/* harmony export */   "faYandex": () => (/* binding */ faYandex),
-/* harmony export */   "faYandexInternational": () => (/* binding */ faYandexInternational),
-/* harmony export */   "faYarn": () => (/* binding */ faYarn),
-/* harmony export */   "faYelp": () => (/* binding */ faYelp),
-/* harmony export */   "faYoast": () => (/* binding */ faYoast),
-/* harmony export */   "faYoutube": () => (/* binding */ faYoutube),
-/* harmony export */   "faYoutubeSquare": () => (/* binding */ faYoutubeSquare),
-/* harmony export */   "faZhihu": () => (/* binding */ faZhihu),
-/* harmony export */   "fab": () => (/* binding */ _iconsCache),
-/* harmony export */   "prefix": () => (/* binding */ prefix)
-/* harmony export */ });
+
+function index_es_ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    enumerableOnly && (symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    })), keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function index_es_objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = null != arguments[i] ? arguments[i] : {};
+    i % 2 ? index_es_ownKeys(Object(source), !0).forEach(function (key) {
+      index_es_defineProperty(target, key, source[key]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : index_es_ownKeys(Object(source)).forEach(function (key) {
+      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+    });
+  }
+
+  return target;
+}
+
+function index_es_typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return index_es_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, index_es_typeof(obj);
+}
+
+function index_es_defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+function index_es_toConsumableArray(arr) {
+  return index_es_arrayWithoutHoles(arr) || index_es_iterableToArray(arr) || index_es_unsupportedIterableToArray(arr) || index_es_nonIterableSpread();
+}
+
+function index_es_arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return index_es_arrayLikeToArray(arr);
+}
+
+function index_es_iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
+
+function index_es_unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return index_es_arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return index_es_arrayLikeToArray(o, minLen);
+}
+
+function index_es_arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+
+  return arr2;
+}
+
+function index_es_nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+// Get CSS class list from a props object
+function classList(props) {
+  var _classes;
+
+  var beat = props.beat,
+      fade = props.fade,
+      beatFade = props.beatFade,
+      bounce = props.bounce,
+      shake = props.shake,
+      flash = props.flash,
+      spin = props.spin,
+      spinPulse = props.spinPulse,
+      spinReverse = props.spinReverse,
+      pulse = props.pulse,
+      fixedWidth = props.fixedWidth,
+      inverse = props.inverse,
+      border = props.border,
+      listItem = props.listItem,
+      flip = props.flip,
+      size = props.size,
+      rotation = props.rotation,
+      pull = props.pull; // map of CSS class names to properties
+
+  var classes = (_classes = {
+    'fa-beat': beat,
+    'fa-fade': fade,
+    'fa-beat-fade': beatFade,
+    'fa-bounce': bounce,
+    'fa-shake': shake,
+    'fa-flash': flash,
+    'fa-spin': spin,
+    'fa-spin-reverse': spinReverse,
+    'fa-spin-pulse': spinPulse,
+    'fa-pulse': pulse,
+    'fa-fw': fixedWidth,
+    'fa-inverse': inverse,
+    'fa-border': border,
+    'fa-li': listItem,
+    'fa-flip': flip === true,
+    'fa-flip-horizontal': flip === 'horizontal' || flip === 'both',
+    'fa-flip-vertical': flip === 'vertical' || flip === 'both'
+  }, index_es_defineProperty(_classes, "fa-".concat(size), typeof size !== 'undefined' && size !== null), index_es_defineProperty(_classes, "fa-rotate-".concat(rotation), typeof rotation !== 'undefined' && rotation !== null && rotation !== 0), index_es_defineProperty(_classes, "fa-pull-".concat(pull), typeof pull !== 'undefined' && pull !== null), index_es_defineProperty(_classes, 'fa-swap-opacity', props.swapOpacity), _classes); // map over all the keys in the classes object
+  // return an array of the keys where the value for the key is not null
+
+  return Object.keys(classes).map(function (key) {
+    return classes[key] ? key : null;
+  }).filter(function (key) {
+    return key;
+  });
+}
+
+// Camelize taken from humps
+// humps is copyright © 2012+ Dom Christie
+// Released under the MIT license.
+// Performant way to determine if object coerces to a number
+function _isNumerical(obj) {
+  obj = obj - 0; // eslint-disable-next-line no-self-compare
+
+  return obj === obj;
+}
+
+function camelize(string) {
+  if (_isNumerical(string)) {
+    return string;
+  } // eslint-disable-next-line no-useless-escape
+
+
+  string = string.replace(/[\-_\s]+(.)?/g, function (match, chr) {
+    return chr ? chr.toUpperCase() : '';
+  }); // Ensure 1st char is always lowercase
+
+  return string.substr(0, 1).toLowerCase() + string.substr(1);
+}
+
+var _excluded = ["style"];
+
+function capitalize(val) {
+  return val.charAt(0).toUpperCase() + val.slice(1);
+}
+
+function styleToObject(style) {
+  return style.split(';').map(function (s) {
+    return s.trim();
+  }).filter(function (s) {
+    return s;
+  }).reduce(function (acc, pair) {
+    var i = pair.indexOf(':');
+    var prop = camelize(pair.slice(0, i));
+    var value = pair.slice(i + 1).trim();
+    prop.startsWith('webkit') ? acc[capitalize(prop)] = value : acc[prop] = value;
+    return acc;
+  }, {});
+}
+
+function convert(createElement, element) {
+  var extraProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+  if (typeof element === 'string') {
+    return element;
+  }
+
+  var children = (element.children || []).map(function (child) {
+    return convert(createElement, child);
+  });
+  /* eslint-disable dot-notation */
+
+  var mixins = Object.keys(element.attributes || {}).reduce(function (acc, key) {
+    var val = element.attributes[key];
+
+    switch (key) {
+      case 'class':
+        acc.attrs['className'] = val;
+        delete element.attributes['class'];
+        break;
+
+      case 'style':
+        acc.attrs['style'] = styleToObject(val);
+        break;
+
+      default:
+        if (key.indexOf('aria-') === 0 || key.indexOf('data-') === 0) {
+          acc.attrs[key.toLowerCase()] = val;
+        } else {
+          acc.attrs[camelize(key)] = val;
+        }
+
+    }
+
+    return acc;
+  }, {
+    attrs: {}
+  });
+
+  var _extraProps$style = extraProps.style,
+      existingStyle = _extraProps$style === void 0 ? {} : _extraProps$style,
+      remaining = _objectWithoutProperties(extraProps, _excluded);
+
+  mixins.attrs['style'] = index_es_objectSpread2(index_es_objectSpread2({}, mixins.attrs['style']), existingStyle);
+  /* eslint-enable */
+
+  return createElement.apply(void 0, [element.tag, index_es_objectSpread2(index_es_objectSpread2({}, mixins.attrs), remaining)].concat(index_es_toConsumableArray(children)));
+}
+
+var index_es_PRODUCTION = false;
+
+try {
+  index_es_PRODUCTION = "production" === 'production';
+} catch (e) {}
+
+function log () {
+  if (!index_es_PRODUCTION && console && typeof console.error === 'function') {
+    var _console;
+
+    (_console = console).error.apply(_console, arguments);
+  }
+}
+
+function normalizeIconArgs(icon) {
+  // this has everything that it needs to be rendered which means it was probably imported
+  // directly from an icon svg package
+  if (icon && index_es_typeof(icon) === 'object' && icon.prefix && icon.iconName && icon.icon) {
+    return icon;
+  }
+
+  if (parse$1.icon) {
+    return parse$1.icon(icon);
+  } // if the icon is null, there's nothing to do
+
+
+  if (icon === null) {
+    return null;
+  } // if the icon is an object and has a prefix and an icon name, return it
+
+
+  if (icon && index_es_typeof(icon) === 'object' && icon.prefix && icon.iconName) {
+    return icon;
+  } // if it's an array with length of two
+
+
+  if (Array.isArray(icon) && icon.length === 2) {
+    // use the first item as prefix, second as icon name
+    return {
+      prefix: icon[0],
+      iconName: icon[1]
+    };
+  } // if it's a string, use it as the icon name
+
+
+  if (typeof icon === 'string') {
+    return {
+      prefix: 'fas',
+      iconName: icon
+    };
+  }
+}
+
+// creates an object with a key of key
+// and a value of value
+// if certain conditions are met
+function objectWithKey(key, value) {
+  // if the value is a non-empty array
+  // or it's not an array but it is truthy
+  // then create the object with the key and the value
+  // if not, return an empty array
+  return Array.isArray(value) && value.length > 0 || !Array.isArray(value) && value ? index_es_defineProperty({}, key, value) : {};
+}
+
+var FontAwesomeIcon = /*#__PURE__*/index_js_default().forwardRef(function (props, ref) {
+  var iconArgs = props.icon,
+      maskArgs = props.mask,
+      symbol = props.symbol,
+      className = props.className,
+      title = props.title,
+      titleId = props.titleId,
+      maskId = props.maskId;
+  var iconLookup = normalizeIconArgs(iconArgs);
+  var classes = objectWithKey('classes', [].concat(index_es_toConsumableArray(classList(props)), index_es_toConsumableArray(className.split(' '))));
+  var transform = objectWithKey('transform', typeof props.transform === 'string' ? parse$1.transform(props.transform) : props.transform);
+  var mask = objectWithKey('mask', normalizeIconArgs(maskArgs));
+  var renderedIcon = icon(iconLookup, index_es_objectSpread2(index_es_objectSpread2(index_es_objectSpread2(index_es_objectSpread2({}, classes), transform), mask), {}, {
+    symbol: symbol,
+    title: title,
+    titleId: titleId,
+    maskId: maskId
+  }));
+
+  if (!renderedIcon) {
+    log('Could not find icon', iconLookup);
+    return null;
+  }
+
+  var abstract = renderedIcon.abstract;
+  var extraProps = {
+    ref: ref
+  };
+  Object.keys(props).forEach(function (key) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!FontAwesomeIcon.defaultProps.hasOwnProperty(key)) {
+      extraProps[key] = props[key];
+    }
+  });
+  return convertCurry(abstract[0], extraProps);
+});
+FontAwesomeIcon.displayName = 'FontAwesomeIcon';
+FontAwesomeIcon.propTypes = {
+  beat: (prop_types_default()).bool,
+  border: (prop_types_default()).bool,
+  beatFade: (prop_types_default()).bool,
+  bounce: (prop_types_default()).bool,
+  className: (prop_types_default()).string,
+  fade: (prop_types_default()).bool,
+  flash: (prop_types_default()).bool,
+  mask: prop_types_default().oneOfType([(prop_types_default()).object, (prop_types_default()).array, (prop_types_default()).string]),
+  maskId: (prop_types_default()).string,
+  fixedWidth: (prop_types_default()).bool,
+  inverse: (prop_types_default()).bool,
+  flip: prop_types_default().oneOf([true, false, 'horizontal', 'vertical', 'both']),
+  icon: prop_types_default().oneOfType([(prop_types_default()).object, (prop_types_default()).array, (prop_types_default()).string]),
+  listItem: (prop_types_default()).bool,
+  pull: prop_types_default().oneOf(['right', 'left']),
+  pulse: (prop_types_default()).bool,
+  rotation: prop_types_default().oneOf([0, 90, 180, 270]),
+  shake: (prop_types_default()).bool,
+  size: prop_types_default().oneOf(['2xs', 'xs', 'sm', 'lg', 'xl', '2xl', '1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x']),
+  spin: (prop_types_default()).bool,
+  spinPulse: (prop_types_default()).bool,
+  spinReverse: (prop_types_default()).bool,
+  symbol: prop_types_default().oneOfType([(prop_types_default()).bool, (prop_types_default()).string]),
+  title: (prop_types_default()).string,
+  titleId: (prop_types_default()).string,
+  transform: prop_types_default().oneOfType([(prop_types_default()).string, (prop_types_default()).object]),
+  swapOpacity: (prop_types_default()).bool
+};
+FontAwesomeIcon.defaultProps = {
+  border: false,
+  className: '',
+  mask: null,
+  maskId: null,
+  fixedWidth: false,
+  inverse: false,
+  flip: false,
+  icon: null,
+  listItem: false,
+  pull: null,
+  pulse: false,
+  rotation: null,
+  size: null,
+  spin: false,
+  spinPulse: false,
+  spinReverse: false,
+  beat: false,
+  fade: false,
+  beatFade: false,
+  bounce: false,
+  shake: false,
+  symbol: false,
+  title: '',
+  titleId: null,
+  transform: null,
+  swapOpacity: false
+};
+var convertCurry = convert.bind(null, (index_js_default()).createElement);
+
+
+
+;// CONCATENATED MODULE: ./node_modules/@fortawesome/free-brands-svg-icons/index.es.js
 /*!
  * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6268,1403 +6253,43 @@ var _iconsCache = {
 
 
 
+// EXTERNAL MODULE: ./node_modules/gatsby-plugin-anchor-links/index.js
+var gatsby_plugin_anchor_links = __webpack_require__(3089);
+;// CONCATENATED MODULE: ./src/components/navBar.js
+const NavBar=({activeNav})=>{return/*#__PURE__*/index_js_default().createElement("div",{id:"nav-container"},/*#__PURE__*/index_js_default().createElement("nav",{id:"top-nav"},/*#__PURE__*/index_js_default().createElement("ul",null,activeNav==="home"?/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{className:"active",to:"/#welcome",title:"Home"}):/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{to:"/#welcome",title:"Home"}),activeNav==="publications"?/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{className:"active",to:"/#publications",title:"Publications"}):/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{to:"/#publications",title:"Publications"}),activeNav==="projects"?/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{className:"active",to:"/#projects",title:"Projects"}):/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{to:"/#projects",title:"Projects"}),activeNav==="teaching"?/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{className:"active",to:"/#teaching",title:"Teaching"}):/*#__PURE__*/index_js_default().createElement(gatsby_plugin_anchor_links/* AnchorLink */.P,{to:"/#teaching",title:"Teaching"}))));};/* harmony default export */ const navBar = (NavBar);
+;// CONCATENATED MODULE: ./src/components/contact.js
+const ContactSection=()=>{return/*#__PURE__*/index_js_default().createElement("div",{id:"contact"},/*#__PURE__*/index_js_default().createElement("span",null,"torre680@umn.edu"),/*#__PURE__*/index_js_default().createElement("span",null,"|"),/*#__PURE__*/index_js_default().createElement("span",null,"Office: Vincent Hall 424"));};/* harmony default export */ const contact = (ContactSection);
+;// CONCATENATED MODULE: ./src/components/layout.js
+// import profile_picture from '../images/square_profile_picture.jpg';
+// The main layout of the website
+const Layout=({children})=>{const{0:activeNav,1:setActiveNav}=(0,index_js_.useState)("home");const handleScroll=()=>{const projOffset=document.getElementById("projects").offsetTop;const pubOffset=document.getElementById("publications").offsetTop;const teachOffset=document.getElementById("teaching").offsetTop;const curOffset=window.pageYOffset;const adjustment=500;if(curOffset>teachOffset-adjustment){setActiveNav("teaching");}else if(curOffset>projOffset-adjustment){setActiveNav("projects");}else if(curOffset>pubOffset-adjustment){setActiveNav("publications");}else{setActiveNav("home");}};(0,index_js_.useEffect)(()=>{window.addEventListener("scroll",handleScroll);},[]);return/*#__PURE__*/index_js_default().createElement("div",{id:"page"},/*#__PURE__*/index_js_default().createElement("header",null,/*#__PURE__*/index_js_default().createElement("div",{id:"header-name"},"Eduardo Torres Davila")),/*#__PURE__*/index_js_default().createElement(navBar,{activeNav:activeNav}),/*#__PURE__*/index_js_default().createElement("main",{className:"container"},children),/*#__PURE__*/index_js_default().createElement("footer",null,/*#__PURE__*/index_js_default().createElement("div",{id:"footer-content"},/*#__PURE__*/index_js_default().createElement(contact,null),/*#__PURE__*/index_js_default().createElement("ul",null,/*#__PURE__*/index_js_default().createElement("li",null,/*#__PURE__*/index_js_default().createElement("a",{href:"https://github.com/etdavila10","aria-label":"github",target:"_blank",rel:"noreferrer"},/*#__PURE__*/index_js_default().createElement(FontAwesomeIcon,{icon:faGithub,size:"2x"}))),/*#__PURE__*/index_js_default().createElement("li",null,/*#__PURE__*/index_js_default().createElement("a",{href:"https://www.facebook.com/eduardo.torresdavila.39/","aria-label":"facebook",target:"_blank",rel:"noreferrer"},/*#__PURE__*/index_js_default().createElement(FontAwesomeIcon,{icon:faFacebook,size:"2x"}))),/*#__PURE__*/index_js_default().createElement("li",null,/*#__PURE__*/index_js_default().createElement("a",{href:"https://www.linkedin.com/in/etorres10/","aria-label":"linkedin",target:"_blank",rel:"noreferrer"},/*#__PURE__*/index_js_default().createElement(FontAwesomeIcon,{icon:faLinkedin,size:"2x"}))))),/*#__PURE__*/index_js_default().createElement("p",null,"powered by ",/*#__PURE__*/index_js_default().createElement("a",{href:"https://www.gatsbyjs.com/",target:"_blank",rel:"noreferrer"},"gatsby"),"\xA0\xA0\xA0|\xA0\xA0\xA0built by Eduardo")));};/* harmony default export */ const layout = (Layout);
+;// CONCATENATED MODULE: ./src/documents/etorresdavila_cv.pdf
+/* harmony default export */ const etorresdavila_cv = (__webpack_require__.p + "static/etorresdavila_cv-89fdf6f876421b3fdc14a08d642d77ef.pdf");
+;// CONCATENATED MODULE: ./src/images/square_profile_picture.jpg
+/* harmony default export */ const square_profile_picture = (__webpack_require__.p + "static/square_profile_picture-13d06e028eaa9bdff9cc12e5a3d6a3e8.jpg");
+;// CONCATENATED MODULE: ./src/components/welcome.js
+const Welcome=()=>{return/*#__PURE__*/index_js_default().createElement("div",{id:"welcome"},/*#__PURE__*/index_js_default().createElement("h1",null,"Welcome!"),/*#__PURE__*/index_js_default().createElement("div",{className:"welcome-section",id:"about-me"},/*#__PURE__*/index_js_default().createElement("img",{id:"profile-picture",src:square_profile_picture,alt:"Self-portrait"}),/*#__PURE__*/index_js_default().createElement("h2",null,"About Me"),/*#__PURE__*/index_js_default().createElement("p",null,"Hello! I am currently a third-year PhD student at the ",/*#__PURE__*/index_js_default().createElement("a",{href:"https://twin-cities.umn.edu/",className:"ext-link",title:"UMN",target:"_blank",rel:"noreferrer"}," University of Minnesota"),". I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and a minor in Computer Science from ",/*#__PURE__*/index_js_default().createElement("a",{href:"https://www.sdsu.edu/",className:"ext-link",title:"SDSU",target:"_blank",rel:"noreferrer"}," San Diego State University"),". Outside of academics, I enjoy the outdoors and climbing!"),/*#__PURE__*/index_js_default().createElement("p",null,"I am also a co-leader of the ",/*#__PURE__*/index_js_default().createElement("a",{href:"http://cause.umn.edu/",className:"ext-link",title:"CAUSE",target:"_blank",rel:"noreferrer"}," Council for the Advancement of Underrepresented Scientists and Engineers")," (CAUSE). We are dedicated to the recruitment, retention, and professional development of graduate students of color and first generation college students within the College of Science and Engineering.")),/*#__PURE__*/index_js_default().createElement("div",{className:"welcome-section",id:"cur-doing"},/*#__PURE__*/index_js_default().createElement("h2",null,"What I'm up to"),/*#__PURE__*/index_js_default().createElement("p",null,"I am currently studying for the Complex Preliminary Exam and a supporting mentor for the ",/*#__PURE__*/index_js_default().createElement("a",{href:"https://geometrynyc.wixsite.com/polymathreu/",className:"ext-link",title:"polymath-jr",target:"_blank",rel:"noreferrer"},"PolyMath Jr. REU")," helping with the Ramsey Theory project.")),/*#__PURE__*/index_js_default().createElement("div",{className:"welcome-section",id:"skills"},/*#__PURE__*/index_js_default().createElement("div",{id:"tech-skills"},/*#__PURE__*/index_js_default().createElement("h2",null,"Technical Skills"),/*#__PURE__*/index_js_default().createElement("ul",null,/*#__PURE__*/index_js_default().createElement("li",null,"Python"),/*#__PURE__*/index_js_default().createElement("li",{className:"bullet"}),/*#__PURE__*/index_js_default().createElement("li",null,"SageMath"),/*#__PURE__*/index_js_default().createElement("li",{className:"bullet"}),/*#__PURE__*/index_js_default().createElement("li",null,"ReactJS"),/*#__PURE__*/index_js_default().createElement("li",{className:"bullet"}),/*#__PURE__*/index_js_default().createElement("li",null,"LaTeX"))),/*#__PURE__*/index_js_default().createElement("div",{id:"soft-skills"},/*#__PURE__*/index_js_default().createElement("h2",null,"Soft Skills"),/*#__PURE__*/index_js_default().createElement("ul",null,/*#__PURE__*/index_js_default().createElement("li",null,"Math Teaching"),/*#__PURE__*/index_js_default().createElement("li",{className:"bullet"}),/*#__PURE__*/index_js_default().createElement("li",null,"Bilingual (English/Spanish)")))),/*#__PURE__*/index_js_default().createElement("div",{className:"welcome-section",id:"research-interest"},/*#__PURE__*/index_js_default().createElement("h2",null,"Research Interest"),/*#__PURE__*/index_js_default().createElement("div",{id:"research-area"},/*#__PURE__*/index_js_default().createElement("p",null,"While at San Diego State, my main interest was in algebraic combinatorics. In particular, I studied relationships between numerical semigroups and polytopes under Dr. Christopher O'Neill. I also participated in MSRI-UP where I had the opportunity to work with Lie algebras under Dr. Pamela E. Harris. Since starting graduate school, I found myself drawn to the application of mathematics to real world problems and because of this I have started reading under Dr. Richard McGehee about the mathematics behind climate change."),/*#__PURE__*/index_js_default().createElement("a",{href:etorresdavila_cv},/*#__PURE__*/index_js_default().createElement("div",{id:"cv-container"},"Curriculum",/*#__PURE__*/index_js_default().createElement("br",null),"Vitae")))));};/* harmony default export */ const welcome = (Welcome);
+// EXTERNAL MODULE: ./.cache/gatsby-browser-entry.js + 8 modules
+var gatsby_browser_entry = __webpack_require__(7609);
+;// CONCATENATED MODULE: ./src/components/publication.js
+const Publication=props=>{const publication=props.publication;const title=publication.title;const coAuthors=publication.coAuthors;const submissionStatus=publication.submissionStatus;const url=publication.url;const site=publication.Site;const journal=publication.journal;return/*#__PURE__*/index_js_default().createElement("div",{className:"publication"},/*#__PURE__*/index_js_default().createElement("h3",null,/*#__PURE__*/index_js_default().createElement("a",{href:url},title)),/*#__PURE__*/index_js_default().createElement("span",null,"In collaboration with"),coAuthors.map((author,index)=>{if(index===coAuthors.length-1){return/*#__PURE__*/index_js_default().createElement("span",{key:index},"& ",author,".");}else if(coAuthors.length===2){return/*#__PURE__*/index_js_default().createElement("span",{key:index},author);}return/*#__PURE__*/index_js_default().createElement("span",{key:index},author,",");}),submissionStatus==='Submitted'&&/*#__PURE__*/index_js_default().createElement("span",null,/*#__PURE__*/index_js_default().createElement("em",null,"Submitted"),"."),submissionStatus==='Accepted'&&/*#__PURE__*/index_js_default().createElement("span",null,/*#__PURE__*/index_js_default().createElement("em",null,journal),"."),site&&/*#__PURE__*/index_js_default().createElement("span",null,/*#__PURE__*/index_js_default().createElement("em",null,site),"."));};/* harmony default export */ const components_publication = (Publication);
+;// CONCATENATED MODULE: ./src/components/publicationSection.js
+const PublicationSection=()=>{const data=(0,gatsby_browser_entry.useStaticQuery)("709423395");const publications=data.allPublicationsJson.edges;return/*#__PURE__*/index_js_default().createElement("div",{id:"publications"},/*#__PURE__*/index_js_default().createElement("h1",null,"Publications"),/*#__PURE__*/index_js_default().createElement("div",{className:"publication-section",id:"research-papers"},/*#__PURE__*/index_js_default().createElement("h2",null,"Academic Research"),publications.filter(publication=>publication.node.type==='researchPaper').map(publication=>{return/*#__PURE__*/index_js_default().createElement(components_publication,{key:publication.node.id,publication:publication.node});})),/*#__PURE__*/index_js_default().createElement("div",{className:"publication-section",id:"writing-contributions"},/*#__PURE__*/index_js_default().createElement("h2",null,"Writing Contributions"),publications.filter(publication=>publication.node.type==='writingContribution').map(publication=>{return/*#__PURE__*/index_js_default().createElement(components_publication,{key:publication.node.id,publication:publication.node});})));};/* harmony default export */ const publicationSection = (PublicationSection);
+;// CONCATENATED MODULE: ./src/components/project.js
+const Project=props=>{const project=props.project;const title=project.title;const description=project.description;const coAuthors=project.coAuthors;// const languages = project.languages;
+// const frameworks = project.frameworks;
+const url=project.url;return/*#__PURE__*/index_js_default().createElement("div",{className:"project"},/*#__PURE__*/index_js_default().createElement("h3",null,/*#__PURE__*/index_js_default().createElement("a",{href:url},title)),/*#__PURE__*/index_js_default().createElement("p",null,description),/*#__PURE__*/index_js_default().createElement("span",null,"In collaboration with "),coAuthors.map((author,index)=>{if(index===coAuthors.length-1){return/*#__PURE__*/index_js_default().createElement("span",{key:index}," & ",author,".");}else if(coAuthors.length===2){return/*#__PURE__*/index_js_default().createElement("span",{key:index}," ",author);}return/*#__PURE__*/index_js_default().createElement("span",{key:index}," ",author,",");}));};/* harmony default export */ const components_project = (Project);
+;// CONCATENATED MODULE: ./src/components/projectSection.js
+const ProjectSection=()=>{const data=(0,gatsby_browser_entry.useStaticQuery)("1321542477");const projects=data.allProjectsJson.edges;return/*#__PURE__*/index_js_default().createElement("div",{id:"projects"},/*#__PURE__*/index_js_default().createElement("h1",null,"Projects"),/*#__PURE__*/index_js_default().createElement("div",{className:"project-section"},projects.map(project=>{return/*#__PURE__*/index_js_default().createElement(components_project,{key:project.node.id,project:project.node});})));};/* harmony default export */ const projectSection = (ProjectSection);
+;// CONCATENATED MODULE: ./src/components/teaching.js
+const TeachingSection=()=>{return/*#__PURE__*/index_js_default().createElement("div",{id:"teaching"},/*#__PURE__*/index_js_default().createElement("h1",null,"Teaching"),/*#__PURE__*/index_js_default().createElement("h2",null,"Spring 2022"),/*#__PURE__*/index_js_default().createElement("p",null,"Teaching Assistant for Math 1271 - Calculus I"));};/* harmony default export */ const teaching = (TeachingSection);
+;// CONCATENATED MODULE: ./src/pages/index.js
+// Landing Page
+const IndexPage=()=>{return/*#__PURE__*/index_js_default().createElement(layout,null,/*#__PURE__*/index_js_default().createElement("title",null,"Eduardo Torres Davila"),/*#__PURE__*/index_js_default().createElement(welcome,null),/*#__PURE__*/index_js_default().createElement(publicationSection,null),/*#__PURE__*/index_js_default().createElement(projectSection,null),/*#__PURE__*/index_js_default().createElement(teaching,null));};/* harmony default export */ const pages = (IndexPage);
 
 /***/ }),
 
-/***/ "./node_modules/@fortawesome/react-fontawesome/index.es.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/@fortawesome/react-fontawesome/index.es.js ***!
-  \*****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "FontAwesomeIcon": () => (/* binding */ FontAwesomeIcon)
-/* harmony export */ });
-/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    enumerableOnly && (symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    })), keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread2(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = null != arguments[i] ? arguments[i] : {};
-    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
-      _defineProperty(target, key, source[key]);
-    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
-      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-    });
-  }
-
-  return target;
-}
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, _typeof(obj);
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-
-  var target = _objectWithoutPropertiesLoose(source, excluded);
-
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-function _toConsumableArray(arr) {
-  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread();
-}
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return _arrayLikeToArray(arr);
-}
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
-
-  return arr2;
-}
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-// Get CSS class list from a props object
-function classList(props) {
-  var _classes;
-
-  var beat = props.beat,
-      fade = props.fade,
-      beatFade = props.beatFade,
-      bounce = props.bounce,
-      shake = props.shake,
-      flash = props.flash,
-      spin = props.spin,
-      spinPulse = props.spinPulse,
-      spinReverse = props.spinReverse,
-      pulse = props.pulse,
-      fixedWidth = props.fixedWidth,
-      inverse = props.inverse,
-      border = props.border,
-      listItem = props.listItem,
-      flip = props.flip,
-      size = props.size,
-      rotation = props.rotation,
-      pull = props.pull; // map of CSS class names to properties
-
-  var classes = (_classes = {
-    'fa-beat': beat,
-    'fa-fade': fade,
-    'fa-beat-fade': beatFade,
-    'fa-bounce': bounce,
-    'fa-shake': shake,
-    'fa-flash': flash,
-    'fa-spin': spin,
-    'fa-spin-reverse': spinReverse,
-    'fa-spin-pulse': spinPulse,
-    'fa-pulse': pulse,
-    'fa-fw': fixedWidth,
-    'fa-inverse': inverse,
-    'fa-border': border,
-    'fa-li': listItem,
-    'fa-flip': flip === true,
-    'fa-flip-horizontal': flip === 'horizontal' || flip === 'both',
-    'fa-flip-vertical': flip === 'vertical' || flip === 'both'
-  }, _defineProperty(_classes, "fa-".concat(size), typeof size !== 'undefined' && size !== null), _defineProperty(_classes, "fa-rotate-".concat(rotation), typeof rotation !== 'undefined' && rotation !== null && rotation !== 0), _defineProperty(_classes, "fa-pull-".concat(pull), typeof pull !== 'undefined' && pull !== null), _defineProperty(_classes, 'fa-swap-opacity', props.swapOpacity), _classes); // map over all the keys in the classes object
-  // return an array of the keys where the value for the key is not null
-
-  return Object.keys(classes).map(function (key) {
-    return classes[key] ? key : null;
-  }).filter(function (key) {
-    return key;
-  });
-}
-
-// Camelize taken from humps
-// humps is copyright © 2012+ Dom Christie
-// Released under the MIT license.
-// Performant way to determine if object coerces to a number
-function _isNumerical(obj) {
-  obj = obj - 0; // eslint-disable-next-line no-self-compare
-
-  return obj === obj;
-}
-
-function camelize(string) {
-  if (_isNumerical(string)) {
-    return string;
-  } // eslint-disable-next-line no-useless-escape
-
-
-  string = string.replace(/[\-_\s]+(.)?/g, function (match, chr) {
-    return chr ? chr.toUpperCase() : '';
-  }); // Ensure 1st char is always lowercase
-
-  return string.substr(0, 1).toLowerCase() + string.substr(1);
-}
-
-var _excluded = ["style"];
-
-function capitalize(val) {
-  return val.charAt(0).toUpperCase() + val.slice(1);
-}
-
-function styleToObject(style) {
-  return style.split(';').map(function (s) {
-    return s.trim();
-  }).filter(function (s) {
-    return s;
-  }).reduce(function (acc, pair) {
-    var i = pair.indexOf(':');
-    var prop = camelize(pair.slice(0, i));
-    var value = pair.slice(i + 1).trim();
-    prop.startsWith('webkit') ? acc[capitalize(prop)] = value : acc[prop] = value;
-    return acc;
-  }, {});
-}
-
-function convert(createElement, element) {
-  var extraProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-  if (typeof element === 'string') {
-    return element;
-  }
-
-  var children = (element.children || []).map(function (child) {
-    return convert(createElement, child);
-  });
-  /* eslint-disable dot-notation */
-
-  var mixins = Object.keys(element.attributes || {}).reduce(function (acc, key) {
-    var val = element.attributes[key];
-
-    switch (key) {
-      case 'class':
-        acc.attrs['className'] = val;
-        delete element.attributes['class'];
-        break;
-
-      case 'style':
-        acc.attrs['style'] = styleToObject(val);
-        break;
-
-      default:
-        if (key.indexOf('aria-') === 0 || key.indexOf('data-') === 0) {
-          acc.attrs[key.toLowerCase()] = val;
-        } else {
-          acc.attrs[camelize(key)] = val;
-        }
-
-    }
-
-    return acc;
-  }, {
-    attrs: {}
-  });
-
-  var _extraProps$style = extraProps.style,
-      existingStyle = _extraProps$style === void 0 ? {} : _extraProps$style,
-      remaining = _objectWithoutProperties(extraProps, _excluded);
-
-  mixins.attrs['style'] = _objectSpread2(_objectSpread2({}, mixins.attrs['style']), existingStyle);
-  /* eslint-enable */
-
-  return createElement.apply(void 0, [element.tag, _objectSpread2(_objectSpread2({}, mixins.attrs), remaining)].concat(_toConsumableArray(children)));
-}
-
-var PRODUCTION = false;
-
-try {
-  PRODUCTION = "development" === 'production';
-} catch (e) {}
-
-function log () {
-  if (!PRODUCTION && console && typeof console.error === 'function') {
-    var _console;
-
-    (_console = console).error.apply(_console, arguments);
-  }
-}
-
-function normalizeIconArgs(icon) {
-  // this has everything that it needs to be rendered which means it was probably imported
-  // directly from an icon svg package
-  if (icon && _typeof(icon) === 'object' && icon.prefix && icon.iconName && icon.icon) {
-    return icon;
-  }
-
-  if (_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.parse.icon) {
-    return _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.parse.icon(icon);
-  } // if the icon is null, there's nothing to do
-
-
-  if (icon === null) {
-    return null;
-  } // if the icon is an object and has a prefix and an icon name, return it
-
-
-  if (icon && _typeof(icon) === 'object' && icon.prefix && icon.iconName) {
-    return icon;
-  } // if it's an array with length of two
-
-
-  if (Array.isArray(icon) && icon.length === 2) {
-    // use the first item as prefix, second as icon name
-    return {
-      prefix: icon[0],
-      iconName: icon[1]
-    };
-  } // if it's a string, use it as the icon name
-
-
-  if (typeof icon === 'string') {
-    return {
-      prefix: 'fas',
-      iconName: icon
-    };
-  }
-}
-
-// creates an object with a key of key
-// and a value of value
-// if certain conditions are met
-function objectWithKey(key, value) {
-  // if the value is a non-empty array
-  // or it's not an array but it is truthy
-  // then create the object with the key and the value
-  // if not, return an empty array
-  return Array.isArray(value) && value.length > 0 || !Array.isArray(value) && value ? _defineProperty({}, key, value) : {};
-}
-
-var FontAwesomeIcon = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().forwardRef(function (props, ref) {
-  var iconArgs = props.icon,
-      maskArgs = props.mask,
-      symbol = props.symbol,
-      className = props.className,
-      title = props.title,
-      titleId = props.titleId,
-      maskId = props.maskId;
-  var iconLookup = normalizeIconArgs(iconArgs);
-  var classes = objectWithKey('classes', [].concat(_toConsumableArray(classList(props)), _toConsumableArray(className.split(' '))));
-  var transform = objectWithKey('transform', typeof props.transform === 'string' ? _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.parse.transform(props.transform) : props.transform);
-  var mask = objectWithKey('mask', normalizeIconArgs(maskArgs));
-  var renderedIcon = (0,_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_0__.icon)(iconLookup, _objectSpread2(_objectSpread2(_objectSpread2(_objectSpread2({}, classes), transform), mask), {}, {
-    symbol: symbol,
-    title: title,
-    titleId: titleId,
-    maskId: maskId
-  }));
-
-  if (!renderedIcon) {
-    log('Could not find icon', iconLookup);
-    return null;
-  }
-
-  var abstract = renderedIcon.abstract;
-  var extraProps = {
-    ref: ref
-  };
-  Object.keys(props).forEach(function (key) {
-    // eslint-disable-next-line no-prototype-builtins
-    if (!FontAwesomeIcon.defaultProps.hasOwnProperty(key)) {
-      extraProps[key] = props[key];
-    }
-  });
-  return convertCurry(abstract[0], extraProps);
-});
-FontAwesomeIcon.displayName = 'FontAwesomeIcon';
-FontAwesomeIcon.propTypes = {
-  beat: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  border: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  beatFade: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  bounce: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  fade: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  flash: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  mask: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().array), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)]),
-  maskId: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  fixedWidth: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  inverse: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  flip: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOf([true, false, 'horizontal', 'vertical', 'both']),
-  icon: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().array), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)]),
-  listItem: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  pull: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOf(['right', 'left']),
-  pulse: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  rotation: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOf([0, 90, 180, 270]),
-  shake: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  size: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOf(['2xs', 'xs', 'sm', 'lg', 'xl', '2xl', '1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x']),
-  spin: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  spinPulse: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  spinReverse: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-  symbol: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)]),
-  title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  titleId: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-  transform: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)]),
-  swapOpacity: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
-};
-FontAwesomeIcon.defaultProps = {
-  border: false,
-  className: '',
-  mask: null,
-  maskId: null,
-  fixedWidth: false,
-  inverse: false,
-  flip: false,
-  icon: null,
-  listItem: false,
-  pull: null,
-  pulse: false,
-  rotation: null,
-  size: null,
-  spin: false,
-  spinPulse: false,
-  spinReverse: false,
-  beat: false,
-  fade: false,
-  beatFade: false,
-  bounce: false,
-  shake: false,
-  symbol: false,
-  title: '',
-  titleId: null,
-  transform: null,
-  swapOpacity: false
-};
-var convertCurry = convert.bind(null, (react__WEBPACK_IMPORTED_MODULE_1___default().createElement));
-
-
-
-
-/***/ }),
-
-/***/ "./src/documents/etorresdavila_cv.pdf":
-/*!********************************************!*\
-  !*** ./src/documents/etorresdavila_cv.pdf ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "static/etorresdavila_cv-89fdf6f876421b3fdc14a08d642d77ef.pdf");
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-anchor-links/components/AnchorLink.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/gatsby-plugin-anchor-links/components/AnchorLink.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.AnchorLink = AnchorLink;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _gatsby = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-
-var _propTypes = _interopRequireDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
-
-var _utils = __webpack_require__(/*! ../utils */ "./node_modules/gatsby-plugin-anchor-links/utils.js");
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-function ownKeys(object, enumerableOnly) {
-  var keys = Object.keys(object);
-
-  if (Object.getOwnPropertySymbols) {
-    var symbols = Object.getOwnPropertySymbols(object);
-    if (enumerableOnly) symbols = symbols.filter(function (sym) {
-      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-    });
-    keys.push.apply(keys, symbols);
-  }
-
-  return keys;
-}
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        _defineProperty(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
-  }
-
-  return target;
-}
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-AnchorLink.propTypes = {
-  to: _propTypes["default"].string.isRequired,
-  title: _propTypes["default"].string,
-  className: _propTypes["default"].string,
-  stripHash: _propTypes["default"].bool,
-  gatsbyLinkProps: _propTypes["default"].object,
-  onAnchorLinkClick: _propTypes["default"].func,
-  children: _propTypes["default"].node
-};
-
-function AnchorLink(_ref) {
-  var to = _ref.to,
-      title = _ref.title,
-      children = _ref.children,
-      className = _ref.className,
-      _ref$stripHash = _ref.stripHash,
-      stripHash = _ref$stripHash === void 0 ? false : _ref$stripHash,
-      _ref$gatsbyLinkProps = _ref.gatsbyLinkProps,
-      gatsbyLinkProps = _ref$gatsbyLinkProps === void 0 ? {} : _ref$gatsbyLinkProps,
-      onAnchorLinkClick = _ref.onAnchorLinkClick;
-  var onClickHandler = stripHash ? _utils.handleStrippedLinkClick : _utils.handleLinkClick;
-
-  var linkProps = _objectSpread(_objectSpread({}, gatsbyLinkProps), {}, {
-    /**
-     * Spread optional gatsbyLinkProps object in fist, so our specific props will override
-     */
-    to: stripHash ? (0, _utils.stripHashedLocation)(to) : to,
-    onClick: function onClick(e) {
-      return onClickHandler(to, e, onAnchorLinkClick);
-    }
-  });
-  /**
-   * Optional props
-   */
-
-
-  if (title) linkProps.title = title;
-  if (className) linkProps.className = className;
-  return /*#__PURE__*/_react["default"].createElement(_gatsby.Link, linkProps, children ? children : title);
-}
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-anchor-links/errors.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/gatsby-plugin-anchor-links/errors.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.INVALID_HASH = exports.IMPROPPER_FORMATTING = void 0;
-var IMPROPPER_FORMATTING = 'Anchor path should contain an absolute root path `/` and selector `#` Ex: `/about#team`';
-exports.IMPROPPER_FORMATTING = IMPROPPER_FORMATTING;
-var INVALID_HASH = 'Anchor Links plugin attempted to scroll to an invalid hash on route change.';
-exports.INVALID_HASH = INVALID_HASH;
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-anchor-links/index.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/gatsby-plugin-anchor-links/index.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-Object.defineProperty(exports, "AnchorLink", ({
-  enumerable: true,
-  get: function get() {
-    return _AnchorLink.AnchorLink;
-  }
-}));
-
-var _AnchorLink = __webpack_require__(/*! ./components/AnchorLink */ "./node_modules/gatsby-plugin-anchor-links/components/AnchorLink.js");
-
-/***/ }),
-
-/***/ "./node_modules/gatsby-plugin-anchor-links/utils.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/gatsby-plugin-anchor-links/utils.js ***!
-  \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.logWarning = logWarning;
-exports.scroller = scroller;
-exports.handleLinkClick = handleLinkClick;
-exports.handleStrippedLinkClick = handleStrippedLinkClick;
-exports.stripHashedLocation = stripHashedLocation;
-exports.checkHash = checkHash;
-exports.isDevelopment = exports.isBrowser = void 0;
-
-var _scrollToElement = _interopRequireDefault(__webpack_require__(/*! scroll-to-element */ "./node_modules/scroll-to-element/index.js"));
-
-var _gatsby = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-
-var errorTypes = _interopRequireWildcard(__webpack_require__(/*! ./errors */ "./node_modules/gatsby-plugin-anchor-links/errors.js"));
-
-function _getRequireWildcardCache() {
-  if (typeof WeakMap !== "function") return null;
-  var cache = new WeakMap();
-
-  _getRequireWildcardCache = function _getRequireWildcardCache() {
-    return cache;
-  };
-
-  return cache;
-}
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  }
-
-  if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") {
-    return {
-      "default": obj
-    };
-  }
-
-  var cache = _getRequireWildcardCache();
-
-  if (cache && cache.has(obj)) {
-    return cache.get(obj);
-  }
-
-  var newObj = {};
-  var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
-
-  for (var key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
-      var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
-
-      if (desc && (desc.get || desc.set)) {
-        Object.defineProperty(newObj, key, desc);
-      } else {
-        newObj[key] = obj[key];
-      }
-    }
-  }
-
-  newObj["default"] = obj;
-
-  if (cache) {
-    cache.set(obj, newObj);
-  }
-
-  return newObj;
-}
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    "default": obj
-  };
-}
-
-function _slicedToArray(arr, i) {
-  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
-}
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
-}
-
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
-
-function _iterableToArrayLimit(arr, i) {
-  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-var isBrowser = typeof window !== 'undefined';
-exports.isBrowser = isBrowser;
-var isDevelopment = "development" !== 'production';
-exports.isDevelopment = isDevelopment;
-
-function logWarning(message) {
-  if (isDevelopment) console.warn(message);
-}
-
-function scroller(target) {
-  var offset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-  var duration = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1000;
-  (0, _scrollToElement["default"])(target, {
-    duration: duration,
-    offset: offset
-  });
-}
-
-function handleLinkClick(to, e, onAnchorLinkClick) {
-  /**
-   * Log warnings on click
-   */
-  var improperFormatting = !to.includes('/') || !to.includes('#');
-  if (improperFormatting) logWarning(errorTypes.IMPROPPER_FORMATTING);
-
-  if (isBrowser && to.includes('#')) {
-    var _to$split = to.split('#'),
-        _to$split2 = _slicedToArray(_to$split, 2),
-        anchorPath = _to$split2[0],
-        anchor = _to$split2[1];
-
-    if (window.location.pathname === (0, _gatsby.withPrefix)(anchorPath)) {
-      e.preventDefault();
-      scroller("#".concat(anchor), window.gatsby_scroll_offset, window.gatsby_scroll_duration);
-    }
-  }
-
-  if (onAnchorLinkClick) onAnchorLinkClick();
-}
-
-function handleStrippedLinkClick(to, e, onAnchorLinkClick) {
-  /**
-   * Log warnings on click
-   */
-  var improperFormatting = !to.includes('/') || !to.includes('#');
-  if (improperFormatting) logWarning(errorTypes.IMPROPPER_FORMATTING);
-
-  var _to$split3 = to.split('#'),
-      _to$split4 = _slicedToArray(_to$split3, 2),
-      anchorPath = _to$split4[0],
-      anchor = _to$split4[1];
-  /**
-   * Determine location, run scroller or set window variable
-   */
-
-
-  var isSamePage = isBrowser && window.location.pathname === anchorPath;
-  var isDifferentPage = isBrowser && window.location.pathname !== anchorPath;
-
-  if (isSamePage) {
-    e.preventDefault();
-    scroller("#".concat(anchor), window.gatsby_scroll_offset, window.gatsby_scroll_duration);
-  }
-
-  if (isDifferentPage) {
-    window.gatsby_scroll_hash = "#".concat(anchor);
-  }
-
-  if (onAnchorLinkClick) onAnchorLinkClick();
-}
-
-function stripHashedLocation(to) {
-  return to.split('#')[0];
-}
-
-function checkHash(location, offset) {
-  var hash = location.hash,
-      selector = hash ? hash.substr(1) : null,
-      validElement = selector ? document.getElementById(selector) : null;
-  if (hash && Boolean(validElement)) scroller(hash, offset);else if (hash && selector && !validElement) logWarning(errorTypes.INVALID_HASH);
-}
-
-/***/ }),
-
-/***/ "./src/components/contact.js":
-/*!***********************************!*\
-  !*** ./src/components/contact.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-const ContactSection = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "contact"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "torre680@umn.edu"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "|"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "Office: Vincent Hall 424"));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ContactSection);
-
-/***/ }),
-
-/***/ "./src/components/layout.js":
-/*!**********************************!*\
-  !*** ./src/components/layout.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js");
-/* harmony import */ var _navBar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./navBar */ "./src/components/navBar.js");
-/* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./contact */ "./src/components/contact.js");
-/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../sass/index.scss */ "./src/sass/index.scss");
-/* harmony import */ var _sass_index_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_sass_index_scss__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
- // import profile_picture from '../images/square_profile_picture.jpg';
-
- // The main layout of the website
-
-const Layout = ({
-  children
-}) => {
-  const {
-    0: activeNav,
-    1: setActiveNav
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("home");
-
-  const handleScroll = () => {
-    const projOffset = document.getElementById("projects").offsetTop;
-    const pubOffset = document.getElementById("publications").offsetTop;
-    const teachOffset = document.getElementById("teaching").offsetTop;
-    const curOffset = window.pageYOffset;
-    const adjustment = 500;
-
-    if (curOffset > teachOffset - adjustment) {
-      setActiveNav("teaching");
-    } else if (curOffset > projOffset - adjustment) {
-      setActiveNav("projects");
-    } else if (curOffset > pubOffset - adjustment) {
-      setActiveNav("publications");
-    } else {
-      setActiveNav("home");
-    }
-  };
-
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    window.addEventListener("scroll", handleScroll);
-  }, []);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "page"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "header-name"
-  }, "Eduardo Torres Davila")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_navBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    activeNav: activeNav
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
-    className: "container"
-  }, children), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "footer-content"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contact__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://github.com/etdavila10",
-    "aria-label": "github",
-    target: "_blank",
-    rel: "noreferrer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faGithub,
-    size: "2x"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://www.facebook.com/eduardo.torresdavila.39/",
-    "aria-label": "facebook",
-    target: "_blank",
-    rel: "noreferrer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faFacebook,
-    size: "2x"
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://www.linkedin.com/in/etorres10/",
-    "aria-label": "linkedin",
-    target: "_blank",
-    rel: "noreferrer"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__.FontAwesomeIcon, {
-    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__.faLinkedin,
-    size: "2x"
-  }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "powered by ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://www.gatsbyjs.com/",
-    target: "_blank",
-    rel: "noreferrer"
-  }, "gatsby"), "\xA0\xA0\xA0|\xA0\xA0\xA0built by Eduardo")));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Layout);
-
-/***/ }),
-
-/***/ "./src/components/navBar.js":
-/*!**********************************!*\
-  !*** ./src/components/navBar.js ***!
-  \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby-plugin-anchor-links */ "./node_modules/gatsby-plugin-anchor-links/index.js");
-
-
-
-const NavBar = ({
-  activeNav
-}) => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "nav-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("nav", {
-    id: "top-nav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, activeNav === "home" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    className: "active",
-    to: "/#welcome",
-    title: "Home"
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    to: "/#welcome",
-    title: "Home"
-  }), activeNav === "publications" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    className: "active",
-    to: "/#publications",
-    title: "Publications"
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    to: "/#publications",
-    title: "Publications"
-  }), activeNav === "projects" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    className: "active",
-    to: "/#projects",
-    title: "Projects"
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    to: "/#projects",
-    title: "Projects"
-  }), activeNav === "teaching" ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    className: "active",
-    to: "/#teaching",
-    title: "Teaching"
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby_plugin_anchor_links__WEBPACK_IMPORTED_MODULE_1__.AnchorLink, {
-    to: "/#teaching",
-    title: "Teaching"
-  }))));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (NavBar);
-
-/***/ }),
-
-/***/ "./src/components/project.js":
-/*!***********************************!*\
-  !*** ./src/components/project.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-const Project = props => {
-  const project = props.project;
-  const title = project.title;
-  const description = project.description;
-  const coAuthors = project.coAuthors; // const languages = project.languages;
-  // const frameworks = project.frameworks;
-
-  const url = project.url;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "project"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: url
-  }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "In collaboration with "), coAuthors.map((author, index) => {
-    if (index === coAuthors.length - 1) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        key: index
-      }, " & ", author, ".");
-    } else if (coAuthors.length === 2) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        key: index
-      }, " ", author);
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-      key: index
-    }, " ", author, ",");
-  }));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Project);
-
-/***/ }),
-
-/***/ "./src/components/projectSection.js":
-/*!******************************************!*\
-  !*** ./src/components/projectSection.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _public_page_data_sq_d_1321542477_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/1321542477.json */ "./public/page-data/sq/d/1321542477.json");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./project */ "./src/components/project.js");
-
-
-
-
-const ProjectSection = () => {
-  const data = _public_page_data_sq_d_1321542477_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  const projects = data.allProjectsJson.edges;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    id: "projects"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "Projects"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "project-section"
-  }, projects.map(project => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_project__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: project.node.id,
-      project: project.node
-    });
-  })));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ProjectSection);
-
-/***/ }),
-
-/***/ "./src/components/publication.js":
-/*!***************************************!*\
-  !*** ./src/components/publication.js ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-const Publication = props => {
-  const publication = props.publication;
-  const title = publication.title;
-  const coAuthors = publication.coAuthors;
-  const submissionStatus = publication.submissionStatus;
-  const url = publication.url;
-  const site = publication.Site;
-  const journal = publication.journal;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "publication"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: url
-  }, title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "In collaboration with"), coAuthors.map((author, index) => {
-    if (index === coAuthors.length - 1) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        key: index
-      }, "& ", author, ".");
-    } else if (coAuthors.length === 2) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        key: index
-      }, author);
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-      key: index
-    }, author, ",");
-  }), submissionStatus === 'Submitted' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("em", null, "Submitted"), "."), submissionStatus === 'Accepted' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("em", null, journal), "."), site && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("em", null, site), "."));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Publication);
-
-/***/ }),
-
-/***/ "./src/components/publicationSection.js":
-/*!**********************************************!*\
-  !*** ./src/components/publicationSection.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _public_page_data_sq_d_709423395_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../public/page-data/sq/d/709423395.json */ "./public/page-data/sq/d/709423395.json");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _publication__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./publication */ "./src/components/publication.js");
-
-
-
-
-const PublicationSection = () => {
-  const data = _public_page_data_sq_d_709423395_json__WEBPACK_IMPORTED_MODULE_0__.data;
-  const publications = data.allPublicationsJson.edges;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    id: "publications"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h1", null, "Publications"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "publication-section",
-    id: "research-papers"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, "Academic Research"), publications.filter(publication => publication.node.type === 'researchPaper').map(publication => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_publication__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: publication.node.id,
-      publication: publication.node
-    });
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", {
-    className: "publication-section",
-    id: "writing-contributions"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("h2", null, "Writing Contributions"), publications.filter(publication => publication.node.type === 'writingContribution').map(publication => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_publication__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      key: publication.node.id,
-      publication: publication.node
-    });
-  })));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PublicationSection);
-
-/***/ }),
-
-/***/ "./src/components/teaching.js":
-/*!************************************!*\
-  !*** ./src/components/teaching.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-const TeachingSection = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "teaching"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Teaching"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Spring 2022"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Teaching Assistant for Math 1271 - Calculus I"));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TeachingSection);
-
-/***/ }),
-
-/***/ "./src/components/welcome.js":
-/*!***********************************!*\
-  !*** ./src/components/welcome.js ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _documents_etorresdavila_cv_pdf__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../documents/etorresdavila_cv.pdf */ "./src/documents/etorresdavila_cv.pdf");
-/* harmony import */ var _images_square_profile_picture_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/square_profile_picture.jpg */ "./src/images/square_profile_picture.jpg");
-
-
-
-
-const Welcome = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "welcome"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, "Welcome!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "welcome-section",
-    id: "about-me"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    id: "profile-picture",
-    src: _images_square_profile_picture_jpg__WEBPACK_IMPORTED_MODULE_2__["default"],
-    alt: "Self-portrait"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "About Me"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Hello! I am currently a third-year PhD student at the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://twin-cities.umn.edu/",
-    className: "ext-link",
-    title: "UMN",
-    target: "_blank",
-    rel: "noreferrer"
-  }, " University of Minnesota"), ". I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and a minor in Computer Science from ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://www.sdsu.edu/",
-    className: "ext-link",
-    title: "SDSU",
-    target: "_blank",
-    rel: "noreferrer"
-  }, " San Diego State University"), ". Outside of academics, I enjoy the outdoors and climbing!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "I am also a co-leader of the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "http://cause.umn.edu/",
-    className: "ext-link",
-    title: "CAUSE",
-    target: "_blank",
-    rel: "noreferrer"
-  }, " Council for the Advancement of Underrepresented Scientists and Engineers"), " (CAUSE). We are dedicated to the recruitment, retention, and professional development of graduate students of color and first generation college students within the College of Science and Engineering.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "welcome-section",
-    id: "cur-doing"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "What I'm up to"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "I am currently studying for the Complex Preliminary Exam and a supporting mentor for the ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: "https://geometrynyc.wixsite.com/polymathreu/",
-    className: "ext-link",
-    title: "polymath-jr",
-    target: "_blank",
-    rel: "noreferrer"
-  }, "PolyMath Jr. REU"), " helping with the Ramsey Theory project.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "welcome-section",
-    id: "skills"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "tech-skills"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Technical Skills"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Python"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "bullet"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "SageMath"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "bullet"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "ReactJS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "bullet"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "LaTeX"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "soft-skills"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Soft Skills"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Math Teaching"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "bullet"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, "Bilingual (English/Spanish)")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "welcome-section",
-    id: "research-interest"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, "Research Interest"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "research-area"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "While at San Diego State, my main interest was in algebraic combinatorics. In particular, I studied relationships between numerical semigroups and polytopes under Dr. Christopher O'Neill. I also participated in MSRI-UP where I had the opportunity to work with Lie algebras under Dr. Pamela E. Harris. Since starting graduate school, I found myself drawn to the application of mathematics to real world problems and because of this I have started reading under Dr. Richard McGehee about the mathematics behind climate change."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    href: _documents_etorresdavila_cv_pdf__WEBPACK_IMPORTED_MODULE_1__["default"]
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "cv-container"
-  }, "Curriculum", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("br", null), "Vitae")))));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Welcome);
-
-/***/ }),
-
-/***/ "./src/pages/index.js":
-/*!****************************!*\
-  !*** ./src/pages/index.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-/* harmony import */ var _components_welcome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/welcome */ "./src/components/welcome.js");
-/* harmony import */ var _components_publicationSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/publicationSection */ "./src/components/publicationSection.js");
-/* harmony import */ var _components_projectSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/projectSection */ "./src/components/projectSection.js");
-/* harmony import */ var _components_teaching__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/teaching */ "./src/components/teaching.js");
-
-
-
-
-
- // Landing Page
-
-const IndexPage = () => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Eduardo Torres Davila"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_welcome__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_publicationSection__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_projectSection__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_teaching__WEBPACK_IMPORTED_MODULE_5__["default"], null));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
-
-/***/ }),
-
-/***/ "./src/sass/index.scss":
-/*!*****************************!*\
-  !*** ./src/sass/index.scss ***!
-  \*****************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./node_modules/performance-now/lib/performance-now.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/performance-now/lib/performance-now.js ***!
-  \*************************************************************/
+/***/ 75:
 /***/ (function(module) {
 
 // Generated by CoffeeScript 1.12.2
@@ -7707,13 +6332,10 @@ const IndexPage = () => {
 
 /***/ }),
 
-/***/ "./node_modules/raf/index.js":
-/*!***********************************!*\
-  !*** ./node_modules/raf/index.js ***!
-  \***********************************/
+/***/ 4087:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var now = __webpack_require__(/*! performance-now */ "./node_modules/performance-now/lib/performance-now.js")
+var now = __webpack_require__(75)
   , root = typeof window === 'undefined' ? global : window
   , vendors = ['moz', 'webkit']
   , suffix = 'AnimationFrame'
@@ -7792,10 +6414,7 @@ module.exports.polyfill = function(object) {
 
 /***/ }),
 
-/***/ "./node_modules/scroll-to-element/ease.js":
-/*!************************************************!*\
-  !*** ./node_modules/scroll-to-element/ease.js ***!
-  \************************************************/
+/***/ 8081:
 /***/ ((__unused_webpack_module, exports) => {
 
 // easing functions from "Tween.js"
@@ -8000,10 +6619,7 @@ exports["in-out-elastic"] = exports.inOutElastic;
 
 /***/ }),
 
-/***/ "./node_modules/scroll-to-element/emitter.js":
-/*!***************************************************!*\
-  !*** ./node_modules/scroll-to-element/emitter.js ***!
-  \***************************************************/
+/***/ 1842:
 /***/ ((module) => {
 
 function Emitter(obj) {
@@ -8108,13 +6724,10 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/scroll-to-element/index.js":
-/*!*************************************************!*\
-  !*** ./node_modules/scroll-to-element/index.js ***!
-  \*************************************************/
+/***/ 2618:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var scroll = __webpack_require__(/*! ./scroll-to */ "./node_modules/scroll-to-element/scroll-to.js");
+var scroll = __webpack_require__(5246);
 
 function calculateScrollOffset(elem, additionalOffset, alignment) {
   var body = document.body,
@@ -8150,14 +6763,11 @@ module.exports = function (elem, options) {
 
 /***/ }),
 
-/***/ "./node_modules/scroll-to-element/scroll-to.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/scroll-to-element/scroll-to.js ***!
-  \*****************************************************/
+/***/ 5246:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var Tween = __webpack_require__(/*! ./tween */ "./node_modules/scroll-to-element/tween.js");
-var raf = __webpack_require__(/*! raf */ "./node_modules/raf/index.js");
+var Tween = __webpack_require__(5344);
+var raf = __webpack_require__(4087);
 
 function scroll() {
   var y = window.pageYOffset || document.documentElement.scrollTop;
@@ -8203,14 +6813,11 @@ module.exports = scrollTo;
 
 /***/ }),
 
-/***/ "./node_modules/scroll-to-element/tween.js":
-/*!*************************************************!*\
-  !*** ./node_modules/scroll-to-element/tween.js ***!
-  \*************************************************/
+/***/ 5344:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-var ease = __webpack_require__(/*! ./ease */ "./node_modules/scroll-to-element/ease.js");
-var Emitter = __webpack_require__(/*! ./emitter */ "./node_modules/scroll-to-element/emitter.js");
+var ease = __webpack_require__(8081);
+var Emitter = __webpack_require__(1842);
 
 function extend(obj, src) {
   for (var key in src) {
@@ -8310,43 +6917,6 @@ Tween.prototype.update = function(fn){
 
 module.exports = Tween;
 
-
-/***/ }),
-
-/***/ "./src/images/square_profile_picture.jpg":
-/*!***********************************************!*\
-  !*** ./src/images/square_profile_picture.jpg ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "static/square_profile_picture-13d06e028eaa9bdff9cc12e5a3d6a3e8.jpg");
-
-/***/ }),
-
-/***/ "./public/page-data/sq/d/1321542477.json":
-/*!***********************************************!*\
-  !*** ./public/page-data/sq/d/1321542477.json ***!
-  \***********************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"data":{"allProjectsJson":{"edges":[{"node":{"title":"kunzpolyhedron","description":"A SageMath package for working with Kunz posets.","associatedPaper":"Numerical semigroups, polyhedra, and posets II, and III","coAuthors":["Tara Gomes","Christopher O\'Neill","Christopher Preuss"],"languages":["SageMath"],"frameworks":[],"id":"6fbce81b-67b4-5692-84a4-48d6dbe6713b","url":"https://github.com/coneill-math/kunzpolyhedron"}},{"node":{"title":"MatrixManipulator","description":"A web application to perform row operations on matrices representing free resolutions.","associatedPaper":null,"coAuthors":["Tara Gomes","Christopher O\'Neill"],"languages":["SageMath","JavaScript"],"frameworks":["jQuery"],"id":"8cefae2e-072c-5c75-9349-e196ac783c4b","url":"https://etdavila10.github.io/MatrixManipulator/"}},{"node":{"title":"lattice_plot","description":"Python scripts for building Weyl alternation diagrams for Lie algebras of type D₂, B₂, C₂, and G₂.","associatedPaper":"Visualizing the support of Kostant\'s weight multiplicity formula for the rank two Lie algebras","coAuthors":["Pamela E. Harris","Juan Ramirez","Fabrice Ulysse"],"languages":["Python"],"frameworks":["Matplotlib","NumPy"],"id":"c2702090-1106-5091-943f-864e7566666d","url":"https://github.com/etdavila10/lattice_plot"}},{"node":{"title":"weyldiagrams","description":"A web application to build the Weyl alternation diagrams from the lattice_plot project.","associatedPaper":"Visualizing the support of Kostant\'s weight multiplicity formula for the rank two Lie algebras","coAuthors":["Pamela E. Harris","Juan Ramirez","Fabrice Ulysse"],"languages":["JavaScript"],"frameworks":["D3"],"id":"b4609ba8-0070-54c4-9019-9bfb5de4f90c","url":"https://etdavila10.github.io/weyldiagrams/"}}]}}}');
-
-/***/ }),
-
-/***/ "./public/page-data/sq/d/709423395.json":
-/*!**********************************************!*\
-  !*** ./public/page-data/sq/d/709423395.json ***!
-  \**********************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = JSON.parse('{"data":{"allPublicationsJson":{"edges":[{"node":{"Site":"AMS Blogs","coAuthors":["Joanne Beckford","Alex Christensen","Pamela E. Harris","Lucy Martinez","Fabrice O. Ulysse"],"id":"b44151e8-edc2-5801-9760-8acf505fffca","journal":null,"submissionStatus":null,"title":"Networking Basics for Math Undergrads","type":"writingContribution","url":"https://blogs.ams.org/mathmentoringnetwork/2020/07/21/networking-basics-for-math-undergrads/","year":2020,"volume":null,"pages":null,"number":null}},{"node":{"Site":null,"coAuthors":["Jackson Autry","Abigail Ezell","Tara Gomes","Christopher O\'Neill","Christopher Preuss","Tarang Saluja"],"id":"abd99768-5276-5678-83d4-624395186818","journal":"Journal of Advances in Geometry","submissionStatus":"Accepted","title":"Numerical semigroups, polyhedra, and posets II: locating certain families of semigroups","type":"researchPaper","url":"https://www.degruyter.com/document/doi/10.1515/advgeom-2021-0024/html","year":2022,"volume":22,"pages":[33,48],"number":1}},{"node":{"Site":null,"coAuthors":["Pamela E. Harris","Marissa Loving","Juan Ramirez","Joseph Rennie","Gordon Rojas Kirby","Fabrice O. Ulysse"],"id":"25819480-fb31-5e06-938f-7877f9d96e79","journal":null,"submissionStatus":"Submitted","title":"Visualizing the support of Kostant\'s weight multiplicity formula for the rank two Lie algebras","type":"researchPaper","url":"https://arxiv.org/abs/1908.08405","year":null,"volume":null,"pages":null,"number":null}},{"node":{"Site":null,"coAuthors":["Tara Gomes","Christopher O\'Neill"],"id":"2c8bb013-0b62-5e0f-b4c8-f5ba2873dc2d","journal":null,"submissionStatus":"Submitted","title":"Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension","type":"researchPaper","url":"https://arxiv.org/abs/2009.05921","year":null,"volume":null,"pages":null,"number":null}},{"node":{"Site":"AMS Blogs","coAuthors":["Pamela E. Harris","Lucy Martinez"],"id":"7c2044d8-f1e9-570b-b679-1fb577656d36","journal":null,"submissionStatus":null,"title":"Bank of REU/Grad Fair Questions","type":"writingContribution","url":"https://blogs.ams.org/mathmentoringnetwork/2020/01/24/bank-of-reu-grad-fair-questions/","year":2020,"volume":null,"pages":null,"number":null}}]}}}');
 
 /***/ })
 
