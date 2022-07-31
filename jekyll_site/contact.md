@@ -4,7 +4,7 @@ layout: default
 
 ## Contact Me
 
-* Email: torre680@umn.edu
+* Email: [torre680@umn.edu](mailto:torre680@umn.edu)
 
 * Office: Vincent Hall 424
 
