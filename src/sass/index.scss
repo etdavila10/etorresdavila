@@ -29,9 +29,9 @@ html {
   background-color: $accent-color;
 }
 
-* {
-  // background: rgba(0, 92, 0, 0.05);
-}
+// * {
+//   background: rgba(0, 92, 0, 0.05);
+// }
 
 body {
   margin: 0;
@@ -147,9 +147,8 @@ header {
       justify-content: flex-start;
       align-items: flex-start;
       #tech-skills {
-        margin-right: 3rem;
-        border-right: 1rem dotted $accent-color;
-        padding-right: 3rem;
+        margin-right: 2rem;
+        padding-right: 2rem;
       }
       ul {
         list-style: none;
@@ -162,6 +161,7 @@ header {
           margin: 0;
         }
         .bullet {
+          display: inline-block;
           width: 1rem;
           height: 1rem;
           background-color: $accent-color;
@@ -363,25 +363,108 @@ footer {
 //     TABLET DEVICES       //
 //////////////////////////////
 @media only screen and (min-width: 768px) {
+  $max-content-width: 740px;
+  $header-font-size: 4rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+    }
+  }
+
+  #nav-container {
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    #welcome {
+      #profile-picture {
+        width: 15rem;
+      }
+      #skills {
+        ul {
+          .bullet {
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
 }
 
 //////////////////////////////
 //     LAPTOP DEVICES       //
 //////////////////////////////
 @media only screen and (min-width: 992px) {
+  $max-content-width: 920px;
+  $header-font-size: 5rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+    }
+  }
+
+  #nav-container {
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    #welcome {
+      #profile-picture {
+        width: 19rem;
+      }
+      #skills {
+        ul {
+          .bullet {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
 }
 
+// ALREADY PRETTY GOOD ON BELOW DEVICES
 //////////////////////////////
 //     DESKTOP DEVICES      //
 //////////////////////////////
-@media only screen and (min-width: 1200px) {
-}
+// @media only screen and (min-width: 1200px) {
+// }
 
 //////////////////////////////
 //        4K SCREENS        //
 //////////////////////////////
-@media only screen and (min-width: 1400px) {
-}
+// @media only screen and (min-width: 1400px) {
+// }
 
 //////////////////////////////
 //       ANIMATIONS         //
