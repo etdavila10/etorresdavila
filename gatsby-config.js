@@ -22,7 +22,7 @@ module.exports = {
         name: `Eduardo Torres Davila`,
         short_name: `Eduardo`,
         start_url: `/`,
-        icon: `src/images/android-chrome-192x192.png`
+        icon: `src/images/android-chrome-512x512.png`
       }
     },
     {
