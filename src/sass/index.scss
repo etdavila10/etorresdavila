@@ -352,6 +352,135 @@ footer {
 //     MOBILE DEVICES       //
 //////////////////////////////
 @media only screen and (max-width: 576px) {
+  $max-content-width: 350px;
+  $header-font-size: 2rem;
+  $h1-font-size: 1.75rem;
+  $h2-font-size: 1.25rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  #nav-container {
+    // need to create hamburger menu //
+    display: none;
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    // START WELCOME SECTION
+    #welcome {
+      h1 {
+        font-size: $h1-font-size;
+        border-bottom: 0.25rem solid $accent-color;
+        margin-top: 2rem;
+      }
+      .welcome-section {
+        margin-top: 2rem;
+        h2 {
+          font-size: $h2-font-size;
+        }
+        #profile-picture {
+          display: block;
+          width: 10rem;
+          float: none;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          margin-left: calc($max-content-width/4);
+          border: 0.25rem solid $accent-color;
+        }
+      }
+      #skills {
+        flex-direction: column;
+        #tech-skills {
+          margin-bottom: 2rem;
+        }
+      }
+      #research-interest {
+        #research-area {
+          display: flex;
+          flex-direction: column;
+          a {
+            border-radius: 50%;
+            margin-left: 0rem !important;
+            margin-top: 1rem;
+            text-decoration: none;
+            font-size: $h2-font-size;
+            font-family: 'Pacifico';
+            color: $bg-2-color;
+            div {
+              width: 6rem;
+              height: 6rem;
+            }
+          }
+        }
+      }
+    }
+    // END WELCOME SECTION
+    // START PUBLICATIONS SECTION
+    #publications {
+      margin-top: 4rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+      .publication-section {
+        margin-top: 2rem;
+      }
+    }
+    // END PUBLICATIONS SECTION
+    // START PROJECTS SECTION
+    #projects {
+      margin-top: 4rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+    }
+    // END PROJECTS SECTION
+    // START TEACHING SECTION
+    #teaching {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+    }
+    // END TEACHING SECTION
+  }
+
+  footer {
+    #contact {
+      #email {
+        display: block;
+      }
+      #sep {
+        display: none;
+      }
+      #office {
+        margin-top: 1rem;
+        display: block;
+      }
+    }
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
 }
 
 //////////////////////////////
@@ -400,7 +529,7 @@ footer {
           float: none;
           border-radius: 50%;
           margin-bottom: 1rem;
-          margin-left: $max-content-width/4;
+          margin-left: calc($max-content-width/4);
           border: 0.25rem solid $accent-color;
         }
       }
@@ -433,43 +562,53 @@ footer {
     // END WELCOME SECTION
     // START PUBLICATIONS SECTION
     #publications {
-      margin-top: 7rem;
+      margin-top: 5rem;
       h1 {
         font-size: $h1-font-size;
-        border-bottom: 0.25rem solid $accent-color;
-        margin-top: 0rem;
-        font-family: 'Pacifico';
       }
       h2 {
-        margin: 0;
         font-size: $h2-font-size;
-        display: inline-block;
-        border-bottom: 2px solid $accent-color;
       }
       .publication-section {
-        margin-top: 4rem;
-        .publication {
-          color: $fg-color;
-          h3 {
-            margin-bottom: 0;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-          a {
-            color: $accent-color;
-            text-decoration: none;
-          }
-          span {
-            margin-right: 0.25rem;
-          }
-        }
+        margin-top: 2rem;
       }
     }
     // END PUBLICATIONS SECTION
+    // START PROJECTS SECTION
+    #projects {
+      margin-top: 5rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+    }
+    // END PROJECTS SECTION
+    // START TEACHING SECTION
+    #teaching {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+    }
+    // END TEACHING SECTION
   }
 
   footer {
+    #contact {
+      #email {
+        display: inline-block;
+      }
+      #sep {
+        display: inline-block;
+      }
+      #office {
+        margin-top: 0rem;
+        display: inline-block;
+      }
+    }
     #footer-content {
       max-width: $max-content-width;
     }
@@ -564,37 +703,35 @@ footer {
       margin-top: 7rem;
       h1 {
         font-size: $h1-font-size;
-        border-bottom: 0.25rem solid $accent-color;
-        margin-top: 0rem;
-        font-family: 'Pacifico';
       }
       h2 {
-        margin: 0;
         font-size: $h2-font-size;
-        display: inline-block;
-        border-bottom: 2px solid $accent-color;
       }
       .publication-section {
         margin-top: 4rem;
-        .publication {
-          color: $fg-color;
-          h3 {
-            margin-bottom: 0;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-          a {
-            color: $accent-color;
-            text-decoration: none;
-          }
-          span {
-            margin-right: 0.25rem;
-          }
-        }
       }
     }
     // END PUBLICATIONS SECTION
+    // START PROJECTS SECTION
+    #projects {
+      margin-top: 7rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+    }
+    // END PROJECTS SECTION
+    // START TEACHING SECTION
+    #teaching {
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+    }
+    // END TEACHING SECTION
   }
 
   footer {
