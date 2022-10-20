@@ -16,7 +16,9 @@ const Project = (props) => {
       <p>{description}</p>
       <span>In collaboration with </span>
       {coAuthors.map((author, index) => {
-        if (index === coAuthors.length - 1) {
+        if (coAuthors.length === 1) {
+          return <span key={index}> {author}</span>;
+        } else if (index === coAuthors.length - 1) {
           return <span key={index}> &#38; {author}.</span>;
         } else if (coAuthors.length === 2) {
           return <span key={index}> {author}</span>;
