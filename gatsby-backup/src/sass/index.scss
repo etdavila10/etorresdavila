@@ -1,0 +1,809 @@
+/////////////////////////////
+//         COLORS          //
+/////////////////////////////
+ 
+// White & Black w/ Teal Accent
+$bg-color: #3E4149;
+$bg-2-color: #444F5A;
+$fg-color: #EEEEEE;
+$accent-color: #71C9CE;
+// $accent-color: #FF9999;
+
+/////////////////////////////
+//       FONT SIZES        //
+/////////////////////////////
+$base-font-size: 18px;
+$header-font-size: 5rem;
+$h1-font-size: 3rem;
+$h2-font-size: 2rem;
+$nav-font-size: 1rem;
+
+/////////////////////////////
+//    CONTAINER SIZES      //
+/////////////////////////////
+$nav-height: 4rem;
+$max-content-width: 920px;
+
+html {
+  font-size: $base-font-size;
+  background-color: $accent-color;
+}
+
+// * {
+//   background: rgba(0, 92, 0, 0.05);
+// }
+
+body {
+  margin: 0;
+  background-color: $bg-color;
+}
+
+/////////////////////////////
+//         NAVBAR          //
+/////////////////////////////
+#nav-container {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  background-color: $bg-color;
+  z-index: 1;
+  #top-nav {
+    border-bottom: 0.25rem solid $accent-color;
+    margin: auto;
+    max-width: $max-content-width;
+    height: $nav-height;
+    ul {
+      height: $nav-height;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      overflow: hidden;
+      a {
+        font-size: $nav-font-size;
+        font-family: 'Jost';
+        font-weight: bold;
+        display: inline-block;
+        color: $fg-color;
+        margin-left: 2rem;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .active {
+        color: $accent-color;
+      }
+    }
+  }
+}
+
+/////////////////////////////
+//         HEADER          //
+/////////////////////////////
+header {
+  background-color: $accent-color;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  #header-name {
+    max-width: $max-content-width;
+    margin: auto;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-family: 'Pacifico';
+    font-size: $header-font-size;
+    color: $bg-2-color;
+    text-align: center;
+  }
+}
+
+/////////////////////////////
+//      MAIN CONTENT       //
+/////////////////////////////
+.container {
+  font-family: 'Jost';
+  margin: auto;
+  max-width: $max-content-width;
+  color: $fg-color;
+  /////////////////////////////
+  //    WELCOME SECTION      //
+  /////////////////////////////
+  #welcome {
+    h1 {
+      font-size: $h1-font-size;
+      font-family: 'Pacifico';
+      border-bottom: 0.25rem solid $accent-color;
+      margin-top: 0;
+    }
+    .welcome-section {
+      margin-top: 4rem;
+      h2 {
+        display: inline-block;
+        margin: 0;
+        font-size: $h2-font-size;
+        border-bottom: 2px solid $accent-color;
+      }
+      #profile-picture {
+        width: 19rem;
+        float: right;
+        border-radius: 50%;
+        margin-left: 2rem;
+        margin-bottom: 1rem;
+        border: 0.25rem solid $accent-color;
+      }
+    }
+    .ext-link:hover {
+      text-decoration: underline;
+    }
+    .ext-link {
+      color: $accent-color;
+      text-decoration: none;
+    }
+    #skills {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      #tech-skills {
+        margin-right: 2rem;
+        padding-right: 2rem;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 0;
+        li {
+          display: inline-block;
+          margin: 0;
+        }
+        .bullet {
+          display: inline-block;
+          width: 1rem;
+          height: 1rem;
+          background-color: $accent-color;
+          border-radius: 50%;
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    #research-interest {
+      #research-area {
+        display: flex;
+        align-items: center;
+        a {
+          border-radius: 50%;
+          margin-left: 2rem;
+          text-decoration: none;
+          font-size: $h2-font-size;
+          font-family: 'Pacifico';
+          color: $bg-2-color;
+          div {
+            width: 10rem;
+            height: 10rem;
+            padding: 2rem;
+            background-color: $accent-color;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          }
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  /////////////////////////////
+  //  PUBLICATIONS SECTION   //
+  /////////////////////////////
+  #publications {
+    margin-top: 7rem;
+    h1 {
+      font-size: $h1-font-size;
+      border-bottom: 0.25rem solid $accent-color;
+      margin-top: 0rem;
+      font-family: 'Pacifico';
+    }
+    h2 {
+      margin: 0;
+      font-size: $h2-font-size;
+      display: inline-block;
+      border-bottom: 2px solid $accent-color;
+    }
+    .publication-section {
+      margin-top: 4rem;
+      .publication {
+        color: $fg-color;
+        h3 {
+          margin-bottom: 0;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        a {
+          color: $accent-color;
+          text-decoration: none;
+        }
+        span {
+          margin-right: 0.25rem;
+        }
+      }
+    }
+  }
+  /////////////////////////////
+  //     PROJECTS SECTION    //
+  /////////////////////////////
+  #projects {
+    margin-top: 7rem;
+    h1 {
+      font-size: $h1-font-size;
+      border-bottom: 0.25rem solid $accent-color;
+      margin-top: 0rem;
+      font-family: 'Pacifico';
+    }
+    .project-section {
+      .project {
+        h3 {
+          margin-bottom: 0;
+        }
+        a {
+          text-decoration: none;
+          color: $accent-color;
+        }
+        a:hover {
+          text-decoration: underline;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  /////////////////////////////
+  //     TEACHING SECTION    //
+  /////////////////////////////
+  #teaching {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    h1 {
+      font-size: $h1-font-size;
+      border-bottom: 0.25rem solid $accent-color;
+      margin-top: 0rem;
+      font-family: 'Pacifico';
+    }
+    h2 {
+      margin: 0;
+      font-size: $h2-font-size;
+      display: inline-block;
+      border-bottom: 2px solid $accent-color;
+    }
+  }
+}
+
+/////////////////////////////
+//         FOOTER          //
+/////////////////////////////
+footer {
+  color: $bg-2-color;
+  background-color: $accent-color;
+  font-family: 'Jost';
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  #footer-content {
+    max-width: $max-content-width;
+    margin: auto;
+    padding-top: 1rem;
+    span {
+      margin-right: 1rem;
+    }
+  }
+  ul {
+    padding-bottom: 1rem;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+      a {
+        color: $bg-2-color;
+      }
+      a:hover {
+        color: $fg-color;
+      }
+    }
+  }
+  p {
+    margin: auto;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 2px solid $bg-2-color;
+    text-align: center;
+    opacity: 70%;
+    max-width: $max-content-width;
+    font-size: 0.9rem;
+    a {
+      color: $bg-2-color;
+    }
+    a:hover {
+      color: $fg-color;
+    }
+  }
+}
+
+///////////////////////////////////////////////////////
+// HANDLING MEDIA QUERIES                            //
+// BELOW HERE                                        //
+///////////////////////////////////////////////////////
+
+// ToDo: Resize fonts accordingly
+// ToDo: Fix image in Header
+// ToDo: Create Hamburger menu for small devices
+
+//////////////////////////////
+//     MOBILE DEVICES       //
+//////////////////////////////
+@media only screen and (max-width: 576px) {
+  $max-content-width: 370px;
+  $header-font-size: 2rem;
+  $h1-font-size: 1.75rem;
+  $h2-font-size: 1.25rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  #nav-container {
+    // need to create hamburger menu //
+    display: none;
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    // START WELCOME SECTION
+    #welcome {
+      h1 {
+        font-size: $h1-font-size;
+        border-bottom: 0.25rem solid $accent-color;
+        margin-top: 2rem;
+      }
+      .welcome-section {
+        margin-top: 2rem;
+        h2 {
+          font-size: $h2-font-size;
+        }
+        #profile-picture {
+          display: block;
+          width: 10rem;
+          float: none;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          margin-left: calc($max-content-width/4);
+          border: 0.25rem solid $accent-color;
+        }
+      }
+      #skills {
+        flex-direction: column;
+        #tech-skills {
+          margin-bottom: 2rem;
+        }
+      }
+      #research-interest {
+        #research-area {
+          display: flex;
+          flex-direction: column;
+          a {
+            border-radius: 50%;
+            margin-left: 0rem !important;
+            margin-top: 1rem;
+            text-decoration: none;
+            font-size: $h2-font-size;
+            font-family: 'Pacifico';
+            color: $bg-2-color;
+            div {
+              width: 6rem;
+              height: 6rem;
+            }
+          }
+        }
+      }
+    }
+    // END WELCOME SECTION
+    // START PUBLICATIONS SECTION
+    #publications {
+      margin-top: 4rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+      .publication-section {
+        margin-top: 2rem;
+      }
+    }
+    // END PUBLICATIONS SECTION
+    // START PROJECTS SECTION
+    #projects {
+      margin-top: 4rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+    }
+    // END PROJECTS SECTION
+    // START TEACHING SECTION
+    #teaching {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+    }
+    // END TEACHING SECTION
+  }
+
+  footer {
+    #contact {
+      #email {
+        display: block;
+      }
+      #sep {
+        display: none;
+      }
+      #office {
+        margin-top: 1rem;
+        display: block;
+      }
+    }
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
+}
+
+//////////////////////////////
+//   MED PHONES DEVICES     //
+//////////////////////////////
+@media only screen and (min-width: 576px) {
+  $max-content-width: 550px;
+  $header-font-size: 3rem;
+  $h1-font-size: 2rem;
+  $h2-font-size: 1.5rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+    }
+  }
+
+  #nav-container {
+    // need to create hamburger menu //
+    display: none;
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    // START WELCOME SECTION
+    #welcome {
+      h1 {
+        font-size: $h1-font-size;
+        border-bottom: 0.25rem solid $accent-color;
+        margin-top: 2rem;
+      }
+      .welcome-section {
+        margin-top: 2rem;
+        h2 {
+          font-size: $h2-font-size;
+        }
+        #profile-picture {
+          display: block;
+          width: 15rem;
+          float: none;
+          border-radius: 50%;
+          margin-bottom: 1rem;
+          margin-left: calc($max-content-width/4);
+          border: 0.25rem solid $accent-color;
+        }
+      }
+      #skills {
+        flex-direction: column;
+        #tech-skills {
+          margin-bottom: 2rem;
+        }
+      }
+      #research-interest {
+        #research-area {
+          display: flex;
+          flex-direction: column;
+          a {
+            border-radius: 50%;
+            margin-left: 0rem !important;
+            margin-top: 1rem;
+            text-decoration: none;
+            font-size: $h2-font-size;
+            font-family: 'Pacifico';
+            color: $bg-2-color;
+            div {
+              width: 8rem;
+              height: 8rem;
+            }
+          }
+        }
+      }
+    }
+    // END WELCOME SECTION
+    // START PUBLICATIONS SECTION
+    #publications {
+      margin-top: 5rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+      .publication-section {
+        margin-top: 2rem;
+      }
+    }
+    // END PUBLICATIONS SECTION
+    // START PROJECTS SECTION
+    #projects {
+      margin-top: 5rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+    }
+    // END PROJECTS SECTION
+    // START TEACHING SECTION
+    #teaching {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+    }
+    // END TEACHING SECTION
+  }
+
+  footer {
+    #contact {
+      #email {
+        display: inline-block;
+      }
+      #sep {
+        display: inline-block;
+      }
+      #office {
+        margin-top: 0rem;
+        display: inline-block;
+      }
+    }
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
+}
+
+//////////////////////////////
+//     TABLET DEVICES       //
+//////////////////////////////
+@media only screen and (min-width: 768px) {
+  $max-content-width: 740px;
+  $header-font-size: 4rem;
+  $h1-font-size: 3rem;
+  $h2-font-size: 2rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+  }
+
+  #nav-container {
+    display: block;
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    // START WELCOME SECTION
+    #welcome {
+      h1 {
+        font-size: $h1-font-size;
+        border-bottom: 0.25rem solid $accent-color;
+        margin-top: 0rem;
+      }
+      .welcome-section {
+        margin-top: 4rem;
+        h2 {
+          font-size: $h2-font-size;
+        }
+        #profile-picture {
+          width: 15rem;
+          float: right;
+          border-radius: 50%;
+          margin-left: 2rem;
+          margin-bottom: 1rem;
+          border: 0.25rem solid $accent-color;
+        }
+      }
+      #skills {
+        flex-direction: row;
+        #tech-skills {
+          margin-bottom: 0rem;
+        }
+        ul {
+          .bullet {
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+      #research-interest {
+        #research-area {
+          display: flex;
+          flex-direction: row;
+          a {
+            border-radius: 50%;
+            margin-left: 2rem !important;
+            margin-top: 0rem;
+            text-decoration: none;
+            font-size: $h2-font-size;
+            color: $bg-2-color;
+            div {
+              width: 10rem;
+              height: 10rem;
+            }
+          }
+        }
+      }
+    }
+    // END WELCOME SECTION
+    // START PUBLICATIONS SECTION
+    #publications {
+      margin-top: 7rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+      .publication-section {
+        margin-top: 4rem;
+      }
+    }
+    // END PUBLICATIONS SECTION
+    // START PROJECTS SECTION
+    #projects {
+      margin-top: 7rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+    }
+    // END PROJECTS SECTION
+    // START TEACHING SECTION
+    #teaching {
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      h1 {
+        font-size: $h1-font-size;
+      }
+      h2 {
+        font-size: $h2-font-size;
+      }
+    }
+    // END TEACHING SECTION
+  }
+
+  footer {
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
+}
+
+//////////////////////////////
+//     LAPTOP DEVICES       //
+//////////////////////////////
+@media only screen and (min-width: 992px) {
+  $max-content-width: 920px;
+  $header-font-size: 5rem;
+
+  header {
+    #header-name {
+      max-width: $max-content-width;
+      font-size: $header-font-size;
+    }
+  }
+
+  #nav-container {
+    #top-nav {
+      max-width: $max-content-width;
+    }
+  }
+
+  .container {
+    max-width: $max-content-width;
+    #welcome {
+      #profile-picture {
+        width: 19rem;
+      }
+      #skills {
+        ul {
+          .bullet {
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    #footer-content {
+      max-width: $max-content-width;
+    }
+    p {
+      max-width: $max-content-width;
+    }
+  }
+}
+
+// ALREADY PRETTY GOOD ON BELOW DEVICES
+//////////////////////////////
+//     DESKTOP DEVICES      //
+//////////////////////////////
+// @media only screen and (min-width: 1200px) {
+// }
+
+//////////////////////////////
+//        4K SCREENS        //
+//////////////////////////////
+// @media only screen and (min-width: 1400px) {
+// }
+
+//////////////////////////////
+//       ANIMATIONS         //
+//////////////////////////////

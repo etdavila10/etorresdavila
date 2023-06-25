@@ -1,0 +1,9 @@
+{
+  "title": "The ArXiv Game",
+  "description": "A webapp created using ReactJS and the ArXiv API.",
+  "coAuthors": ["Aaron Li"],
+  "languages": ["JavaScript"],
+  "frameworks": ["reactJS"],
+  "url": "https://tranquil-starship-92a3ed.netlify.app/",
+  "id": "arxivgame2022"
+}
