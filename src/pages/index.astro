@@ -1,16 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import HelloWorld from '../components/HelloWorld.tsx';
-
-const about: string = 'http://localhost:3000/about'
 ---
 
 <!-- This is how you pass things to the parent component -->
 <Layout title='Torres Dávila - Portfolio'>
-	<main>
-		<h1>Welcome to My Website</h1>
-    <HelloWorld client:load/>
-    <a href={ about } class=''>Check out my about page!</a>
+	<main class='m-10 border-2 border-black p-10 rounded-lg'>
+		<h1 class='font-bold text-2xl'>Welcome to My Website</h1>
+    <ul class='list-disc'>
+      <a href='/'>
+        <li>Welcome</li>
+      </a>
+      <a href='/about'>
+        <li>About</li>
+      </a>
+      <a href='/projects'>
+        <li>Projects</li>
+      </a>
+    </ul>
     <p>
       My name is Eduardo Torres Dávila and I like to do
       many things, but most of all I like to code my own fun projects and I like
