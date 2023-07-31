@@ -1,17 +1,43 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const home: string = 'http://localhost:3000';
-const projects: string = 'http://localhost:3000/projects';
+const title = 'About';
+const pageTitle = 'About me';
 ---
 
-<Layout title='Torres Dávila - About'>
-  <main>
-    <h1>About Me</h1>
-    <a href={ home }>Go to home page</a>
-    <a href={ projects }>Go to projects page</a>
-    <p>
-      A little more about me. I grew up in California. In the bay area.
-    </p>
-  </main>
-</Layout>
+<BaseLayout title={ title }, pageTitle={ pageTitle }>
+  <p class='mb-2'>
+    I am currently a third-year PhD student at the University of Minnesota.
+    I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and
+    a minor in Computer Science from San Diego State University. Outside of academics,
+    I enjoy the outdoors and climbing!
+  </p>
+  <p>
+    I am also a co-leader of the Council for the Advancement of Underrepresented
+    Scientists and Engineers (CAUSE). We are dedicated to the recruitment, retention,
+    and professional development of graduate students of color and first generation
+    college students within the College of Science and Engineering.
+  </p>
+  <h2 class='text-xl mt-5 mb-2 underline'>What I'm up to</h2>
+  <p>
+    I am currently studying for the Complex Preliminary Exam and a supporting
+    mentor for the PolyMath Jr. REU helping with the Ramsey Theory project.
+  </p>
+  <p class='mb-2'>
+    I am currently a third-year PhD student at the University of Minnesota.
+    I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and
+    a minor in Computer Science from San Diego State University. Outside of academics,
+    I enjoy the outdoors and climbing!
+  </p>
+  <p>
+    I am also a co-leader of the Council for the Advancement of Underrepresented
+    Scientists and Engineers (CAUSE). We are dedicated to the recruitment, retention,
+    and professional development of graduate students of color and first generation
+    college students within the College of Science and Engineering.
+  </p>
+  <h2 class='text-xl mt-5 mb-2 underline'>What I'm up to</h2>
+  <p>
+    I am currently studying for the Complex Preliminary Exam and a supporting
+    mentor for the PolyMath Jr. REU helping with the Ramsey Theory project.
+  </p>
+</BaseLayout>
