@@ -1,26 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Portfolio';
+const pageTitle = 'Welcome to my Website!';
 ---
 
-<!-- This is how you pass things to the parent component -->
-<Layout title='Torres Dávila - Portfolio'>
-	<main class='m-10 border-2 border-black p-10 rounded-lg'>
-		<h1 class='font-bold text-2xl'>Welcome to My Website</h1>
-    <ul class='list-disc'>
-      <a href='/'>
-        <li>Welcome</li>
-      </a>
-      <a href='/about'>
-        <li>About</li>
-      </a>
-      <a href='/projects'>
-        <li>Projects</li>
-      </a>
-    </ul>
-    <p>
-      My name is Eduardo Torres Dávila and I like to do
-      many things, but most of all I like to code my own fun projects and I like
-      to learn new mathematics.
-    </p>
-	</main>
-</Layout>
+<BaseLayout title={ title } pageTitle={ pageTitle }>
+  <p>
+    Hello! My name is Eduardo Torres Dávila and I am a programmer|mathematician.
+  </p>
+</BaseLayout>
