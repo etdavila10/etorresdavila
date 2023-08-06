@@ -1,18 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Projects';
+const pageTitle = 'Projects';
 ---
 
-<BaseLayout title='Torres Dávila - Projects'>
-  <main>
-    <h1>About Me</h1>
-    <a href='/home'>Go to home page</a>
-    <a href='/about'>Go to about page</a>
-    <p>
-      Here are some of my projects that I am really happy with.
-    </p>
-    <ul>
-      <li>Project 1</li>
-      <li>Project 2</li>
-    </ul>
-  </main>
+<BaseLayout title={ title } pageTitle={ pageTitle }>
+  <p>
+    Here are some of my projects that I am really happy with.
+  </p>
+  <ul>
+    <li>Project 1</li>
+    <li>Project 2</li>
+  </ul>
 </BaseLayout>

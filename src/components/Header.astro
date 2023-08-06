@@ -1,18 +1,38 @@
----
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
----
-
-<div class='w-full flex justify-start items-center sticky top-0 bg-amber-50 bg-opacity-80 backdrop-blur-sm'>
-  <ul class='mt-5'>
-    <a class={`${currentPath === '' ? 'border-b-4 border-sky-500': ''} hover:text-sky-500 inline-block py-2 px-5 transition duration-200 ease-in-out`} href='/'>
+<div id='nav-bar' class='w-full flex justify-start items-center sticky top-0
+                         bg-opacity-95 bg-amber-50 backdrop-blur-sm transition-all
+                         ease-in-out duration-500 z-10'>
+  <ul class='my-3'>
+    <a class='hover:text-sky-500 inline-block py-2 pr-5 pl-7 transition duration-200
+              ease-in-out' href='/'>
       <li>Home</li>
-    </a><a class={`${currentPath === 'about' ? 'border-b-4 border-sky-500': ''} hover:text-sky-500 inline-block py-2 px-5 transition duration-200 ease-in-out`} href='/about'>
+    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
+                  ease-in-out' href='/about'>
       <li>About</li>
-    </a><a class={`${currentPath === 'research' ? 'border-b-4 border-sky-500': ''} hover:text-sky-500 inline-block py-2 px-5 transition duration-200 ease-in-out`} href='/research'>
+    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
+                  ease-in-out' href='/research'>
       <li>Research</li>
-    </a><a class={`${currentPath === 'projects' ? 'border-b-4 border-sky-500': ''} hover:text-sky-500 inline-block py-2 px-5 transition duration-200 ease-in-out`} href='/projects'>
+    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
+                  ease-in-out' href='/projects'>
       <li>Projects</li>
+    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
+                  ease-in-out' href='/teaching'>
+      <li>Teaching</li>
     </a>
   </ul>
 </div>
+
+<script>
+  const navBar = document.getElementById('nav-bar');
+
+  const updateNavBar = () => {
+    console.log('hello');
+    if (window.scrollY === 0) {
+      navBar?.classList.remove('border-b', 'border-zinc-700');
+    } else {
+      navBar?.classList.add('border-b', 'border-zinc-700');
+    }
+  };
+
+  window.addEventListener("load",updateNavBar,false) 
+  window.addEventListener('scroll', updateNavBar);
+</script>

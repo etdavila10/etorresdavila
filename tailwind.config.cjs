@@ -9,6 +9,10 @@ module.exports = {
       backgroundPosition: {
         'pos-0': '0% 0%',
         'pos-100': '100% 100%'
+      },
+      width: {
+        '112': '28rem',
+        '128': '32rem',
       }
     },
 	},

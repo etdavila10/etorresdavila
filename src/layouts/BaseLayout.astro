@@ -13,13 +13,18 @@ const { title, pageTitle } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+    <script src="https://kit.fontawesome.com/9730b2ac3e.js" crossorigin="anonymous"></script>
 		<title>{title}</title>
 	</head>
 	<body class='min-h-screen flex flex-col bg-amber-50 text-zinc-700'>
     <Header />
-    <main class='m-10 border-2 border-black p-10 rounded-lg'>
-      <h1 class='font-bold text-2xl mb-5'>{ pageTitle }</h1>
-      <slot />
+    <main class='mx-10 px-10'>
+      <div class='absolute font-bold text-7xl border-2 border-sky-500 bg-sky-500 bg-opacity-20 rounded-full py-10 px-10 -translate-x-40 z-0'>
+        <p class='ml-24'>{ pageTitle }</p>
+      </div>
+      <div class='mt-52'>
+        <slot />
+      </div>
     </main>
     <Footer />
 	</body>
