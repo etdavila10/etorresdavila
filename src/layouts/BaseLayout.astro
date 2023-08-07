@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const { title, pageTitle } = Astro.props;
+const { title, pageTitle, bgColor } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,15 +16,15 @@ const { title, pageTitle } = Astro.props;
     <script src="https://kit.fontawesome.com/9730b2ac3e.js" crossorigin="anonymous"></script>
 		<title>{title}</title>
 	</head>
-	<body class='min-h-screen flex flex-col bg-amber-50 text-zinc-700'>
+	<body class='bg-amber-50 text-zinc-700'>
     <Header />
-    <main class='mx-10 px-10'>
-      <div class='absolute font-bold text-7xl border-2 border-sky-500 bg-sky-500 bg-opacity-20 rounded-full py-10 px-10 -translate-x-40 z-0'>
-        <p class='ml-24'>{ pageTitle }</p>
-      </div>
-      <div class='mt-52'>
-        <slot />
-      </div>
+    <main class='bg-red-400 min-h-screen px-10 pt-12'>
+        <div class='w-fit font-bold text-7xl bg-sky-500 rounded-full py-10 px-10'>
+          <p class=''>{ pageTitle }</p>
+        </div>
+        <div class=''>
+          <slot />
+        </div>
     </main>
     <Footer />
 	</body>

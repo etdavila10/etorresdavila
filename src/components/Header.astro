@@ -1,38 +1,40 @@
-<div id='nav-bar' class='w-full flex justify-start items-center sticky top-0
-                         bg-opacity-95 bg-amber-50 backdrop-blur-sm transition-all
-                         ease-in-out duration-500 z-10'>
-  <ul class='my-3'>
-    <a class='hover:text-sky-500 inline-block py-2 pr-5 pl-7 transition duration-200
-              ease-in-out' href='/'>
+<div id='nav-bar' class=''>
+  <ul class='flex flex-start items-end mt-10'>
+    <a class='bg-red-400 rounded-t-lg py-2 px-5' href='/'>
       <li>Home</li>
-    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
-                  ease-in-out' href='/about'>
-      <li>About</li>
-    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
-                  ease-in-out' href='/research'>
+    </a>
+    <div class='w-2 h-8 bg-red-400'>
+      <div class='w-2 h-8 bg-amber-50 rounded-bl-md'></div>
+    </div>
+    <a class='bg-blue-400 rounded-t-lg py-2 px-5' href='/about'>
       <li>Research</li>
-    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
-                  ease-in-out' href='/projects'>
+    </a>
+    <div class='w-2 h-8 bg-amber-50'></div>
+    <a class='bg-pink-400 rounded-t-lg py-2 px-5' href='/research'>
       <li>Projects</li>
-    </a><a class='hover:text-sky-500 inline-block py-2 px-5 transition duration-200
-                  ease-in-out' href='/teaching'>
+    </a>
+    <div class='w-2 h-8 bg-amber-50'></div>
+    <a class='bg-teal-400 rounded-t-lg py-2 px-5' href='/projects'>
       <li>Teaching</li>
+    </a>
+    <div class='w-2 h-8 bg-amber-50'></div>
+    <a class='bg-lime-400 rounded-t-lg py-2 px-5' href='/teaching'>
+      <li>About</li>
     </a>
   </ul>
 </div>
 
 <script>
-  const navBar = document.getElementById('nav-bar');
+  // const navBar = document.getElementById('nav-bar');
 
-  const updateNavBar = () => {
-    console.log('hello');
-    if (window.scrollY === 0) {
-      navBar?.classList.remove('border-b', 'border-zinc-700');
-    } else {
-      navBar?.classList.add('border-b', 'border-zinc-700');
-    }
-  };
+  // const updateNavBar = () => {
+  //   if (window.scrollY === 0) {
+  //     navBar?.classList.remove('border-b', 'border-zinc-700');
+  //   } else {
+  //     navBar?.classList.add('border-b', 'border-zinc-700');
+  //   }
+  // };
 
-  window.addEventListener("load",updateNavBar,false) 
-  window.addEventListener('scroll', updateNavBar);
+  // window.addEventListener("load",updateNavBar,false) 
+  // window.addEventListener('scroll', updateNavBar);
 </script>
