@@ -1,27 +1,75 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-const title = 'Portfolio';
-const pageTitle = 'Welcome';
-const bgColor = 'bg-red-400';
+import SectionLayout from '../layouts/SectionLayout.astro';
 ---
 
-<BaseLayout title={ title } pageTitle={ pageTitle } bgColor={ bgColor }>
-  <div>
-    <p class='text-2xl mb-5'>
-      My name is
-    </p>
-    <div id='terminal-container' class='w-128 font-mono bg-slate-700 text-sky-500 flex justify-start items-center p-2 mb-10'>
-      <span id='chevron-character' class='text-lime-500 text-4xl -translate-y-0.5'>❯</span>
-      <span id='name-container' class='text-sky-500 text-4xl ml-2'></span>
-      <span id='pipe-character' class='w-1 ml-1 rounded-full bg-sky-500 h-10 inline-block'></span>
+<BaseLayout>
+  <SectionLayout sectionId={ 'home-section' } sectionTitle={ 'Welcome' }>
+    <div>
+      <p class='text-2xl mb-5'>
+        My name is
+      </p>
+      <div id='terminal-container' class='w-128 font-mono bg-slate-700 text-sky-500 flex justify-start items-center p-2 mb-10'>
+        <span id='chevron-character' class='text-lime-500 text-4xl -translate-y-0.5'>❯</span>
+        <span id='name-container' class='text-sky-500 text-4xl ml-2'></span>
+        <span id='pipe-character' class='w-1 ml-1 rounded-full bg-sky-500 h-10 inline-block'></span>
+      </div>
+      <p class='text-2xl mb-5'>
+        I am a
+      </p>
+      <div id='identity-container' class='cursor-pointer text-4xl rounded-full bg-sky-500 bg-opacity-20 w-fit p-5 border-2 border-sky-500 transition duration-200 hover:bg-opacity-50'>
+      </div>
     </div>
-    <p class='text-2xl mb-5'>
-      I am a
+  </SectionLayout>
+  <SectionLayout sectionId={ 'research-section' } sectionTitle={ 'Research' }>
+    <h2 class='text-xl underline mb-2'>Research Interests</h2>
+    <p>
+      While at San Diego State, my main interest was in algebraic combinatorics.
+      In particular, I studied relationships between numerical semigroups and polytopes
+      under Dr. Christopher O'Neill. I also participated in MSRI-UP where I had the
+      opportunity to work with Lie algebras under Dr. Pamela E. Harris. Since starting
+      graduate school, I found myself drawn to the application of mathematics to real
+      world problems and because of this I have started reading under Dr. Richard
+      McGehee about the mathematics behind climate change.
     </p>
-    <div id='identity-container' class='cursor-pointer text-4xl rounded-full bg-sky-500 bg-opacity-20 w-fit p-5 border-2 border-sky-500 transition duration-200 hover:bg-opacity-50'>
-    </div>
-  </div>
+    <h2 class='text-xl underline mb-2'>Publications</h2>
+    <p>
+      My publications will go here as well.
+    </p>
+  </SectionLayout>
+  <SectionLayout sectionId={ 'coding-section' } sectionTitle={ 'Programming' }>
+    <p class='mb-2'>
+      My projects will go here. This includes all my coding projects that I have
+      done in the past. Including my internship?
+    </p>
+  </SectionLayout>
+  <SectionLayout sectionId={ 'teaching-section' } sectionTitle={ 'Teaching' }>
+    <p class='mb-2'>
+      These are the classes that I'm currently teaching and the courses that I've
+      taught in the past.
+    </p>
+  </SectionLayout>
+  <SectionLayout sectionId={ 'about-section' } sectionTitle={ 'About' }>
+    <p class='mb-2'>
+      I am currently a third-year PhD student at the University of Minnesota.
+      I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and
+      a minor in Computer Science from San Diego State University. Outside of academics,
+      I enjoy the outdoors and climbing!
+    </p>
+    <p>
+      I am also a co-leader of the Council for the Advancement of Underrepresented
+      Scientists and Engineers (CAUSE). We are dedicated to the recruitment, retention,
+      and professional development of graduate students of color and first generation
+      college students within the College of Science and Engineering.
+    </p>
+    <h2 class='text-xl mt-5 mb-2 underline'>What I'm up to</h2>
+    <p>
+      I am currently studying for the Complex Preliminary Exam and a supporting
+      mentor for the PolyMath Jr. REU helping with the Ramsey Theory project.
+    </p>
+    <p>I will post about my hobbies here. I think this page should be pushed to
+       the about me page</p>
+  </SectionLayout>
 </BaseLayout>
 
 <script>

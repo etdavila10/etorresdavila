@@ -1,8 +1,9 @@
 ---
-import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
 
-const { title, pageTitle, bgColor } = Astro.props;
+
+const { title, pageTitle } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,16 +17,16 @@ const { title, pageTitle, bgColor } = Astro.props;
     <script src="https://kit.fontawesome.com/9730b2ac3e.js" crossorigin="anonymous"></script>
 		<title>{title}</title>
 	</head>
-	<body class='bg-amber-50 text-zinc-700'>
-    <Header />
-    <main class='bg-red-400 min-h-screen px-10 pt-12'>
-        <div class='w-fit font-bold text-7xl bg-sky-500 rounded-full py-10 px-10'>
-          <p class=''>{ pageTitle }</p>
-        </div>
-        <div class=''>
-          <slot />
-        </div>
+	<body class='bg-gray-700 text-gray-50'>
+    <Navigation />
+    <main class='flex-1 min-h-screen p-12 pl-48 pb-0 bg-gray-700 flex flex-col'>
+      <div class='w-fit font-bold text-7xl'>
+        <p class=''>{ pageTitle }</p>
+      </div>
+      <div class=''>
+        <slot />
+      </div>
+      <Footer />
     </main>
-    <Footer />
 	</body>
 </html>
