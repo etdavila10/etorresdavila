@@ -13,6 +13,13 @@ module.exports = {
       width: {
         '112': '28rem',
         '128': '32rem',
+      },
+      height: {
+        '112': '28rem',
+        '128': '32rem',
+      },
+      fontSize: {
+        '10xl': '10rem'
       }
     },
 	},

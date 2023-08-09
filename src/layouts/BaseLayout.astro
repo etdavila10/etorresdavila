@@ -1,31 +1,27 @@
 ---
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
+import '../styles/global.css';
 
-
-const { title, pageTitle } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class='scroll-smooth'>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-    <script src="https://kit.fontawesome.com/9730b2ac3e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/9730b2ac3e.js" 
+            crossorigin="anonymous"></script>
 		<title>{title}</title>
 	</head>
-	<body class='bg-gray-700 text-gray-50'>
+	<body class='bg-gray-700 text-gray-50 font-serif'>
     <Navigation />
-    <main class='flex-1 min-h-screen p-12 pl-48 pb-0 bg-gray-700 flex flex-col'>
-      <div class='w-fit font-bold text-7xl'>
-        <p class=''>{ pageTitle }</p>
-      </div>
-      <div class=''>
-        <slot />
-      </div>
+    <main class='ml-48 mr-16'>
+      <slot />
       <Footer />
     </main>
 	</body>

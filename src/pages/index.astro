@@ -1,120 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SectionLayout from '../layouts/SectionLayout.astro';
+import Welcome from '../components/Welcome.astro';
 ---
 
-<BaseLayout>
-  <SectionLayout sectionId={ 'home-section' } sectionTitle={ 'Welcome' }>
-    <div>
-      <p class='text-2xl mb-5'>
-        My name is
-      </p>
-      <div id='terminal-container' class='w-128 font-mono bg-slate-700 text-sky-500 flex justify-start items-center p-2 mb-10'>
-        <span id='chevron-character' class='text-lime-500 text-4xl -translate-y-0.5'>❯</span>
-        <span id='name-container' class='text-sky-500 text-4xl ml-2'></span>
-        <span id='pipe-character' class='w-1 ml-1 rounded-full bg-sky-500 h-10 inline-block'></span>
-      </div>
-      <p class='text-2xl mb-5'>
-        I am a
-      </p>
-      <div id='identity-container' class='cursor-pointer text-4xl rounded-full bg-sky-500 bg-opacity-20 w-fit p-5 border-2 border-sky-500 transition duration-200 hover:bg-opacity-50'>
-      </div>
-    </div>
-  </SectionLayout>
-  <SectionLayout sectionId={ 'research-section' } sectionTitle={ 'Research' }>
-    <h2 class='text-xl underline mb-2'>Research Interests</h2>
-    <p>
-      While at San Diego State, my main interest was in algebraic combinatorics.
-      In particular, I studied relationships between numerical semigroups and polytopes
-      under Dr. Christopher O'Neill. I also participated in MSRI-UP where I had the
-      opportunity to work with Lie algebras under Dr. Pamela E. Harris. Since starting
-      graduate school, I found myself drawn to the application of mathematics to real
-      world problems and because of this I have started reading under Dr. Richard
-      McGehee about the mathematics behind climate change.
-    </p>
-    <h2 class='text-xl underline mb-2'>Publications</h2>
-    <p>
-      My publications will go here as well.
-    </p>
-  </SectionLayout>
-  <SectionLayout sectionId={ 'coding-section' } sectionTitle={ 'Programming' }>
-    <p class='mb-2'>
-      My projects will go here. This includes all my coding projects that I have
-      done in the past. Including my internship?
-    </p>
-  </SectionLayout>
-  <SectionLayout sectionId={ 'teaching-section' } sectionTitle={ 'Teaching' }>
-    <p class='mb-2'>
-      These are the classes that I'm currently teaching and the courses that I've
-      taught in the past.
-    </p>
-  </SectionLayout>
-  <SectionLayout sectionId={ 'about-section' } sectionTitle={ 'About' }>
-    <p class='mb-2'>
-      I am currently a third-year PhD student at the University of Minnesota.
-      I graduated in May 2020 with a Bachelors of Science in Applied Mathematics and
-      a minor in Computer Science from San Diego State University. Outside of academics,
-      I enjoy the outdoors and climbing!
-    </p>
-    <p>
-      I am also a co-leader of the Council for the Advancement of Underrepresented
-      Scientists and Engineers (CAUSE). We are dedicated to the recruitment, retention,
-      and professional development of graduate students of color and first generation
-      college students within the College of Science and Engineering.
-    </p>
-    <h2 class='text-xl mt-5 mb-2 underline'>What I'm up to</h2>
-    <p>
-      I am currently studying for the Complex Preliminary Exam and a supporting
-      mentor for the PolyMath Jr. REU helping with the Ramsey Theory project.
-    </p>
-    <p>I will post about my hobbies here. I think this page should be pushed to
-       the about me page</p>
-  </SectionLayout>
+<BaseLayout title={ 'Eduardo Torres Dávila - Portfolio' }>
+  <Welcome />
+  <div class='mt-48'>
+    <h1>Research Area</h1>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+  </div>
 </BaseLayout>
-
-<script>
-  const identifiers = ['Mathematician', 'Researcher', 'Algebraist', 'Programmer',
-                       'Software Developer', 'Graduate Student', 'Teacher'];
-  const fullName: string = 'Eduardo Torres Dávila';
-  const nameContainer = document.getElementById('name-container')!;
-  const pipeCharacter = document.getElementById('pipe-character')!;
-  const identifierContainer = document.getElementById('identity-container')!;
-
-  const animateName = () => {
-    for (let i = 0; i < fullName.length; i++) {
-      setTimeout(() => {
-        nameContainer.innerHTML += fullName[i];
-        if (i == fullName.length - 1) {
-          setInterval(() => {
-            if (pipeCharacter.classList.contains('hidden')) {
-              pipeCharacter.classList.remove('hidden');
-            } else {
-              pipeCharacter.classList.add('hidden');
-            }
-          }, 500);
-        };
-      }, 200 * i);
-    }
-  };
-
-  const renderIdentifier = () => {
-    const randomIndex = Math.floor(Math.random() * identifiers.length);
-    const randomIdentifier = identifiers[randomIndex];
-    if (identifierContainer.innerHTML === randomIdentifier) {
-      console.log('recalled');
-      renderIdentifier();
-    } else {
-      identifierContainer.innerHTML = randomIdentifier;
-    }
-  };
-
-  const funcsToRun = () => {
-    renderIdentifier();
-    animateName();
-  };
-
-  window.addEventListener("load",funcsToRun,false);
-  identifierContainer.addEventListener('click', renderIdentifier);
-</script>
-
-
