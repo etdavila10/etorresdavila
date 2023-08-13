@@ -2,23 +2,75 @@
 import headshot from '../images/profile-pic-web.jpeg'; 
 ---
 <div id='home-section'>
-  <h1 id='home-header' class='first-letter:text-6xl text-5xl uppercase font-bold mb-6'>
+  <h1 id='home-header' class='font-display first-letter:text-6xl text-5xl uppercase font-bold mb-6'>
     Welcome!
   </h1>
   <div id='welcome-content-headshot-container' class='flex flex-row flex-nowrap
                                                       justify-between'>
-    <div id='welcome-content-container'>
+    <div id='welcome-content-container' class='flex-1 flex flex-col justify-center gap-12'>
       <div id='name-content-container'>
         <p class='text-lg'>My name is</p>
-        <p class='text-3xl'>Eduardo Torres Dávila</p>
+        <h2 class='text-4xl font-display font-bold'>Eduardo Torres Dávila</h2>
       </div>
       <div id='identity-container'>
         <p class='text-lg'>I am a</p>
-        <p class='text-3xl'>Graduate Student</p>
+        <h2 id='identity' class='select-none text-4xl font-display font-bold transition duration-1000'>Graduate Student</h2>
       </div>
     </div>
-    <div id='headshot-container' class='w-96'>
-      <img id='headshot' class='w-fit' src={ headshot } alt="Eduardo's Headshot">
+    <div id='headshot-container' class='w-80 flex-none'>
+      <img id='headshot' class='w-fit rounded-3xl' src={ headshot } alt="Eduardo's Headshot">
     </div>
   </div>
+  <div id='about-me-container' class='mt-12'>
+    <h2 class='text-xl font-display underline'>About me</h2>
+    <p>
+      I am currently a fourth year PhD student at the University of
+      Minnesota. I graduated in May 2020 with a Bachelors of Science in
+      Applied Mathematics and a minor in Computer Science from San Diego
+      State University. Outside of academics, I enjoy the outdoors and
+      climbing!
+    </p>
+    <p>
+      I am a co-leader of the Council for the Advancement of
+      Underrepresented Scientists and Engineers (CAUSE). We are dedicated
+      to the recruitment, retention, and professional development of
+      graduate students of color and first generation college students
+      within the College of Science and Engineering.
+    </p>
+    <p>
+      Want to learn more about me? Follow this link to see my entire academic development.
+    </p>
+    <p>
+      If you want a quick snapshot to my academic development view my cv.
+    </p>
+  </div>
 </div>
+
+<script>
+  const identifiers = ['Graduate Student', 'Mathematician', 'Researcher', 'Algebraist', 'Programmer',
+                       'Software Developer'];
+  const numOfIdentifiers = identifiers.length;
+  const identifierContainer = document.getElementById('identity-container')!;
+  const identifier = document.getElementById('identity')!;
+  let curIndex = 0;
+
+  const animateIdentifier = () => {
+    setInterval(() => {
+      identifier.classList.add('opacity-0', 'translate-x-12');
+      curIndex = (curIndex === numOfIdentifiers - 1) ? 0 : curIndex + 1;
+      let curIdentifier = identifiers[curIndex];
+
+      setTimeout(() => {
+        identifier.innerHTML = curIdentifier;
+        identifier.classList.remove('translate-x-12');
+        identifier.classList.add('-translate-x-12');
+      }, 1000);
+
+      setTimeout(() => {
+        identifier.classList.remove('opacity-0', '-translate-x-12');
+      }, 2000);
+    }, 5000);
+  };
+
+  window.addEventListener("load",animateIdentifier,false);
+</script>
