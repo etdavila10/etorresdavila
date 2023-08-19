@@ -2,7 +2,7 @@
 import headshot from '../images/profile-pic-web.jpeg'; 
 import cvSnapshot from '../images/cv-snapshot.png'; 
 ---
-<div id='home-section' class='flex flex-row flex-nowrap justify-center gap-24 min-h-screen items-center'>
+<div id='home-section' data-link-name='Home' class='section flex flex-row flex-nowrap justify-center gap-24 min-h-screen items-center'>
   <div id='welcome-content-container' class='flex flex-col justify-start gap-12'>
     <h1 id='home-header' class='font-display first-letter:text-6xl text-5xl uppercase font-bold'>
       Welcome
@@ -20,8 +20,12 @@ import cvSnapshot from '../images/cv-snapshot.png';
     <img id='headshot' class='w-fit rounded-3xl border-gray-300 border' src={ headshot } alt="Eduardo's Headshot">
   </div>
 </div>
-<div id='about-me-container'>
-  <h3 class='text-2xl mb-3 font-display underline'>About me</h3>
+<div id='about-me-section' data-link-name='About Me' class='section'>
+  <div id='about-header' class='font-display w-full h-6 mb-12 border-b border-slate-700'>
+    <span class='text-4xl font-bold bg-gray-100 pr-10'>
+      About Me
+    </span>
+  </div>
   <div id='about-cv-container' class='flex flex-row flex-nowrap justify-between gap-12'>
     <div id='about-me-content' class='text-justify flex-1'>
       <p class='pb-2'>
