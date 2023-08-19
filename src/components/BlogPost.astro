@@ -1,0 +1,15 @@
+---
+const { blogPost } = Astro.props;
+const { id, title, authors } = blogPost;
+const numOfAuthors = authors && authors.length;
+---
+
+<div id={ id } class='bg-amber-100 mb-6'>
+  <p class='text-xl font-display'>{ title }</p>
+  <span>Authors: </span>
+  { numOfAuthors === 2 && authors.map((author, i) => i != numOfAuthors - 1 && <span>{ author } </span>) }
+  { numOfAuthors != 2 && authors.map((author, i) => i != numOfAuthors - 1 && <span>{ author }, </span>) }
+  { authors && <span>& { authors[numOfAuthors - 1] }</span> }
+</div>
+
+

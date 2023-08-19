@@ -1,15 +1,77 @@
 ---
+import Publication from './Publication.astro';
+import BlogPost from './BlogPost.astro';
+
+const publications = [
+  {
+    id: 'sgps-II',
+    title: 'Numerical semigroups, polyhedra, and posets II: locating certain families of semigroups',
+    authors: ['Jackson Autry'],
+    journal: 'Journal of Advances in Geometry',
+    isPublished: true,
+    url: ''
+  },
+  {
+    id: 'sgps-III',
+    title: 'Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension',
+    authors: ['Tara Gomes', 'Chris'],
+    journal: 'Electronic Journal of Combinatorics',
+    isPublished: false,
+    url: ''
+  },
+  {
+    id: 'lie-algebras',
+    title: 'Visualizing the support of Kostant\'s weight multiplicity formula for the rank two Lie algebras',
+    authors: ['Pamela', 'Marissa'],
+    journal: 'Involve',
+    isPublished: false,
+    url: ''
+  }
+];
+
+const blogPosts = [
+  {
+    id: 'networking-basics',
+    title: 'Networking Basics for Math Undergrads',
+    authors: ['Joanne Beckford', 'Alex Christensen', 'Pamela E. Harris'],
+    journal: 'AMS Blogs',
+    isPublished: true,
+    url: ''
+  },
+  {
+    id: 'reu-questions',
+    title: 'Bank of REU/Grad Fair Questions',
+    authors: ['Pamela E. Harris', 'Lucy Martinez'],
+    journal: 'AMS Blogs',
+    isPublished: true,
+    url: ''
+  }
+];
 ---
 
 <div id='research-section' class='mt-12'>
-  <div id='research-header' class='font-display w-full h-6 mb-12 border-b border-slate-700 text-left'>
+  <div id='research-header' class='font-display w-full h-6 mb-12 border-b border-slate-700'>
     <span class='text-4xl font-bold bg-gray-100 pr-10'>
       Research
     </span>
   </div>
-  <div id='research-content-container' class='text-justify'>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+  <div id='research-interest-container' class='text-justify mb-6'>
+    <h3 class='text-2xl mb-3 font-display underline'>Research Interest</h3>
+    <p>
+      While at San Diego State, my main interest was in algebraic combinatorics. In particular,
+      I studied relationships between numerical semigroups and polytopes under Dr. Christopher
+      O'Neill. I also participated in MSRI-UP where I had the opportunity to work with Lie algebras
+      under Dr. Pamela E. Harris. Since starting graduate school, I found myself drawn to the application
+      of mathematics to real world problems and because of this I have started reading under Dr.
+      Richard McGehee about the mathematics behind climate change.
+    </p>
+  </div>
+  <div id='publications-container' class='text-justify'>
+    <h3 class='text-2xl mb-3 font-display underline'>Publications</h3>
+    { publications && publications.map(pub => <Publication publication={ pub } />) }
+  </div>
+  <div id='blogPosts-container' class='text-justify'>
+    <h3 class='text-2xl mb-3 font-display underline'>Writing Contributions</h3>
+    { blogPosts && blogPosts.map(post => <BlogPost blogPost={ post } />) }
   </div>
 </div>
