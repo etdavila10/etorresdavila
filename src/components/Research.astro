@@ -1,23 +1,24 @@
 ---
 import Publication from './Publication.astro';
-import BlogPost from './BlogPost.astro';
 
 const publications = [
   {
     id: 'sgps-II',
     title: 'Numerical semigroups, polyhedra, and posets II: locating certain families of semigroups',
-    authors: ['Jackson Autry'],
+    authors: ['Jackson Autry', 'Abigail Ezell', 'Tara Gomes', 'Chistopher O\'Neill', 'Chistopher Preuss', 'Tarang Saluja'],
     journal: 'Journal of Advances in Geometry',
     isPublished: true,
-    url: ''
+    articleLink: 'https://www.degruyter.com/document/doi/10.1515/advgeom-2021-0024/html',
+    pubType: 'article'
   },
   {
     id: 'sgps-III',
     title: 'Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension',
-    authors: ['Tara Gomes', 'Chris'],
+    authors: ['Tara Gomes', 'Chris', 'Another Person'],
     journal: 'Electronic Journal of Combinatorics',
-    isPublished: false,
-    url: ''
+    isPublished: true,
+    articleLink: 'https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57',
+    pubType: 'article'
   },
   {
     id: 'lie-algebras',
@@ -25,28 +26,11 @@ const publications = [
     authors: ['Pamela', 'Marissa'],
     journal: 'Involve',
     isPublished: false,
-    url: ''
+    articleLink: 'https://arxiv.org/abs/1908.08405',
+    pubType: 'article'
   }
 ];
 
-const blogPosts = [
-  {
-    id: 'networking-basics',
-    title: 'Networking Basics for Math Undergrads',
-    authors: ['Joanne Beckford', 'Alex Christensen', 'Pamela E. Harris'],
-    journal: 'AMS Blogs',
-    isPublished: true,
-    url: ''
-  },
-  {
-    id: 'reu-questions',
-    title: 'Bank of REU/Grad Fair Questions',
-    authors: ['Pamela E. Harris', 'Lucy Martinez'],
-    journal: 'AMS Blogs',
-    isPublished: true,
-    url: ''
-  }
-];
 ---
 
 <div id='research-section' data-link-name='Research' class='section mt-12'>
@@ -55,7 +39,7 @@ const blogPosts = [
       Research
     </span>
   </div>
-  <div id='research-interest-container' data-link-name='Research Interest' class='sub-section text-justify mb-6'>
+  <div id='research-interest-container' data-link-name='Research Interest' class='sub-section mb-6'>
     <h3 class='text-2xl mb-3 font-display underline'>Research Interest</h3>
     <p>
       While at San Diego State, my main interest was in algebraic combinatorics. In particular,
@@ -66,12 +50,8 @@ const blogPosts = [
       Richard McGehee about the mathematics behind climate change.
     </p>
   </div>
-  <div id='publications-container' data-link-name='Publications' class='sub-section text-justify'>
+  <div id='publications-container' data-link-name='Publications' class='sub-section'>
     <h3 class='text-2xl mb-3 font-display underline'>Publications</h3>
     { publications && publications.map(pub => <Publication publication={ pub } />) }
-  </div>
-  <div id='blogPosts-container' data-link-name='Writing Contributions' class='sub-section text-justify'>
-    <h3 class='text-2xl mb-3 font-display underline'>Writing Contributions</h3>
-    { blogPosts && blogPosts.map(post => <BlogPost blogPost={ post } />) }
   </div>
 </div>

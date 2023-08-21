@@ -1,4 +1,24 @@
 ---
+import BlogPost from './BlogPost.astro';
+
+const blogPosts = [
+  {
+    id: 'networking-basics',
+    title: 'Networking Basics for Math Undergrads',
+    authors: ['Joanne Beckford', 'Alex Christensen', 'Pamela E. Harris'],
+    journal: 'AMS Blogs',
+    isPublished: true,
+    url: ''
+  },
+  {
+    id: 'reu-questions',
+    title: 'Bank of REU/Grad Fair Questions',
+    authors: ['Pamela E. Harris', 'Lucy Martinez'],
+    journal: 'AMS Blogs',
+    isPublished: true,
+    url: ''
+  }
+];
 ---
 
 <div id='community-section' data-link-name='Community' class='section mt-12'>
@@ -8,6 +28,10 @@
     </span>
   </div>
   <div id='community-content-container'>
+    <div id='blogPosts-container' data-link-name='Writing Contributions' class='sub-section text-justify'>
+      <h3 class='text-2xl mb-3 font-display underline'>Writing Contributions</h3>
+      { blogPosts && blogPosts.map(post => <BlogPost blogPost={ post } />) }
+    </div>
     <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
     <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>
     <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.</p>

@@ -1,15 +1,21 @@
 ---
 const { publication } = Astro.props;
-const { id, title, authors, journal } = publication;
+const { id, title, authors, journal, isPublished, articleLink, pubType } = publication;
 const numOfAuthors = authors && authors.length;
 ---
 
-<div id={ id } class='bg-amber-100 mb-6'>
-  <p class='text-xl font-display'>{ title }</p>
-  <span>Authors: </span>
-  { numOfAuthors === 2 && authors.map((author, i) => i != numOfAuthors - 1 && <span>{ author } </span>) }
-  { numOfAuthors != 2 && authors.map((author, i) => i != numOfAuthors - 1 && <span>{ author }, </span>) }
-  { authors && <span>& { authors[numOfAuthors - 1] }</span> }
+<div id={ id } class='group mb-6 h-52 p-12 border-slate-700 border-2 rounded-lg flex items-center gap-12 transition duration-500
+  hover:bg-gray-200 hover:scale-105 hover:shadow-2xl'>
+  { pubType === 'article' && <i class='fa-regular fa-file-lines text-7xl' />}
+  { pubType === 'book' && <i class='fa-regular fa-book fa-2xl' />}
+  <div>
+    <a href={articleLink} class='text-xl font-display block mb-6 transition duration-500 group-hover:text-sky-600'>{ title }</a>
+    <span>In collaboration with</span>
+    { numOfAuthors === 2 && authors.map((author, i) => i != numOfAuthors - 1 && <span>{ author }</span>) }
+    { numOfAuthors != 2 && authors.map((author, i) => i != numOfAuthors - 1 && <span>{ author }, </span>) }
+    { authors && <span>{numOfAuthors != 1 ? '&' : '' } { authors[numOfAuthors - 1] }.</span> }
+    { journal && isPublished ? <span class='italic block text-slate-500'>{ journal }.</span> : <span class='italic block text-slate-500'>To appear in { journal }.</span> }
+  </div>
 </div>
 
 
