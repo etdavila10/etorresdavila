@@ -1,18 +1,19 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Layout from '../layouts/Layout.astro';
 import Welcome from '../components/Welcome.astro';
+import About from '../components/About.astro';
 import Research from '../components/Research.astro';
 import Coding from '../components/Coding.astro';
 import Teaching from '../components/Teaching.astro';
-import Community from '../components/Community.astro';
 ---
 
-<BaseLayout title={ 'Eduardo Torres Dávila - Portfolio' }>
-  <div id='content' class='mx-32 mb-12 mt-0'>
+<Layout title="Eduardo Torres Davila">
+	<main>
+    Content goes here.
     <Welcome />
+    <About />
     <Research />
     <Coding />
     <Teaching />
-    <Community />
-  </div>
-</BaseLayout>
+	</main>
+</Layout>
