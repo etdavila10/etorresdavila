@@ -1,8 +1,12 @@
-<div class="h-[calc(100vh-4rem)] grid grid-cols-2 content-center border-wine border">
-  <div class="text-start border border-coral">
-    <h1 class="text-9xl mb-2 font-bold">Eduardo</h1>
-    <h1 class="text-9xl mb-16 font-bold">Torres D&aacutevila</h1>
-    <h2 class="text-5xl mb-32">Math PhD Candidate/Software Engineer</h2>
+---
+import Scatter from './Scatter.astro';
+---
+
+<div class="grid grid-cols-2 content-center">
+  <div class="text-start m-auto">
+    <h1 class="text-8xl mb-2 font-bold">Eduardo</h1>
+    <h1 class="text-8xl mb-16 font-bold">Torres D&aacutevila</h1>
+    <h2 class="text-4xl mb-32">Math PhD Candidate/Software Engineer</h2>
     <div>
       <button class="inline-block bg-teal text-3xl p-6 text-white font-bold">GET IN TOUCH</button>
       <ul class="inline-block text-3xl ml-6">
@@ -12,55 +16,10 @@
       </ul>
     </div>
   </div>
-  <div class="border border-coral flex align-middle">
-    <div class="border border-gray m-auto p-12">
-      <img class="w-[32rem]" src="/profile_pic.jpeg"/>
+  <div class="flex align-middle">
+    <div class="m-auto p-12">
+      <Scatter/>
+      <!-- <img class="w-[32rem]" src="/profile_pic.jpeg"/> -->
     </div>
   </div>
-  <!-- <svg class="-z-10 absolute top-0 left-[49%]" viewbox="-2 0 205 205" id="tealpath"> -->
-  <!--   <path -->
-  <!--     style="fill-opacity:0; -->
-  <!--            stroke:#333333; -->
-  <!--            stroke-width:4px; -->
-  <!--            stroke-linecap:round; -->
-  <!--            stroke-linejoin:round; -->
-  <!--            stroke-dasharray: 200; -->
-  <!--            stroke-dashoffset: 70; -->
-  <!--            animation: dash 5s ease;" -->
-  <!--      d="M 41,78 V 159 H 100" -->
-  <!--      id="path3" /> -->
-  <!--   <path -->
-  <!--     style="fill-opacity:0; -->
-  <!--            stroke:#ee8e11; -->
-  <!--            stroke-width:4px; -->
-  <!--            stroke-linecap:round; -->
-  <!--            stroke-linejoin:round; -->
-  <!--            stroke-dasharray: 200; -->
-  <!--            stroke-dashoffset: 70; -->
-  <!--            animation: dash 5s ease;" -->
-  <!--      d="M 44,83 V 156 H 105" -->
-  <!--      id="path3" /> -->
-  <!--   <path -->
-  <!--     style="fill-opacity:0; -->
-  <!--            stroke:#2da99e; -->
-  <!--            stroke-width:4px; -->
-  <!--            stroke-linecap:round; -->
-  <!--            stroke-linejoin:round; -->
-  <!--            stroke-dasharray: 200; -->
-  <!--            stroke-dashoffset: 70; -->
-  <!--            animation: dash 5s ease;" -->
-  <!--      d="M 47,88 V 153 H 110" -->
-  <!--      id="path3" /> -->
-  <!-- </svg> -->
 </div>
-
-<style>
-@keyframes dash {
-  from {
-    stroke-dashoffset: 200;
-  }
-  to {
-    stroke-dashoffset: 70;
-  }
-}
-</style>

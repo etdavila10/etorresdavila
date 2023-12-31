@@ -1,0 +1,68 @@
+<div id="result">
+</div>
+
+<script>
+  import * as d3 from "d3";
+
+  // Where n is the number of columns you want
+  // Needs to be an odd number
+  const generateGrid = (gridLength) => {
+
+    const midPoint = Math.floor(gridLength/2);
+    let x = [];
+    let y = [];
+    let j = 1;
+    let step = 2;
+    for (let i = -midPoint; i <= midPoint; i++) {
+      x = x.concat(new Array(j).fill(i));
+      if (j === gridLength) { step = -2 }
+
+      y = y.concat(Array.from({ length: j }, (v,ind) => (ind-Math.floor(j/2))));
+
+      j += step;
+    }
+    return [x, y];
+  };
+  const n = 5;
+  const oddify = 2*n + 1;
+
+  const [xvals, yvals] = generateGrid(oddify);
+  console.log(xvals, yvals);
+
+  const xMax = Math.max(...xvals);
+  const yMax = Math.max(...yvals);
+  const xMin = Math.min(...xvals);
+  const yMin = Math.min(...yvals);
+  const data = d3.zip(xvals,yvals)
+
+  const width = 600;
+  const height = 600;
+  const marginTop = 30;
+  const marginRight = 30;
+  const marginBottom = 30;
+  const marginLeft = 30;
+
+  const x = d3.scaleLinear([xMin, xMax], [marginLeft, width-marginRight])
+  const y = d3.scaleLinear([yMin, yMax], [height - marginBottom, marginTop])
+
+  const line = d3.line()
+    .x(d => x(d[0]))
+    .y(d => y(d[1]));
+
+  const svg = d3.select("#result")
+    .append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("viewBox", [0, 0, width, height])
+    .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
+
+  svg.append("g")
+    .attr("stroke-width", 0)
+    .selectAll("circle")
+    .data(data)
+    .join("circle")
+      .attr("cx", d => x(d[0]))
+      .attr("cy", d => y(d[1]))
+      .attr("r", 20)
+      .attr("fill", (d, i) => d3.interpolateRainbow(i / 40))
+</script>
