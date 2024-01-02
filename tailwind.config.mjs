@@ -31,6 +31,10 @@ export default {
       strokeWidth: {
         '15': '15px',
       },
+      minWidth: {
+        '32': '8rem',
+        '96': '24rem'
+      }
     },
 	},
 	plugins: [],

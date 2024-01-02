@@ -1,12 +1,16 @@
-<div id="result">
+<div id="result" class="absolute -top-24 right-0 -z-10">
 </div>
 
 <script>
   import * as d3 from "d3";
 
+  const distance = (x:number,y:number) => {
+    return Math.sqrt(x**2 + y**2);
+  };
+
   // Where n is the number of columns you want
   // Needs to be an odd number
-  const generateGrid = (gridLength) => {
+  const generateGrid = (gridLength:number) => {
 
     const midPoint = Math.floor(gridLength/2);
     let x = [];
@@ -17,13 +21,15 @@
       x = x.concat(new Array(j).fill(i));
       if (j === gridLength) { step = -2 }
 
-      y = y.concat(Array.from({ length: j }, (v,ind) => (ind-Math.floor(j/2))));
+      y = y.concat(Array.from({ length: (j) }, (_,ind) => (ind-(Math.floor((j)/2)))));
 
       j += step;
     }
     return [x, y];
   };
-  const n = 5;
+
+  const colors = ["#E2725B", "#008080", "#556B2F"]
+  const n = 7;
   const oddify = 2*n + 1;
 
   const [xvals, yvals] = generateGrid(oddify);
@@ -35,19 +41,15 @@
   const yMin = Math.min(...yvals);
   const data = d3.zip(xvals,yvals)
 
-  const width = 600;
-  const height = 600;
-  const marginTop = 30;
-  const marginRight = 30;
-  const marginBottom = 30;
-  const marginLeft = 30;
+  const width = 1000;
+  const height = 1000;
+  const marginTop = 20;
+  const marginRight = 20;
+  const marginBottom = 20;
+  const marginLeft = 20;
 
   const x = d3.scaleLinear([xMin, xMax], [marginLeft, width-marginRight])
   const y = d3.scaleLinear([yMin, yMax], [height - marginBottom, marginTop])
-
-  const line = d3.line()
-    .x(d => x(d[0]))
-    .y(d => y(d[1]));
 
   const svg = d3.select("#result")
     .append("svg")
@@ -56,6 +58,17 @@
     .attr("viewBox", [0, 0, width, height])
     .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
+  // Used for sizing of radius
+  // 1 = dramatic dropoff
+  // 10 = less dramatic dropoff
+  const dropoff = 5.5;
+  // Used for scaling the radius of the points
+  // 100 = smaller circles
+  // 500 = larger circles
+  const scaling = 200;
+
+  const variance = 100;
+
   svg.append("g")
     .attr("stroke-width", 0)
     .selectAll("circle")
@@ -63,6 +76,8 @@
     .join("circle")
       .attr("cx", d => x(d[0]))
       .attr("cy", d => y(d[1]))
-      .attr("r", 20)
-      .attr("fill", (d, i) => d3.interpolateRainbow(i / 40))
+      .attr("r", d => 1/(distance(d[0],d[1]) + dropoff)*((scaling) - (Math.random()*variance)))
+      // .attr("r", "20")
+      .attr("fill", d => d3.interpolate(colors[Math.floor(Math.random()*colors.length)], "#FFFFE8")(distance(d[0],d[1])/7.5))
+      .attr("opacity", d => 1/(distance(d[0],d[1])+2)*1 + Math.random())
 </script>
