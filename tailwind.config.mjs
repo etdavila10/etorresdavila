@@ -34,6 +34,9 @@ export default {
       minWidth: {
         '32': '8rem',
         '96': '24rem'
+      },
+      height: {
+        'screen-sans-header': 'calc(100vh - 6rem)',
       }
     },
 	},

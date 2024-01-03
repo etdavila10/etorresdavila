@@ -1,4 +1,4 @@
-<div id="result" class="absolute -top-24 right-0 -z-10">
+<div id="result" class="absolute -top-24 -right-24 -z-10">
 </div>
 
 <script>
@@ -53,8 +53,8 @@
 
   const svg = d3.select("#result")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height)
+    .attr("width", "100vh")
+    .attr("height", "100vh")
     .attr("viewBox", [0, 0, width, height])
     .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
 
@@ -79,5 +79,5 @@
       .attr("r", d => 1/(distance(d[0],d[1]) + dropoff)*((scaling) - (Math.random()*variance)))
       // .attr("r", "20")
       .attr("fill", d => d3.interpolate(colors[Math.floor(Math.random()*colors.length)], "#FFFFE8")(distance(d[0],d[1])/7.5))
-      .attr("opacity", d => 1/(distance(d[0],d[1])+2)*1 + Math.random())
+      .attr("opacity", d => 1/(distance(d[0],d[1])+2)*3 + Math.random())
 </script>
