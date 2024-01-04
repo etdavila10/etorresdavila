@@ -1,8 +1,11 @@
 ---
-const { href, title, body } = Astro.props;
+const {title, iconBg, details, linkUrl} = Astro.props;
 ---
 
-<li class="text-charcoal">
-</li>
-<style>
-</style>
+<a href={ linkUrl }>
+  <div class="w-96 h-96 rounded-xl bg-offwhite p-6 flex flex-col justify-between">
+    <div class="font-display text-2xl">{ title }</div>
+    <div>{ details }</div>
+    <a href={ linkUrl } class:list={[iconBg, 'rounded-full text-white w-fit p-1 px-2']}>Learn more <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+</a>
