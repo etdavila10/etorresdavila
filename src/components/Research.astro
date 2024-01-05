@@ -1,9 +1,10 @@
 ---
 import Card from './Card.astro';
+import Publication from './Publication.astro';
 ---
 
-<div class='h-screen mt-24'>
-  <div class='flex justify-center gap-12 mb-24'>
+<div class='mt-24'>
+  <div class='flex justify-center gap-12 mb-32'>
     <Card 
       title='Differential operators' 
       iconBg='bg-teal'
@@ -27,5 +28,14 @@ import Card from './Card.astro';
     />
   </div>
 
-  <h1 class="text-3xl font-display mb-12">Latest Publication</h1>
+  <h1 class="text-5xl font-display mb-24">Latest Publication</h1>
+  <Publication 
+    title='Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension'
+    authors={['Christopher O\'Neill', 'Tara Gomes']}
+    arxivLink='https://arxiv.org/abs/2009.05921'
+    journalTitle='The Electronic Journal of Combinatorics'
+    journalLink='https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57'
+    abstract='This paper is the third in a series of manuscripts that examine the combinatorics of the Kunz polyhedron Pm, whose positive integer points are in bijection with numerical semigroups (cofinite subsemigroups of ℤ≥0) whose smallest positive element is m. The faces of Pm are indexed by a family of finite posets (called Kunz posets) obtained from the divisibility posets of the numerical semigroups lying on a given face. In this paper, we characterize to what extent the minimal presentation of a numerical semigroup can be recovered from its Kunz poset. In doing so, we prove that all numerical semigroups lying on the interior of a given face of Pm have identical minimal presentation cardinality, and we provide a combinatorial method of obtaining the dimension of a face from its corresponding Kunz poset.'
+  />
+  <button class='mt-24 text-2xl rounded-full bg-offwhite px-6 py-3'>View all publications</button>
 </div>
