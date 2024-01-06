@@ -1,9 +1,117 @@
 ---
+import TechCard from './TechCard.astro';
 ---
 
-<div id='coding' class='text-5xl font-display mt-24 bg-gray rounded-3xl'>
-  <div class='h-screen bg-teal w-32'></div>
-  <div class='h-screen bg-olive w-32'></div>
+<!-- <div class='relative h-12 mt-48'> -->
+<!--   <h1 class='z-10 top-0 left-0 h-12 overflow-hidden absolute margin-shift px-24 text-gray font-display font-bold text-7xl'>Software Engineering</h1> -->
+<!--   <h1 class='z-0 top-0 left-0 absolute h-12 margin-shift px-24 text-neutral font-display font-bold text-7xl'>Software Engineering</h1> -->
+<!-- </div> -->
+<h1 class='margin-shift px-24 mt-48 translate-y-2 font-display font-bold text-6xl'>Software</h1>
+<div id='coding' class='margin-shift text-neutral p-24 pt-0 bg-gray rounded-3xl'>
+  <h1 class='-translate-y-1 font-display font-bold text-6xl'>Engineering</h1>
+  <h1 class='font-display text-5xl mb-12 mt-24'>Languages</h1>
+  <div class='h-64 flex gap-6 overflow-x-scroll'>
+    <TechCard 
+      name='Python'
+      logo='/languages/python.svg'
+      website='https://www.python.org/'
+    />
+    <TechCard 
+      name='JavaScript'
+      logo='/languages/javascript.svg'
+      website='https://www.javascript.com/'
+    />
+    <TechCard 
+      name='CSS'
+      logo='/languages/CSS3.svg'
+      website='https://developer.mozilla.org/en-US/docs/Web/CSS'
+    />
+    <TechCard 
+      name='HTML'
+      logo='/languages/HTML5.svg'
+      website='https://developer.mozilla.org/en-US/docs/Glossary/HTML5'
+    />
+    <TechCard 
+      name='Java'
+      logo='/languages/java.svg'
+      website='https://www.java.com/en/'
+    />
+    <TechCard 
+      name='TypeScript'
+      logo='/languages/typescript.svg'
+      website='https://www.typescriptlang.org/'
+    />
+    <TechCard 
+      name='SageMath'
+      logo='/languages/sagemath.svg'
+      website='https://www.sagemath.org/'
+    />
+    <TechCard 
+      name='Macaulay2'
+      logo='/languages/9planets.jpeg'
+      website='https://macaulay2.com/'
+    />
+    <TechCard 
+      name='Bash'
+      logo='/languages/bash.svg'
+      website='https://www.gnu.org/software/bash/'
+    />
+  </div>
+  <h1 class='font-display text-5xl mb-12 mt-32'>Frameworks</h1>
+  <div class='h-64 flex gap-6 overflow-x-scroll'>
+    <TechCard 
+      name='TailwindCSS'
+      logo='/frameworks/tailwind.svg'
+      website='https://tailwindcss.com/'
+    />
+    <TechCard 
+      name='GSAP'
+      logo='/frameworks/gsap.svg'
+      website='https://gsap.com/'
+    />
+    <TechCard 
+      name='Spring'
+      logo='/frameworks/spring.svg'
+      website='https://spring.io/'
+    />
+    <TechCard 
+      name='Astro'
+      logo='/frameworks/astro.svg'
+      website='https://astro.build/'
+    />
+    <TechCard 
+      name='React'
+      logo='/frameworks/react.svg'
+      website='https://react.dev/'
+    />
+    <TechCard 
+      name='MatPlotLib'
+      logo='/frameworks/matplotlib.svg'
+      website='https://matplotlib.org/'
+    />
+    <TechCard 
+      name='NumPy'
+      logo='/frameworks/numpy.svg'
+      website='https://numpy.org/'
+    />
+    <TechCard 
+      name='Pandas'
+      logo='/frameworks/pandas.svg'
+      website='https://pandas.pydata.org/'
+    />
+  </div>
+  <h1 class='font-display text-5xl mb-12 mt-32'>Tools</h1>
+  <div class='h-64 flex gap-6 overflow-x-scroll'>
+    <TechCard 
+      name='Pandas'
+      logo='/frameworks/pandas.svg'
+      website='https://pandas.pydata.org/'
+    />
+  </div>
+  <h1 class='mt-48 font-display text-5xl'>Latest Project</h1>
+  <div class='text-5xl'>ToDo</div>
+  <h1 class='mt-48 font-display text-5xl'>Latest Experience</h1>
+  <div class='text-5xl'>ToDo</div>
 </div>
 
 <script>
@@ -13,29 +121,36 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to("#coding", {
+  gsap.to(".margin-shift", {
     scrollTrigger: {
       trigger: '#coding',
-      start: 'top top',
+      start: 'top 30%',
       end: '+=100',
-      markers: true,
       scrub: 1
     },
     marginLeft: '-6rem',
     marginRight: '-6rem',
+    borderRadius: '0'
   });
 
-  gsap.to("#coding", {
-    scrollTrigger: {
-      trigger: '#coding',
-      start: 'bottom bottom',
-      end: '+=100',
-      markers: true,
-      scrub: 1
+  gsap.fromTo(".margin-shift", 
+    {
+      marginLeft: '-6rem',
+      marginRight: '-6rem',
+      borderRadius: '0'
     },
-    immediateRender: false,
-    marginLeft: '0rem',
-    marginRight: '0rem',
-  });
+    {
+      scrollTrigger: {
+        trigger: '#coding',
+        start: 'bottom 70%',
+        end: '+=100',
+        scrub: 1
+      },
+      immediateRender: false,
+      marginLeft: '0rem',
+      marginRight: '0rem',
+      borderRadius: '1.5rem'
+    }
+  );
 
 </script>
