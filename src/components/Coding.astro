@@ -2,15 +2,16 @@
 import TechCard from './TechCard.astro';
 ---
 
-<!-- <div class='relative h-12 mt-48'> -->
-<!--   <h1 class='z-10 top-0 left-0 h-12 overflow-hidden absolute margin-shift px-24 text-gray font-display font-bold text-7xl'>Software Engineering</h1> -->
-<!--   <h1 class='z-0 top-0 left-0 absolute h-12 margin-shift px-24 text-neutral font-display font-bold text-7xl'>Software Engineering</h1> -->
-<!-- </div> -->
-<h1 class='margin-shift px-24 mt-48 translate-y-2 font-display font-bold text-6xl'>Software</h1>
-<div id='coding' class='margin-shift text-neutral p-24 pt-0 bg-gray rounded-3xl'>
-  <h1 class='-translate-y-1 font-display font-bold text-6xl'>Engineering</h1>
-  <h1 class='font-display text-5xl mb-12 mt-24'>Languages</h1>
-  <div class='h-64 flex gap-6 overflow-x-scroll'>
+<div id='coding' class='mb-32'>
+  <div class='flex gap-3 items-center'>
+    <div class='h-6 w-6 bg-coral rounded-full'></div>
+    <h1 class='text-5xl font-display text-coral font-bold'>Software</h1>
+  </div>
+  <p class='border-coral border rounded-xl bg-coral bg-opacity-10 p-6'>
+    Hello I am a fourth year phd student at the university of minnesota. I work under the guidance of Christine Berkesch.
+    Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+  </p>
+  <div class='rounded-xl h-64 flex gap-6 overflow-x-scroll items-center'>
     <TechCard 
       name='Python'
       logo='/languages/python.svg'
@@ -22,24 +23,9 @@ import TechCard from './TechCard.astro';
       website='https://www.javascript.com/'
     />
     <TechCard 
-      name='CSS'
-      logo='/languages/CSS3.svg'
-      website='https://developer.mozilla.org/en-US/docs/Web/CSS'
-    />
-    <TechCard 
-      name='HTML'
-      logo='/languages/HTML5.svg'
-      website='https://developer.mozilla.org/en-US/docs/Glossary/HTML5'
-    />
-    <TechCard 
       name='Java'
       logo='/languages/java.svg'
       website='https://www.java.com/en/'
-    />
-    <TechCard 
-      name='TypeScript'
-      logo='/languages/typescript.svg'
-      website='https://www.typescriptlang.org/'
     />
     <TechCard 
       name='SageMath'
@@ -52,32 +38,9 @@ import TechCard from './TechCard.astro';
       website='https://macaulay2.com/'
     />
     <TechCard 
-      name='Bash'
-      logo='/languages/bash.svg'
-      website='https://www.gnu.org/software/bash/'
-    />
-  </div>
-  <h1 class='font-display text-5xl mb-12 mt-32'>Frameworks</h1>
-  <div class='h-64 flex gap-6 overflow-x-scroll'>
-    <TechCard 
-      name='TailwindCSS'
-      logo='/frameworks/tailwind.svg'
-      website='https://tailwindcss.com/'
-    />
-    <TechCard 
-      name='GSAP'
-      logo='/frameworks/gsap.svg'
-      website='https://gsap.com/'
-    />
-    <TechCard 
       name='Spring'
       logo='/frameworks/spring.svg'
       website='https://spring.io/'
-    />
-    <TechCard 
-      name='Astro'
-      logo='/frameworks/astro.svg'
-      website='https://astro.build/'
     />
     <TechCard 
       name='React'
@@ -100,57 +63,8 @@ import TechCard from './TechCard.astro';
       website='https://pandas.pydata.org/'
     />
   </div>
-  <h1 class='font-display text-5xl mb-12 mt-32'>Tools</h1>
-  <div class='h-64 flex gap-6 overflow-x-scroll'>
-    <TechCard 
-      name='Pandas'
-      logo='/frameworks/pandas.svg'
-      website='https://pandas.pydata.org/'
-    />
-  </div>
   <h1 class='mt-48 font-display text-5xl'>Latest Project</h1>
-  <div class='text-5xl'>ToDo</div>
+  <div class='text-5xl'>ArXiv Game</div>
   <h1 class='mt-48 font-display text-5xl'>Latest Experience</h1>
-  <div class='text-5xl'>ToDo</div>
+  <div class='text-5xl'>Amazon Software Engineering Intern</div>
 </div>
-
-<script>
-
-  import { gsap } from 'gsap';
-  import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.to(".margin-shift", {
-    scrollTrigger: {
-      trigger: '#coding',
-      start: 'top 30%',
-      end: '+=100',
-      scrub: 1
-    },
-    marginLeft: '-6rem',
-    marginRight: '-6rem',
-    borderRadius: '0'
-  });
-
-  gsap.fromTo(".margin-shift", 
-    {
-      marginLeft: '-6rem',
-      marginRight: '-6rem',
-      borderRadius: '0'
-    },
-    {
-      scrollTrigger: {
-        trigger: '#coding',
-        start: 'bottom 70%',
-        end: '+=100',
-        scrub: 1
-      },
-      immediateRender: false,
-      marginLeft: '0rem',
-      marginRight: '0rem',
-      borderRadius: '1.5rem'
-    }
-  );
-
-</script>

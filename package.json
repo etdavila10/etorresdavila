@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
+    "@fontsource/comfortaa": "^5.0.18",
     "@fontsource/merriweather-sans": "^5.0.8",
     "@fontsource/source-code-pro": "^5.0.15",
     "@fontsource/source-sans-pro": "^5.0.8",

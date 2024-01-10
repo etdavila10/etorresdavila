@@ -25,7 +25,8 @@ export default {
 		extend: {
       fontFamily: {
         sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
-        display: ["Merriweather Sans", ...defaultTheme.fontFamily.sans],
+        // display: ["Merriweather Sans", ...defaultTheme.fontFamily.sans],
+        display: ["Comfortaa", ...defaultTheme.fontFamily.sans],
         mono: ["Source Code Pro", ...defaultTheme.fontFamily.mono],
       },
       strokeWidth: {
