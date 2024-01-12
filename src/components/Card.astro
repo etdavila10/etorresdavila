@@ -2,8 +2,8 @@
 const {title, iconBg, details, linkUrl} = Astro.props;
 ---
 
-<div class="w-96 h-96 rounded-xl bg-offwhite p-6 flex flex-col justify-between">
+<div class="w-96 h-96 bg-offwhite p-6 flex flex-col gap-6 justify-start shadow-md relative m-auto">
   <div class="font-display text-2xl">{ title }</div>
   <div>{ details }</div>
-  <a href={ linkUrl } class:list={[iconBg, 'rounded-full text-white w-fit p-1 px-2']}>Learn more <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  <a href={ linkUrl } class:list={[iconBg, 'rounded-full text-white w-fit py-1 px-2 absolute -right-2 -top-2']}><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
 </div>
