@@ -1,50 +1,64 @@
 ---
-import Card from './Card.astro';
-import Publication from './Publication.astro';
+import Card from "./Card.astro";
+import Publication from "./Publication.astro";
 ---
 
-<div id='research' class='mb-32'>
-  <div class='flex gap-3 items-center mb-3'>
-    <div class='h-6 w-6 bg-teal rounded-full'></div>
-    <h1 class='text-5xl font-display text-teal font-bold'>Mathematics</h1>
+<div id="research" class="mb-32">
+  <div class="flex gap-3 items-center mb-3">
+    <div class="h-6 w-6 bg-teal rounded-full"></div>
+    <h1 class="text-5xl font-display text-teal font-bold">Mathematics</h1>
   </div>
-  <div class='text-lg border-teal border-l-2 bg-teal bg-opacity-10 p-6 mb-24'>
-    <p class='mb-3 leading-8'>
-      Greetings! 👋 I am currently in my fourth year pursuing a Ph.D. at the University of Minnesota - Twin Cities. Under the guidance of <a href='https://www-users.cse.umn.edu/~cberkesc/' class='hover:text-teal underline'>Christine Berkesch</a>, I am mainly involved in the world of commutative algebra and algebraic geometry.
+  <div class="text-lg border-teal border-l-2 bg-teal bg-opacity-10 p-6 mb-24">
+    <p class="mb-3 leading-8">
+      Greetings! 👋 I am currently in my fourth year pursuing a Ph.D. at the
+      University of Minnesota - Twin Cities. Under the guidance of <a
+        href="https://www-users.cse.umn.edu/~cberkesc/"
+        class="hover:text-teal underline">Christine Berkesch</a
+      >, I am mainly involved in the world of commutative algebra and algebraic
+      geometry.
     </p>
-    <p class='leading-8'>
-     During my undergraduate years at San Diego State University (SDSU) I had the wonderful opportunity of conducting research under the guidance of <a href='https://cdoneill.sdsu.edu/' class='hover:text-teal underline'>Christopher O'Neill</a>. This collaboration extended until my graduation, and during this period, I actively contributed to the exploration of Numerical Semigroups, approaching the subject from both combinatorial and geometric perspectives.
+    <p class="leading-8">
+      During my undergraduate years at San Diego State University (SDSU) I had
+      the wonderful opportunity of conducting research under the guidance of <a
+        href="https://cdoneill.sdsu.edu/"
+        class="hover:text-teal underline">Christopher O'Neill</a
+      >. This collaboration extended until my graduation, and during this
+      period, I actively contributed to the exploration of Numerical Semigroups,
+      approaching the subject from both combinatorial and geometric
+      perspectives.
     </p>
   </div>
-  <div class='grid grid-cols-3 items-center mb-24'>
-    <Card 
-      title='Differential Operators' 
-      iconBg='bg-teal'
-      details='Rings of differential operators play a crucial role in understanding complex commutative rings. Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is simply a map from one space to another satisfying the generalized Leibniz rule.'
-      linkUrl='https://en.wikipedia.org/wiki/Differential_operator'
+  <div class="grid grid-cols-3 items-center mb-24">
+    <Card
+      title="Differential Operators"
+      iconBg="bg-teal"
+      details="Rings of differential operators play a crucial role in understanding complex commutative rings. Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is simply a map from one space to another satisfying the generalized Leibniz rule."
+      linkUrl="https://en.wikipedia.org/wiki/Differential_operator"
     />
-    <Card 
-      title='Semigroup Rings' 
-      iconBg='bg-teal'
-      details='A semigroup ring is constructed by associating a semigroup, $Q$, with a ring, usually denoted $k[Q]$. With this strong identification there is a rigid algebraic structure that is given to the semigroup. We can now use algebraic techniques on the semigroup ring to uncover new properties of the associated semigroup.'
-      linkUrl='https://en.wikipedia.org/wiki/Monoid_ring'
+    <Card
+      title="Semigroup Rings"
+      iconBg="bg-teal"
+      details="A semigroup ring is constructed by associating a semigroup, $Q$, with a ring, usually denoted $k[Q]$. With this strong identification there is a rigid algebraic structure that is given to the semigroup. We can now use algebraic techniques on the semigroup ring to uncover new properties of the associated semigroup."
+      linkUrl="https://en.wikipedia.org/wiki/Monoid_ring"
     />
-    <Card 
-      title='Gr&ouml;bner Bases' 
-      iconBg='bg-teal'
-      details='A Gröbner basis reveals many important properties of an ideal of a ring and the associated algebraic variety. This includes, but is not limited to properties like dimension and the number of zeros when it is finite. Gröbner basis computation is one of the main practical tools for solving systems of polynomial equations and computing the images of algebraic varieties under projections or rational maps.'
-      linkUrl='https://en.wikipedia.org/wiki/Gr%C3%B6bner_basis'
+    <Card
+      title="Gröbner Bases"
+      iconBg="bg-teal"
+      details="A Gröbner basis reveals many important properties of an ideal of a ring and the associated algebraic variety. This includes, but is not limited to properties like dimension and the number of zeros when it is finite. Gröbner basis computation is one of the main practical tools for solving systems of polynomial equations and computing the images of algebraic varieties under projections or rational maps."
+      linkUrl="https://en.wikipedia.org/wiki/Gr%C3%B6bner_basis"
     />
   </div>
 
   <h1 class="text-3xl font-bold font-display mb-12">Latest Publication</h1>
-  <Publication 
-    title='Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension'
-    authors={['Christopher O\'Neill', 'Tara Gomes']}
-    arxivLink='https://arxiv.org/abs/2009.05921'
-    journalTitle='The Electronic Journal of Combinatorics'
-    journalLink='https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57'
-    abstract='This paper is the third in a series of manuscripts that examine the combinatorics of the Kunz polyhedron Pm, whose positive integer points are in bijection with numerical semigroups (cofinite subsemigroups of ℤ≥0) whose smallest positive element is m. The faces of Pm are indexed by a family of finite posets (called Kunz posets) obtained from the divisibility posets of the numerical semigroups lying on a given face. In this paper, we characterize to what extent the minimal presentation of a numerical semigroup can be recovered from its Kunz poset. In doing so, we prove that all numerical semigroups lying on the interior of a given face of Pm have identical minimal presentation cardinality, and we provide a combinatorial method of obtaining the dimension of a face from its corresponding Kunz poset.'
+  <Publication
+    title="Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension"
+    authors={["Christopher O'Neill", "Tara Gomes"]}
+    arxivLink="https://arxiv.org/abs/2009.05921"
+    journalTitle="The Electronic Journal of Combinatorics"
+    journalLink="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57"
+    abstract="This paper is the third in a series of manuscripts that examine the combinatorics of the Kunz polyhedron Pm, whose positive integer points are in bijection with numerical semigroups (cofinite subsemigroups of ℤ≥0) whose smallest positive element is m. The faces of Pm are indexed by a family of finite posets (called Kunz posets) obtained from the divisibility posets of the numerical semigroups lying on a given face. In this paper, we characterize to what extent the minimal presentation of a numerical semigroup can be recovered from its Kunz poset. In doing so, we prove that all numerical semigroups lying on the interior of a given face of Pm have identical minimal presentation cardinality, and we provide a combinatorial method of obtaining the dimension of a face from its corresponding Kunz poset."
   />
-  <button class='mt-24 text-xl rounded-full bg-offwhite px-6 py-3'>View all publications</button>
+  <button class="mt-24 text-xl rounded-full bg-offwhite px-6 py-3"
+    >View all publications</button
+  >
 </div>

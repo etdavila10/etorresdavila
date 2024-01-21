@@ -1,20 +1,104 @@
----
-import Scatter from './Scatter.astro';
----
-
-<div class="mb-32 flex items-center h-screen-sans-header relative">
-  <div class="text-start font-display">
-    <h1 class="text-8xl mb-2 font-bold font-display">Eduardo</h1>
-    <h1 class="text-8xl mb-16 font-bold font-display">Torres D&aacutevila</h1>
-    <h2 class="text-4xl mb-32">Math PhD Candidate/Software Engineer</h2>
-    <div>
-      <button class="inline-block bg-teal rounded-full text-3xl p-6 text-white font-bold">Get in touch</button>
-      <ul class="inline-block text-3xl ml-6">
-        <a class="inline mx-2"><i class="fa-brands fa-github fa-xl"></i></a>
-        <a class="inline mx-2"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-        <a class="inline mx-2"><i class="fa-brands fa-facebook fa-xl"></i></a>
-      </ul>
+<div class="flex items-center justify-center h-screen">
+  <div class="flex flex-col items-center flex-shrink-0 pr-12">
+    <h1 class="font-display text-5xl mb-4">Eduardo Torres D&aacutevila</h1>
+    <h2 class="font-display text-2xl">
+      Math Ph.D. Candidate & Software Engineer
+    </h2>
+    <div class="flex gap-3 text-grey-500">
+      <a href="" class="">
+        LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+      <a href="" class="">
+        GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
     </div>
   </div>
-  <Scatter />
+  <div class="border-l-2 border-lightBlue-500 flex-col flex pl-8 text-xl">
+    <span
+      id="aboutTrigger"
+      class="hover:text-lightBlue-500 hover:scale-110 cursor-pointer transition my-1"
+    >
+      About
+    </span>
+    <span
+      id="mathTrigger"
+      class="hover:text-green-500 hover:scale-110 cursor-pointer transition my-1"
+    >
+      Mathematics
+    </span>
+    <span
+      id="softwareTrigger"
+      class="hover:text-lightBlue-500 hover:scale-110 cursor-pointer transition my-1"
+    >
+      Software
+    </span>
+    <span
+      id="teachingTrigger"
+      class="hover:text-green-500 hover:scale-110 cursor-pointer transition my-1"
+    >
+      Teaching
+    </span>
+    <span
+      id="communityTrigger"
+      class="hover:text-lightBlue-500 hover:scale-110 cursor-pointer transition my-1"
+    >
+      Community
+    </span>
+    <!-- <p class="text-lg mb-4 indent-2 leading-8"> -->
+    <!--   Greetings and welcome to my personal website! I am a fourth-year PhD -->
+    <!--   student at the University of Minnesota - Twin Cities. My broad -->
+    <!--   mathematical interests lie in the realms of commutative algebra and -->
+    <!--   algebraic geometry. I am currently studying differential operators over -->
+    <!--   semigroup rings under the guidance of Dr. Christine Berkesch. -->
+    <!-- </p> -->
+    <!-- <p class="text-lg indent-2"> -->
+    <!--   I am also interested in understanding and learning new technologies for -->
+    <!--   the whole process of building websites. Lorem ipsum dolor sit amet -->
+    <!--   consectetur adipisicing elit. Accusamus officia quo ex numquam fugit -->
+    <!--   tempora est delectus ducimus aliquid magnam quidem, aperiam facilis, -->
+    <!--   architecto veritatis voluptate earum vel dolorum debitis? -->
+    <!-- </p> -->
+  </div>
 </div>
+
+<script>
+  const aboutTrigger = document.getElementById("aboutTrigger");
+  const aboutDiv = document.getElementById("about");
+
+  const mathTrigger = document.getElementById("mathTrigger");
+  const mathDiv = document.getElementById("mathematics");
+
+  const softwareTrigger = document.getElementById("softwareTrigger");
+  const softwareDiv = document.getElementById("software");
+
+  const teachingTrigger = document.getElementById("teachingTrigger");
+  const teachingDiv = document.getElementById("teaching");
+
+  const communityTrigger = document.getElementById("communityTrigger");
+  const communityDiv = document.getElementById("community");
+
+  aboutTrigger.onclick = () => {
+    aboutDiv.style.left = "0";
+    aboutDiv.style.overflowY = "auto";
+  };
+
+  mathTrigger.onclick = () => {
+    mathDiv.style.left = "0";
+    mathDiv.style.overflowY = "auto";
+  };
+
+  softwareTrigger.onclick = () => {
+    softwareDiv.style.left = "0";
+    softwareDiv.style.overflowY = "auto";
+  };
+
+  teachingTrigger.onclick = () => {
+    teachingDiv.style.left = "0";
+    teachingDiv.style.overflowY = "auto";
+  };
+
+  communityTrigger.onclick = () => {
+    communityDiv.style.left = "0";
+    communityDiv.style.overflowY = "auto";
+  };
+</script>

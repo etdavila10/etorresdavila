@@ -1,16 +1,199 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Welcome from '../components/Welcome.astro';
-import Research from '../components/Research.astro';
-import Coding from '../components/Coding.astro';
-import Teaching from '../components/Teaching.astro';
+import Layout from "../layouts/Layout.astro";
+import Welcome from "../components/Welcome.astro";
+import Header from "../components/Header.astro";
 ---
 
-<Layout title="Eduardo Torres Dávila">
-	<main>
+<Layout title="Eduardo Torres Dávila: Math Ph.D. Candidate/Software Engineer">
+  <Header />
+  <main id="content" class="relative overflow-x-hidden">
     <Welcome />
-    <Research />
-    <Coding />
-    <Teaching />
-	</main>
+    <div
+      id="about"
+      class="w-screen bg-purple-100 text-6xl absolute top-0 left-full transition-all duration-1000 h-screen overflow-hidden"
+    >
+      <button class="text-3xl bg-green-500 font-bold" onclick="goHome()"
+        >Go Back Home</button
+      >
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis.
+    </div>
+    <div
+      id="mathematics"
+      class="w-screen bg-grey-100 text-6xl absolute top-0 left-full transition-all duration-1000 h-screen overflow-hidden"
+    >
+      <button class="text-3xl bg-green-500 font-bold" onclick="goHome()"
+        >Go Back Home</button
+      >
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis.
+    </div>
+    <div
+      id="software"
+      class="w-screen bg-green-200 text-6xl absolute top-0 left-full transition-all duration-1000 h-screen overflow-hidden"
+    >
+      <button class="text-3xl bg-green-500 font-bold" onclick="goHome()"
+        >Go Back Home</button
+      >
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis.
+    </div>
+    <div
+      id="teaching"
+      class="w-screen bg-lightBlue-100 text-6xl absolute top-0 left-full transition-all duration-1000 h-screen overflow-hidden"
+    >
+      <button class="text-3xl bg-green-500 font-bold" onclick="goHome()"
+        >Go Back Home</button
+      >
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis.
+    </div>
+    <div
+      id="community"
+      class="w-screen bg-lightBlue-100 text-6xl absolute top-0 left-full transition-all duration-1000 h-screen overflow-hidden"
+    >
+      <button class="text-3xl bg-green-500 font-bold" onclick="goHome()"
+        >Go Back Home</button
+      >
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat
+      reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+      Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+      eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+      Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+      culpa duis. Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+      enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
+      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
+      Nostrud officia
+    </div>
+  </main>
 </Layout>
+
+<script is:inline>
+  const mathDiv = document.getElementById("mathematics");
+  const aboutDiv = document.getElementById("about");
+  const softwareDiv = document.getElementById("software");
+  const teachingDiv = document.getElementById("teaching");
+  const communityDiv = document.getElementById("community");
+
+  const goHome = () => {
+    mathDiv.style.left = "100%";
+    mathDiv.style.overflowY = "hidden";
+    aboutDiv.style.left = "100%";
+    aboutDiv.style.overflowY = "hidden";
+    softwareDiv.style.left = "100%";
+    softwareDiv.style.overflowY = "hidden";
+    teachingDiv.style.left = "100%";
+    teachingDiv.style.overflowY = "hidden";
+    communityDiv.style.left = "100%";
+    communityDiv.style.overflowY = "hidden";
+  };
+</script>
