@@ -15,31 +15,26 @@
   </div>
   <div class="border-l-2 border-lightBlue-500 flex-col flex pl-8 text-xl">
     <span
-      id="aboutTrigger"
       class="hover:text-lightBlue-500 hover:scale-110 cursor-pointer transition my-1"
     >
       About
     </span>
     <span
-      id="mathTrigger"
       class="hover:text-green-500 hover:scale-110 cursor-pointer transition my-1"
     >
       Mathematics
     </span>
     <span
-      id="softwareTrigger"
       class="hover:text-lightBlue-500 hover:scale-110 cursor-pointer transition my-1"
     >
       Software
     </span>
     <span
-      id="teachingTrigger"
       class="hover:text-green-500 hover:scale-110 cursor-pointer transition my-1"
     >
       Teaching
     </span>
     <span
-      id="communityTrigger"
       class="hover:text-lightBlue-500 hover:scale-110 cursor-pointer transition my-1"
     >
       Community
@@ -60,45 +55,3 @@
     <!-- </p> -->
   </div>
 </div>
-
-<script>
-  const aboutTrigger = document.getElementById("aboutTrigger");
-  const aboutDiv = document.getElementById("about");
-
-  const mathTrigger = document.getElementById("mathTrigger");
-  const mathDiv = document.getElementById("mathematics");
-
-  const softwareTrigger = document.getElementById("softwareTrigger");
-  const softwareDiv = document.getElementById("software");
-
-  const teachingTrigger = document.getElementById("teachingTrigger");
-  const teachingDiv = document.getElementById("teaching");
-
-  const communityTrigger = document.getElementById("communityTrigger");
-  const communityDiv = document.getElementById("community");
-
-  aboutTrigger.onclick = () => {
-    aboutDiv.style.left = "0";
-    aboutDiv.style.overflowY = "auto";
-  };
-
-  mathTrigger.onclick = () => {
-    mathDiv.style.left = "0";
-    mathDiv.style.overflowY = "auto";
-  };
-
-  softwareTrigger.onclick = () => {
-    softwareDiv.style.left = "0";
-    softwareDiv.style.overflowY = "auto";
-  };
-
-  teachingTrigger.onclick = () => {
-    teachingDiv.style.left = "0";
-    teachingDiv.style.overflowY = "auto";
-  };
-
-  communityTrigger.onclick = () => {
-    communityDiv.style.left = "0";
-    communityDiv.style.overflowY = "auto";
-  };
-</script>
