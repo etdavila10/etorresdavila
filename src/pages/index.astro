@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 import Header from "../components/Header.astro";
-import Research from "../components/Research.astro";
+import Mathematics from "../components/Mathematics.astro";
 import About from "../components/About.astro";
 ---
 
@@ -10,18 +10,19 @@ import About from "../components/About.astro";
   <Header />
   <main id="content">
     <Welcome />
-    <div id="about" class="bg-grey-100 flex p-24 gap-24">
+    <div id="about-container" class="bg-grey-100 flex p-24 gap-24">
       <div id="profile-img-container" class="w-64">
-        <img src="profile_pic.jpeg" alt="Eduardo headshot" class="rounded-xl"/>
+        <img src="profile_pic.jpeg" alt="Eduardo headshot" class="rounded-xl" />
       </div>
       <div id="about-content" class="text-lg flex-1">
         <div id="about-description" class="mb-12">
           <p class="mb-3 leading-8">
             Greetings! 👋 I am currently in my fourth year pursuing a Ph.D. at
             the University of Minnesota - Twin Cities. Under the guidance of <a
-            href="https://www-users.cse.umn.edu/~cberkesc/"
-            class="hover:text-grey-400 underline">Christine Berkesch</a>,
-            I am mainly involved in the world of commutative algebra and algebraic geometry.
+              href="https://www-users.cse.umn.edu/~cberkesc/"
+              class="hover:text-grey-500 underline">Christine Berkesch</a
+            >, I am mainly involved in the world of commutative algebra and
+            algebraic geometry.
           </p>
           <p class="mb-3 leading-8">
             Outside of mathematics, I enjoy learning about new technologies and
@@ -32,27 +33,36 @@ import About from "../components/About.astro";
         </div>
         <div id="contact-cv" class="flex justify-start items-center gap-24">
           <ul id="contact-info">
-            <li>Office: Vincent Hall 424</li>
+            <li>
+              Office:
+              <a
+                href="https://maps.app.goo.gl/JGG3AdJqALrMNiYf8"
+                class="underline hover:text-grey-500"
+                target="_blank">Vincent Hall 424</a
+              >
+            </li>
             <li>Email: torr680 [at] umn.edu</li>
           </ul>
           <div id="curriculum-vitae">
             <a href="etorresdavila_cv.pdf">
-            <div class="p-6 bg-grey-500 rounded-xl text-white font-bold">
-              <span>Curriculum Vitae</span>
-            </div>
+              <div
+                class="hover:bg-grey-500 p-6 bg-grey-800 rounded-xl text-white font-display"
+              >
+                <span>Curriculum Vitae</span>
+              </div>
             </a>
           </div>
         </div>
       </div>
     </div>
-    <Research />
-    <div id="software" >
+    <Mathematics />
+    <div id="software">
       <h1 class="text-5xl">Software</h1>
     </div>
-    <div id="teaching" class="bg-grey-100" >
+    <div id="teaching" class="bg-grey-100">
       <h1 class="text-5xl">Teaching</h1>
     </div>
-    <div id="community" >
+    <div id="community">
       <h1 class="text-5xl">Community</h1>
     </div>
   </main>

@@ -1,0 +1,48 @@
+---
+import Card from "./Card.astro";
+import Publication from "./Publication.astro";
+---
+
+<div id="mathematics-container" class="pb-24">
+  <h1 id="mathematics-heading" class="text-8xl p-24 font-display font-bold">
+    Mathematics
+  </h1>
+  <div id="mathematics-specialties" class="px-24">
+    <h2
+      id="research-interest-header"
+      class="text-3xl font-bold mb-12 font-display"
+    >
+      Research Interests
+    </h2>
+    <div id="research-interests-container" class="flex justify-between mb-24">
+      <Card
+        title="Differential Operators"
+        details="Rings of differential operators play a crucial role in understanding complex commutative rings. Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is simply a map from one space to another satisfying the generalized Leibniz rule."
+      />
+      <Card
+        title="Semigroup Rings"
+        details="A semigroup ring is constructed by associating a semigroup, $Q$, with a ring, usually denoted $k[Q]$. With this strong identification there is a rigid algebraic structure that is given to the semigroup. We can now use algebraic techniques on the semigroup ring to uncover new properties of the associated semigroup."
+      />
+      <Card
+        title="Toric Varieties"
+        details="In algebraic geometry, a toric variety or torus embedding is an algebraic variety containing an algebraic torus as an open dense subset, such that the action of the torus on itself extends to the whole variety."
+      />
+    </div>
+  </div>
+  <div id="latest-publication" class="font-display mx-24">
+    <h2 class="text-3xl font-bold mb-12">Latest Publication</h2>
+    <Publication
+      title="Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension"
+      authors={["Christopher O'Neill", "Tara Gomes"]}
+      arxivLink="https://arxiv.org/abs/2009.05921"
+      journalTitle="The Electronic Journal of Combinatorics"
+      journalLink="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57"
+      abstract="This paper is the third in a series of manuscripts that examine the combinatorics of the Kunz polyhedron Pm, whose positive integer points are in bijection with numerical semigroups (cofinite subsemigroups of ℤ≥0) whose smallest positive element is m. The faces of Pm are indexed by a family of finite posets (called Kunz posets) obtained from the divisibility posets of the numerical semigroups lying on a given face. In this paper, we characterize to what extent the minimal presentation of a numerical semigroup can be recovered from its Kunz poset. In doing so, we prove that all numerical semigroups lying on the interior of a given face of Pm have identical minimal presentation cardinality, and we provide a combinatorial method of obtaining the dimension of a face from its corresponding Kunz poset."
+    />
+    <!-- TODO: Create a page for all publications -->
+    <button
+      class="hover:bg-grey-800 hover:text-white mt-24 rounded-xl border-2 border-grey-800 bg-white px-6 py-3 text-grey-800 text-lg"
+      >View all publications</button
+    >
+  </div>
+</div>

@@ -1,39 +1,77 @@
 ---
-const {title, authors, arxivLink, journalLink, journalTitle, abstract} = Astro.props;
+const { title, authors, arxivLink, journalLink, journalTitle, abstract } =
+  Astro.props;
+const totalAuthors = authors.length;
 ---
 
 <div class="relative">
-  <div class="w-96 absolute text-center -z-10 opacity-5 left-0 right-0 mx-auto top-1/2 -translate-y-1/2">
-    <img src='/document.png' />
+  <div
+    class="w-96 absolute text-center -z-10 opacity-5 left-0 right-0 mx-auto top-1/2 -translate-y-1/2"
+  >
+    <img src="/document.png" />
   </div>
-  <div class='flex flex-col justify-between'>
-    <h1 class='font-display text-3xl mb-3'>{ title }</h1>
-    <ul class='mb-6'>
-      <li class='inline text-xl pr-2'>In collaboration with:</li><!--
-      -->{ authors.map((author, i) => <li class='inline text-xl pr-2'>{ author }{i === authors.length-1 ? '' : ','}</li>) }
+  <div
+    class="flex flex-col justify-between bg-white/5 p-6 rounded-xl backdrop-blur-sm border-2 border-grey-800"
+  >
+    <h1 class="font-display text-2xl mb-3">{title}</h1>
+    <ul class="mb-6">
+      <li class="inline text-xl">In collaboration with:</li><!--
+      -->{
+        authors.map((author, i) => (
+          <li class="inline text-xl">
+            {author}<!--
+            -->{i < totalAuthors - 2 && ","}<!--
+            -->{i === totalAuthors - 1 && ""}<!--
+            -->{i === totalAuthors - 2 && totalAuthors !== 2 && ", and"}<!--
+            -->{i === totalAuthors - 2 && totalAuthors === 2 && " and"}
+          </li>
+        ))
+      }<!--
+    -->
     </ul>
-    <div class='flex items-center gap-3'>
-      <button id='moreButton' class='text-white w-fit px-6 py-3 bg-teal rounded-full'>Toggle Abstract</button>
-      <a href={ arxivLink } target='_blank' class='rounded-full px-6 py-3 bg-coral text-white'>arXiv <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-      <a href={ journalLink } target='_blank' class='rounded-full px-6 py-3 bg-olive text-white'>{ journalTitle } <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <div class="flex items-center gap-3 font-display text-white">
+      <button
+        id="moreButton"
+        class="hover:bg-grey-500 rounded-xl bg-grey-800 w-fit px-6 py-3"
+        >Toggle Abstract</button
+      >
+      <a
+        href={arxivLink}
+        target="_blank"
+        class="rounded-xl bg-grey-800 px-6 py-3 hover:bg-grey-500"
+        >arXiv <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+      >
+      <a
+        href={journalLink}
+        target="_blank"
+        class="rounded-xl bg-grey-800 px-6 py-3 hover:bg-grey-500"
+        >{journalTitle}
+        <i class="fa-solid fa-arrow-up-right-from-square"></i></a
+      >
     </div>
-    <div id='wrapper' class='mt-6 border-gray border-l-2 pl-3 grid grid-rows-[0fr] transition-all duration-500'>
-      <p id='abstract' class='overflow-hidden leading-7 pr-12'>
-        { abstract }
+    <div
+      id="wrapper"
+      class="mt-6 border-grey-800 border-l-2 pl-3 grid grid-rows-[0fr] transition-all duration-500"
+    >
+      <p id="abstract" class="overflow-hidden leading-7 pr-12">
+        {abstract}
       </p>
     </div>
   </div>
 </div>
 
 <script>
-const moreButton = document.getElementById('moreButton');
-const wrapper = document.getElementById('wrapper');
+  const moreButton = document.getElementById("moreButton");
+  const wrapper = document.getElementById("wrapper");
 
-moreButton.addEventListener('click', () => {
-  if (wrapper.style.gridTemplateRows === '0fr' || wrapper.style.gridTemplateRows === '') {
-    wrapper.style.gridTemplateRows = '1fr';
-  } else {
-    wrapper.style.gridTemplateRows = '0fr';
-  }
-});
+  moreButton.addEventListener("click", () => {
+    if (
+      wrapper.style.gridTemplateRows === "0fr" ||
+      wrapper.style.gridTemplateRows === ""
+    ) {
+      wrapper.style.gridTemplateRows = "1fr";
+    } else {
+      wrapper.style.gridTemplateRows = "0fr";
+    }
+  });
 </script>
