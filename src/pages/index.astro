@@ -3,24 +3,57 @@ import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 import Header from "../components/Header.astro";
 import Research from "../components/Research.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Eduardo Torres Dávila: Math Ph.D. Candidate/Software Engineer">
   <Header />
   <main id="content">
     <Welcome />
-    <div id="about" >
-    <h1 class="text-5xl">About Me</h1>
+    <div id="about" class="bg-grey-100 flex p-24 gap-24">
+      <div id="profile-img-container" class="w-64">
+        <img src="profile_pic.jpeg" alt="Eduardo headshot" class="rounded-xl"/>
+      </div>
+      <div id="about-content" class="text-lg flex-1">
+        <div id="about-description" class="mb-12">
+          <p class="mb-3 leading-8">
+            Greetings! 👋 I am currently in my fourth year pursuing a Ph.D. at
+            the University of Minnesota - Twin Cities. Under the guidance of <a
+            href="https://www-users.cse.umn.edu/~cberkesc/"
+            class="hover:text-grey-400 underline">Christine Berkesch</a>,
+            I am mainly involved in the world of commutative algebra and algebraic geometry.
+          </p>
+          <p class="mb-3 leading-8">
+            Outside of mathematics, I enjoy learning about new technologies and
+            attempt to use this knowledge for mathematical research or building
+            websites. Otherwise, you will find me reading a book, watching
+            formula 1, or enjoying the outdoors.
+          </p>
+        </div>
+        <div id="contact-cv" class="flex justify-start items-center gap-24">
+          <ul id="contact-info">
+            <li>Office: Vincent Hall 424</li>
+            <li>Email: torr680 [at] umn.edu</li>
+          </ul>
+          <div id="curriculum-vitae">
+            <a href="etorresdavila_cv.pdf">
+            <div class="p-6 bg-grey-500 rounded-xl text-white font-bold">
+              <span>Curriculum Vitae</span>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <Research />
     <div id="software" >
-    <h1 class="text-5xl">Software</h1>
+      <h1 class="text-5xl">Software</h1>
     </div>
     <div id="teaching" class="bg-grey-100" >
-    <h1 class="text-5xl">Teaching</h1>
+      <h1 class="text-5xl">Teaching</h1>
     </div>
     <div id="community" >
-    <h1 class="text-5xl">Community</h1>
+      <h1 class="text-5xl">Community</h1>
     </div>
   </main>
 </Layout>

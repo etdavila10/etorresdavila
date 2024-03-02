@@ -86,8 +86,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'sans': ['"Satoshi-Regular"', ...defaultTheme.fontFamily.sans],
-        'display': ['"GeneralSans"', ...defaultTheme.fontFamily.sans],
+        'sans': ['"Satoshi-Variable"', ...defaultTheme.fontFamily.sans],
+        'display': ['"GeneralSans-Variable"', ...defaultTheme.fontFamily.sans],
       },
     },
   },
