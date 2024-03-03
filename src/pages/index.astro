@@ -4,6 +4,9 @@ import Welcome from "../components/Welcome.astro";
 import Header from "../components/Header.astro";
 import Mathematics from "../components/Mathematics.astro";
 import About from "../components/About.astro";
+import Card from "../components/Card.astro";
+import TechCard from "../components/TechCard.astro";
+import Publication from "./Publication.astro";
 ---
 
 <Layout title="Eduardo Torres Dávila: Math Ph.D. Candidate/Software Engineer">
@@ -56,15 +59,61 @@ import About from "../components/About.astro";
       </div>
     </div>
     <Mathematics />
-    <div id="software-container" class="pb-24">
+    <div id="software-container" class="pb-24 bg-grey-800 text-white relative">
       <h1 id="software-heading" class="text-8xl p-24 font-display font-bold">
         Software
       </h1>
+      <h2
+        id="software-tech-heading"
+        class="text-3xl font-display font-bold px-24 pb-12"
+      >
+        Technologies
+      </h2>
+      <div
+        id="software-tech-container"
+        class="flex justify-between mx-24 mb-24"
+      >
+        <TechCard logo="/languages/python.svg" name="Python" />
+        <TechCard logo="/languages/9planets.jpeg" name="Macaulay2" />
+        <TechCard logo="/languages/typescript.svg" name="Typescript" />
+        <TechCard logo="/languages/java.svg" name="Java" />
+      </div>
+      <h2
+        id="latest-experience-heading"
+        class="text-3xl font-display font-bold mx-24 mb-24"
+      >
+        Latest Experience
+      </h2>
+      <div></div>
+      <h2
+        id="latest-experience-heading"
+        class="text-3xl font-display font-bold mx-24 mb-24"
+      >
+        Latest Project
+      </h2>
     </div>
     <div id="teaching-container" class="pb-24">
       <h1 id="teaching-heading" class="text-8xl p-24 font-display font-bold">
         Teaching
       </h1>
+      <h2
+        id="software-tech-heading"
+        class="text-3xl font-display font-bold px-24 pb-12"
+      >
+        Current Course
+      </h2>
+      <div
+        id="software-tech-container"
+        class="flex justify-between mx-24 mb-24"
+      >
+      </div>
+      <h2
+        id="latest-experience-heading"
+        class="text-3xl font-display font-bold mx-24 mb-24"
+      >
+        Previous Courses Taught
+      </h2>
+      <div></div>
     </div>
     <div id="community-container">
       <h1 id="community-heading" class="text-8xl p-24 font-display font-bold">

@@ -2,9 +2,11 @@
 const { name, logo, website } = Astro.props;
 ---
 
-<div class='box'>
-  <div class='rounded-full bg-coral border-2 border-coral bg-opacity-10 h-48 w-48 p-6 flex-col flex gap-3 justify-center text-center items-center'>
-    <img class='h-24' src={ logo }/>
-    <h2 class='text-xl font-display'>{ name }</h2>
+<div class="box">
+  <div
+    class="rounded-xl border-2 h-32 w-32 p-6 flex-col flex gap-3 justify-center text-center items-center"
+  >
+    <img class="h-16" src={logo} />
+    <h2 class="font-display">{name}</h2>
   </div>
 </div>
