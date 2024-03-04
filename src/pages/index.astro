@@ -3,14 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 import Header from "../components/Header.astro";
 import Mathematics from "../components/Mathematics.astro";
-import About from "../components/About.astro";
-import Card from "../components/Card.astro";
 import TechCard from "../components/TechCard.astro";
-import Publication from "./Publication.astro";
 ---
 
 <Layout title="Eduardo Torres Dávila: Math Ph.D. Candidate/Software Engineer">
   <Header />
+  <button
+    id="to-top-button"
+    class="hover:scale-110 transition-all duration-300 w-10 h-10 bg-white rounded-full fixed -right-12 bottom-6"
+    onclick="scrollToTop()"
+  >
+    <i class="fa-regular fa-circle-up fa-2xl"></i>
+  </button>
   <main id="content">
     <Welcome />
     <div id="about-container" class="bg-grey-100 flex p-24 gap-24">
@@ -59,7 +63,7 @@ import Publication from "./Publication.astro";
       </div>
     </div>
     <Mathematics />
-    <div id="software-container" class="pb-24 bg-grey-800 text-white relative">
+    <div id="software-container" class="pb-24 bg-grey-800 text-white">
       <h1 id="software-heading" class="text-8xl p-24 font-display font-bold">
         Software
       </h1>
@@ -140,3 +144,21 @@ import Publication from "./Publication.astro";
     </div>
   </main>
 </Layout>
+
+<script is:inline>
+  const toTopButtonDiv = document.getElementById("to-top-button");
+
+  window.addEventListener("scroll", function () {
+    // TODO: Find a good breakpoint for this
+    if (window.scrollY > 1000) {
+      console.log("getting scroll");
+      toTopButtonDiv.style.right = "1.5rem";
+    } else {
+      toTopButtonDiv.style.right = "-3rem";
+    }
+  });
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+</script>
