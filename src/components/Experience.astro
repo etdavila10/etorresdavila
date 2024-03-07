@@ -1,0 +1,62 @@
+---
+const {
+  class: classNames,
+  jobTitle,
+  employer,
+  details,
+  websiteLink,
+  dates,
+} = Astro.props;
+---
+
+<div class={classNames}>
+  <div class="flex-1">
+    <h1 class="font-display text-2xl mb-3">
+      {employer}
+      <span class="italic text-xl text-grey-400">({dates})</span>
+    </h1>
+    <h2 class="font-display text-xl mb-6">{jobTitle}</h2>
+    <div class="flex items-center gap-3 font-display text-white">
+      <button
+        id="moremoreButton"
+        class="hover:bg-white hover:text-grey-800 rounded-xl bg-grey-500 w-fit px-6 py-3"
+        >More details</button
+      >
+      <a
+        href={websiteLink}
+        target="_blank"
+        class="rounded-xl bg-grey-500 px-6 py-3 hover:bg-white hover:text-grey-800"
+        >Important Link <i class="fa-solid fa-arrow-up-right-from-square"
+        ></i></a
+      >
+    </div>
+    <div
+      id="morewrapper"
+      class="mt-6 border-white border-l-2 pl-3 grid grid-rows-[0fr] transition-all duration-500"
+    >
+      <p id="abstract" class="overflow-hidden leading-7 pr-12">
+        {details}
+      </p>
+    </div>
+  </div>
+  <div class="w-36">
+    <!-- TODO: Source this image from Astro props -->
+    <img src="/amazon_icon.png" />
+  </div>
+</div>
+
+<script>
+  const moremoreButton = document.getElementById("moremoreButton");
+  const morewrapper = document.getElementById("morewrapper");
+
+  moremoreButton.addEventListener("click", () => {
+    if (
+      morewrapper.style.gridTemplateRows === "0fr" ||
+      morewrapper.style.gridTemplateRows === ""
+    ) {
+      morewrapper.style.gridTemplateRows = "1fr";
+    } else {
+      morewrapper.style.gridTemplateRows = "0fr";
+    }
+  });
+</script>

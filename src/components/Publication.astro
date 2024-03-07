@@ -18,6 +18,7 @@ const totalAuthors = authors.length;
       <li class="inline text-xl">In collaboration with:</li><!--
       -->{
         authors.map((author, i) => (
+          <!-- TODO: Add support for linking to author websites -->
           <li class="inline text-xl">
             {author}<!--
             -->{i < totalAuthors - 2 && ","}<!--
