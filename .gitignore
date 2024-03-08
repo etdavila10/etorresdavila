@@ -21,3 +21,6 @@ pnpm-debug.log*
 .DS_Store
 **/.DS_Store
 .sass-cache/
+
+# person script
+update_date.sh

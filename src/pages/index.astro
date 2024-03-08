@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import Mathematics from "../components/Mathematics.astro";
 import Experience from "../components/Experience.astro";
 import TechCard from "../components/TechCard.astro";
@@ -22,9 +23,12 @@ import TechCard from "../components/TechCard.astro";
       <div id="profile-img-container" class="w-64">
         <img src="profile_pic.jpeg" alt="Eduardo headshot" class="rounded-xl" />
       </div>
-      <div id="about-content" class="text-lg flex-1">
-        <div id="about-description" class="mb-12">
-          <p class="mb-3 leading-8">
+      <div
+        id="about-content"
+        class="text-lg flex-1 flex flex-col justify-between"
+      >
+        <div id="about-description" class="">
+          <p class="mb-3 leading-6">
             Greetings! 👋 I am currently in my fourth year pursuing a Ph.D. at
             the University of Minnesota - Twin Cities. Under the guidance of <a
               href="https://www-users.cse.umn.edu/~cberkesc/"
@@ -32,7 +36,7 @@ import TechCard from "../components/TechCard.astro";
             >, I am mainly involved in the world of commutative algebra and
             algebraic geometry.
           </p>
-          <p class="mb-3 leading-8">
+          <p class="mb-3 leading-6">
             Outside of mathematics, I enjoy learning about new technologies and
             attempt to use this knowledge for mathematical research or building
             websites. Otherwise, you will find me reading a book, watching
@@ -109,7 +113,7 @@ import TechCard from "../components/TechCard.astro";
         Work
       </h2>
       <Experience
-        class="font-display backdrop-blur-sm border-2 border-white p-6 rounded-xl mx-24 mb-24 flex justify-start"
+        class="font-display mx-24 mb-24 flex gap-12 justify-start"
         employer="Amazon"
         jobTitle="Software Engineering Intern"
         dates="June 2023 - September 2023"
@@ -147,12 +151,14 @@ import TechCard from "../components/TechCard.astro";
       </h2>
       <div></div>
     </div>
-    <div id="community-container">
-      <h1 id="community-heading" class="text-8xl p-24 font-display font-bold">
-        Community
-      </h1>
-    </div>
+    <!-- TODO:Add a community section to the page -->
+    <!-- <div id="community-container"> -->
+    <!--   <h1 id="community-heading" class="text-8xl p-24 font-display font-bold"> -->
+    <!--     Community -->
+    <!--   </h1> -->
+    <!-- </div> -->
   </main>
+  <Footer class="bg-grey-800 text-white" />
 </Layout>
 
 <script is:inline>

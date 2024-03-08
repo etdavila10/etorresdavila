@@ -10,7 +10,11 @@ const {
 ---
 
 <div class={classNames}>
-  <div class="flex-1">
+  <div class="bg-white rounded-full border-2 border-white self-start w-96">
+    <!-- TODO: Source this image from Astro props -->
+    <img src="/amazon_icon.png" />
+  </div>
+  <div class="border-2 border-white rounded-xl p-6">
     <h1 class="font-display text-2xl mb-3">
       {employer}
       <span class="italic text-xl text-grey-400">({dates})</span>
@@ -20,28 +24,24 @@ const {
       <button
         id="moremoreButton"
         class="hover:bg-white hover:text-grey-800 rounded-xl bg-grey-500 w-fit px-6 py-3"
-        >More details</button
+        >Details</button
       >
       <a
         href={websiteLink}
         target="_blank"
         class="rounded-xl bg-grey-500 px-6 py-3 hover:bg-white hover:text-grey-800"
-        >Important Link <i class="fa-solid fa-arrow-up-right-from-square"
-        ></i></a
+        >Delivery Service Partners <i
+          class="fa-solid fa-arrow-up-right-from-square"></i></a
       >
     </div>
     <div
       id="morewrapper"
       class="mt-6 border-white border-l-2 pl-3 grid grid-rows-[0fr] transition-all duration-500"
     >
-      <p id="abstract" class="overflow-hidden leading-7 pr-12">
+      <p id="details" class="overflow-hidden leading-7 pr-12">
         {details}
       </p>
     </div>
-  </div>
-  <div class="w-36">
-    <!-- TODO: Source this image from Astro props -->
-    <img src="/amazon_icon.png" />
   </div>
 </div>
 
