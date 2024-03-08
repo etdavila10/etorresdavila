@@ -1,10 +1,21 @@
 ---
 const { class: classNames } = Astro.props;
+
+const d = new Date();
+let year = d.getFullYear();
 ---
 
-<footer class:list={[classNames, ""]}>
-  <p>Created by</p>
-  <p>Version 1</p>
-  <p class="font-display text-grey-200">Last Updated: March 7, 2024</p>
-  <span id="git-last-commit-date">Thu Mar 7 15:25:52 2024 -0600</span>
+<footer
+  class:list={[
+    classNames,
+    "flex-col flex items-center p-12 text-sm text-center",
+  ]}
+>
+  <div>
+    <p>&copy; {year}, Eduardo Torres Dávila</p>
+  </div>
+  <div class="font-display text-sm text-grey-300">
+    <span>Last update:</span>
+    <span id="git-last-commit-date">March 07, 2024</span>
+  </div>
 </footer>
