@@ -1,10 +1,17 @@
 ---
-const { name, logo, website } = Astro.props;
+const { widthClass, heightClass, paddingClass, gapClass, name, logo, website } =
+  Astro.props;
 ---
 
-<div class="box">
+<div>
   <div
-    class="rounded-xl border-2 backdrop-blur-sm h-32 w-32 p-6 flex-col flex gap-3 justify-center text-center items-center"
+    class:list={[
+      widthClass || "w-32",
+      heightClass || "h-32",
+      paddingClass || "p-6",
+      gapClass || "gap-3",
+      "rounded-xl border-2 backdrop-blur-sm flex-col flex justify-center text-center items-center",
+    ]}
   >
     <img class="h-16" src={logo} />
     <h2 class="font-display">{name}</h2>

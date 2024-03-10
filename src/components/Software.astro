@@ -1,0 +1,70 @@
+---
+import TechCard from "./TechCard.astro";
+import Experience from "./Experience.astro";
+---
+
+<div id="software-container" class="pb-24 bg-grey-800 text-white">
+  <h1 id="software-heading" class="text-8xl p-24 font-display font-bold">
+    Software
+  </h1>
+  <h2
+    id="software-tech-heading"
+    class="text-3xl font-display font-bold px-24 pb-12"
+  >
+    Technologies
+  </h2>
+  <div id="software-tech-container" class="flex justify-between mx-24 mb-24">
+    <TechCard logo="/languages/python.svg" name="Python" />
+    <TechCard logo="/languages/sagemath.svg" name="SageMath" />
+    <TechCard logo="/languages/9planets.jpeg" name="Macaulay2" />
+    <TechCard logo="/languages/javascript.svg" name="JavaScript" />
+    <TechCard logo="/languages/typescript.svg" name="TypeScript" />
+    <TechCard logo="/languages/java.svg" name="Java" />
+  </div>
+  <h2
+    id="software-frameworks-heading"
+    class="text-3xl font-display font-bold px-24 pb-12"
+  >
+    Frameworks/Libraries
+  </h2>
+  <div
+    id="software-frameworks-container"
+    class="flex justify-between mx-24 mb-24"
+  >
+    <TechCard logo="/frameworks/matplotlib.svg" name="Matplotlib" />
+    <TechCard logo="/frameworks/numpy.svg" name="NumPy" />
+    <TechCard logo="/frameworks/astro.svg" name="Astro" />
+    <TechCard logo="/frameworks/react.svg" name="React" />
+    <TechCard logo="/frameworks/tailwind_css.svg" name="TailwindCSS" />
+    <TechCard logo="/frameworks/spring.svg" name="Spring" />
+  </div>
+  <h2
+    id="latest-experience-heading"
+    class="text-3xl font-display font-bold mx-24 mb-12"
+  >
+    Previous Work
+  </h2>
+  <Experience
+    class="font-display mx-24 mb-24 flex gap-12 justify-start"
+    employer="Amazon"
+    jobTitle="Software Engineer Intern"
+    dates="June 2023 - September 2023"
+    technologies={[
+      { logo: "/languages/typescript.svg", name: "Typescript" },
+      { logo: "/languages/java.svg", name: "Java" },
+    ]}
+    frameworks={[
+      { logo: "/frameworks/react.svg", name: "React" },
+      { logo: "/frameworks/spring.svg", name: "Spring" },
+    ]}
+    websiteLink="testing"
+    websiteLinkTitle="testing"
+    details="Full stack web development using a great range of technologies. Extensive exposure to AWS services like DynamoDB, S3, and Lambda to handle and process big datasets. Constant development in the Java programming language for working on the backend infrastructure of my team's services. Development on frontend applications using technologies like React to create responsive and dynamic pages for our customers."
+  />
+  <h2
+    id="latest-experience-heading"
+    class="text-3xl font-display font-bold mx-24 mb-24"
+  >
+    Latest Project
+  </h2>
+</div>

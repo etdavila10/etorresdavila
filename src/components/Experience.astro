@@ -1,11 +1,15 @@
 ---
+import TechCard from "./TechCard.astro";
 const {
   class: classNames,
   jobTitle,
   employer,
   details,
   websiteLink,
+  websiteLinkTitle,
   dates,
+  technologies,
+  frameworks,
 } = Astro.props;
 ---
 
@@ -15,48 +19,55 @@ const {
     <img src="/amazon_icon.png" />
   </div>
   <div class="border-2 border-white rounded-xl p-6">
-    <h1 class="font-display text-2xl mb-3">
-      {employer}
-      <span class="italic text-xl text-grey-400">({dates})</span>
-    </h1>
-    <h2 class="font-display text-xl mb-6">{jobTitle}</h2>
-    <div class="flex items-center gap-3 font-display text-white">
-      <button
-        id="moremoreButton"
-        class="hover:bg-white hover:text-grey-800 rounded-xl bg-grey-500 w-fit px-6 py-3"
-        >Details</button
-      >
-      <a
-        href={websiteLink}
-        target="_blank"
-        class="rounded-xl bg-grey-500 px-6 py-3 hover:bg-white hover:text-grey-800"
-        >Delivery Service Partners <i
-          class="fa-solid fa-arrow-up-right-from-square"></i></a
-      >
+    <div class="flex justify-between mb-6">
+      <div>
+        <h1 class="font-display text-2xl mb-3">
+          {employer}
+          <span class="italic text-xl text-grey-400">({dates})</span>
+        </h1>
+        <div class="flex gap-3 items-center">
+          <h2 class="font-display text-xl">{jobTitle}</h2>
+          <div class="font-display text-white text-sm">
+            {
+              websiteLink && (
+                <a
+                  href={websiteLink}
+                  target="_blank"
+                  class="block rounded-xl bg-grey-500 px-3 py-1.5 hover:bg-white hover:text-grey-800"
+                >
+                  {websiteLinkTitle}
+                  <i class="fa-solid fa-arrow-up-right-from-square fa-sm" />
+                </a>
+              )
+            }
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-3 mb-3">
+        <!-- Languages -->
+        {
+          technologies.map((tech, i) => (
+            <TechCard gapClass="gap-0" paddingClass="p-3", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
+          ))
+        }
+        <!-- Frameworks -->
+        {
+          frameworks.map((framework, i) => (
+            <TechCard
+              gapClass="gap-0"
+              paddingClass="p-3"
+              widthClass="w-12"
+              heightClass="h-12"
+              logo={framework.logo}
+            />
+          ))
+        }
+      </div>
     </div>
-    <div
-      id="morewrapper"
-      class="mt-6 border-white border-l-2 pl-3 grid grid-rows-[0fr] transition-all duration-500"
-    >
-      <p id="details" class="overflow-hidden leading-7 pr-12">
+    <div class="border-white border-l-2 pl-3">
+      <p id="details" class="leading-7 pr-12">
         {details}
       </p>
     </div>
   </div>
 </div>
-
-<script>
-  const moremoreButton = document.getElementById("moremoreButton");
-  const morewrapper = document.getElementById("morewrapper");
-
-  moremoreButton.addEventListener("click", () => {
-    if (
-      morewrapper.style.gridTemplateRows === "0fr" ||
-      morewrapper.style.gridTemplateRows === ""
-    ) {
-      morewrapper.style.gridTemplateRows = "1fr";
-    } else {
-      morewrapper.style.gridTemplateRows = "0fr";
-    }
-  });
-</script>
