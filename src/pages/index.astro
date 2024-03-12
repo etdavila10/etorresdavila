@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Welcome from "../components/Welcome.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Mathematics from "../components/Mathematics.astro";
 import Software from "../components/Software.astro";
@@ -9,7 +8,6 @@ import About from "../components/About.astro";
 ---
 
 <Layout title="Eduardo Torres Dávila: Math Ph.D. Candidate/Software Engineer">
-  <Header />
   <button
     id="to-top-button"
     class="hover:scale-110 transition-all duration-300 w-10 h-10 bg-white rounded-full fixed -right-12 bottom-6"
@@ -28,22 +26,32 @@ import About from "../components/About.astro";
       </h1>
       <h2
         id="current-course-heading"
-        class="text-3xl font-display font-bold px-24 pb-12"
+        class="text-3xl font-display font-bold px-24 pb-6"
       >
         Current Course
       </h2>
-      <div
-        id="current-course-container"
-        class="flex justify-between mx-24 mb-24"
-      >
+      <div id="current-course-container" class="mx-24">
+        <h2 class="font-display text-2xl mb-1">Spring 2024</h2>
+        <ul class="list-disc list-inside mb-12">
+          <li>Math 1151: Precalculus II - Graduate Teaching Assistant</li>
+        </ul>
       </div>
       <h2
         id="prev-courses-heading"
-        class="text-3xl font-display font-bold mx-24 mb-24"
+        class="text-3xl font-display font-bold mx-24 mb-6"
       >
-        Previous Courses Taught
+        Previous Courses
       </h2>
-      <div></div>
+      <div id="prev-courses-container" class="mx-24">
+        <h2 class="font-display text-2xl">Fall 2023</h2>
+        <ul class="list-disc list-inside mb-6">
+          <li>Math 1151: Precalculus II - Graduate Teaching Assistant</li>
+        </ul>
+        <h2 class="font-display text-2xl">Spring 2022</h2>
+        <ul class="list-disc list-inside">
+          <li>Math 1271: Calculus I - Graduate Teaching Assistant</li>
+        </ul>
+      </div>
     </div>
     <!-- TODO: Add a community section to the page -->
     <!-- <div id="community-container"> -->
