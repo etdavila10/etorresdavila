@@ -34,11 +34,8 @@ const {
 
 const totalAuthors = authors?.length;
 ---
-<div class={classNames}>
-  <div class="bg-white rounded-xl object-cover self-start border-2 border-white">
-    <img src={projectImageFile} class="rounded-xl" alt="project image"/>
-  </div>
-  <div class="border-2 border-white rounded-xl p-6">
+<div class:list={[classNames, ""]}>
+  <div class="border-2 border-white rounded-xl p-6 self-start">
     <div class="flex justify-between mb-6">
       <div class="flex gap-3">
         <h1 class="font-display text-2xl">
@@ -84,5 +81,8 @@ const totalAuthors = authors?.length;
         </p>
       </div>
     </div>
+  </div>
+  <div class="bg-white rounded-xl border-2 border-white self-start">
+    <img src={projectImageFile} class="rounded-xl" alt="project image"/>
   </div>
 </div>
