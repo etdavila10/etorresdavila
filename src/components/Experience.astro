@@ -1,5 +1,24 @@
 ---
+/*
+* Experience.astro
+* Props:
+* - classNames: classes which should be applied to returned div
+*/
+
 import TechCard from "./TechCard.astro";
+
+interface Props {
+  jobTitle: string;
+  employer: string;
+  details: string;
+  dates: string;
+  technologies: {logo: string, name: string}[]
+  frameworks: {logo: string, name: string}[]
+  class?: string;
+  websiteLink?: string;
+  websiteLinkTitle?: string;
+}
+
 const {
   class: classNames,
   jobTitle,

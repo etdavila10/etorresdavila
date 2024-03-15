@@ -1,6 +1,7 @@
 ---
 import TechCard from "./TechCard.astro";
 import Experience from "./Experience.astro";
+import Project from "./Project.astro";
 ---
 
 <div id="software-container" class="pb-24 bg-grey-800 text-white">
@@ -57,14 +58,24 @@ import Experience from "./Experience.astro";
       { logo: "/frameworks/react.svg", name: "React" },
       { logo: "/frameworks/spring.svg", name: "Spring" },
     ]}
-    websiteLink="testing"
-    websiteLinkTitle="testing"
     details="Full stack web development using a great range of technologies. Extensive exposure to AWS services like DynamoDB, S3, and Lambda to handle and process big datasets. Constant development in the Java programming language for working on the backend infrastructure of my team's services. Development on frontend applications using technologies like React to create responsive and dynamic pages for our customers."
   />
   <h2
-    id="latest-experience-heading"
-    class="text-3xl font-display font-bold mx-24 mb-24"
+    id="latest-project-heading"
+    class="text-3xl font-display font-bold mx-24 mb-12"
   >
     Latest Project
   </h2>
+  <Project
+    id="arxiv-game"
+    class="font-display mx-24 flex gap-12"
+    title="ArXiv Game"
+    websiteLink="https://tranquil-starship-92a3ed.netlify.app/"
+    websiteLinkTitle=""
+    projectImageFile="arxivGame_still.png"
+    githubLink="https://github.com/etdavila10/arxiv-sandbox"
+    technologies={[{ logo: "/languages/javascript.svg", name: "JavaScript" }]}
+    frameworks={[{ logo: "/frameworks/react.svg", name: "React" }]}
+    details="This website was created as a first point of contact on working with the ArXiv API. We also wanted to gain more familiarity with the React framework as it is a massively used framework throughout industry. Inspired by the game higher-lower, this website asks users to choose which arxiv article they believe is more recent. If the user fails to choose the correct one the game is over and must be restarted. There is hope to update this in the future to allow for choosing disciplines as well as time frames. Try it out yourself!"
+  />
 </div>

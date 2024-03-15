@@ -1,10 +1,88 @@
 ---
-const {title, authors, authorWebsiteLinks, techhnologyImgFiles, projectImageFile, githubLink} = Astro.props;
----
+import TechCard from './TechCard.astro';
 
-<div class="relative">
-  <div class='flex flex-col justify-between'>
-    <h1 class='font-display text-3xl mb-3'>{ title }</h1>
+
+interface Props {
+  id: string;
+  title: string;
+  details: string;
+  websiteLink?: string;
+  websiteLinkTitle?: string;
+  class?: string;
+  authors?: string[];
+  authorWebsiteLinks?: string[];
+  technologies?: { name: string, logo: string }[];
+  frameworks?: { name: string, logo: string }[];
+  projectImageFile?: string;
+  githubLink?: string;
+}
+
+const {
+  id,
+  title,
+  authors,
+  details,
+  class: classNames,
+  websiteLink,
+  websiteLinkTitle,
+  authorWebsiteLinks,
+  technologies,
+  frameworks,
+  projectImageFile,
+  githubLink
+} = Astro.props;
+
+const totalAuthors = authors?.length;
+---
+<div class={classNames}>
+  <div class="bg-white rounded-xl object-cover self-start border-2 border-white">
+    <img src={projectImageFile} class="rounded-xl" alt="project image"/>
+  </div>
+  <div class="border-2 border-white rounded-xl p-6">
+    <div class="flex justify-between mb-6">
+      <div class="flex gap-3">
+        <h1 class="font-display text-2xl">
+          {
+            websiteLink && (
+              <a
+                href={websiteLink}
+                target="_blank"
+                class="block rounded-xl bg-grey-500 px-3 py-1.5 hover:bg-white hover:text-grey-800"
+              >
+                {title}
+                <i class="fa-solid fa-arrow-up-right-from-square fa-sm" />
+              </a>
+            )
+          }
+        </h1>
+      </div>
+      <div class="flex gap-3">
+        <!-- Languages -->
+        {
+          technologies.map((tech) => (
+            <TechCard gapClass="gap-0" paddingClass="p-3", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
+          ))
+        }
+        <!-- Frameworks -->
+        {
+          frameworks.map((framework) => (
+            <TechCard
+              gapClass="gap-0"
+              paddingClass="p-3"
+              widthClass="w-12"
+              heightClass="h-12"
+              logo={framework.logo}
+            />
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex">
+      <div class="border-white border-l-2 pl-3 self-start flex-grow">
+        <p id={`${id}-details`} class="leading-7 pr-12">
+          {details}
+        </p>
+      </div>
+    </div>
   </div>
 </div>
-

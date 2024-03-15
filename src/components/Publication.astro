@@ -1,5 +1,14 @@
 ---
-const { title, authors, arxivLink, journalLink, journalTitle, abstract } =
+interface Props {
+  title: string;
+  arxivLink: string;
+  articleAbstract: string;
+  authors?: string[];
+  journalLink?: string;
+  journalTitle?: string;
+}
+
+const { title, authors, arxivLink, journalLink, journalTitle, articleAbstract } =
   Astro.props;
 const totalAuthors = authors.length;
 ---
@@ -53,7 +62,7 @@ const totalAuthors = authors.length;
       class="mt-6 border-grey-800 border-l-2 pl-3 grid grid-rows-[0fr] transition-all duration-500"
     >
       <p id="abstract" class="overflow-hidden leading-7 pr-12">
-        {abstract}
+        {articleAbstract}
       </p>
     </div>
   </div>
