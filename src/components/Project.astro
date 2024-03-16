@@ -13,7 +13,7 @@ interface Props {
   authorWebsiteLinks?: string[];
   technologies?: { name: string, logo: string }[];
   frameworks?: { name: string, logo: string }[];
-  projectImageFile?: string;
+  projectImageFiles?: string[];
   githubLink?: string;
 }
 
@@ -28,7 +28,7 @@ const {
   authorWebsiteLinks,
   technologies,
   frameworks,
-  projectImageFile,
+  projectImageFiles,
   githubLink
 } = Astro.props;
 
@@ -74,15 +74,21 @@ const totalAuthors = authors?.length;
         }
       </div>
     </div>
-    <div class="flex">
+    <div class="flex mb-6">
       <div class="border-white border-l-2 pl-3 self-start flex-grow">
         <p id={`${id}-details`} class="leading-7 pr-12">
           {details}
         </p>
       </div>
     </div>
-  </div>
-  <div class="bg-white rounded-xl border-2 border-white self-start">
-    <img src={projectImageFile} class="rounded-xl" alt="project image"/>
+    <div class="flex gap-3">
+      {
+        projectImageFiles.map((image) => (
+          <div class="bg-white rounded-xl border-2 border-white self-start">
+            <img src={image} class="rounded-xl" alt="project image"/>
+          </div>
+        ))
+      }
+    </div>
   </div>
 </div>
