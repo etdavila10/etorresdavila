@@ -20,36 +20,35 @@ import About from "../components/About.astro";
     <About />
     <Mathematics />
     <Software />
-    <div id="teaching-container" class="pb-24">
-      <h1 id="teaching-heading" class="text-8xl p-24 font-display font-bold">
-        Teaching
-      </h1>
-      <h2
-        id="current-course-heading"
-        class="text-3xl font-display font-bold px-24 pb-6"
-      >
+    <div id="teaching-container" class="pb-24 font-display">
+      <h1 id="teaching-heading" class="text-8xl p-24 font-bold">Teaching</h1>
+      <h2 id="current-course-heading" class="text-3xl font-bold px-24 pb-6">
         Current Course
       </h2>
       <div id="current-course-container" class="mx-24">
-        <h2 class="font-display text-2xl mb-1">Spring 2024</h2>
-        <ul class="list-disc list-inside mb-12">
-          <li>Math 1151: Precalculus II - Graduate Teaching Assistant</li>
+        <ul class="list-disc list-inside mb-12 text-2xl">
+          <li>
+            Math 1151: Precalculus II - Graduate Teaching Assistant <span
+              class="italic text-xl text-grey-400 mb-1">(Spring 2024)</span
+            >
+          </li>
         </ul>
       </div>
-      <h2
-        id="prev-courses-heading"
-        class="text-3xl font-display font-bold mx-24 mb-6"
-      >
+      <h2 id="prev-courses-heading" class="text-3xl font-bold mx-24 mb-6">
         Previous Courses
       </h2>
       <div id="prev-courses-container" class="mx-24">
-        <h2 class="font-display text-2xl">Fall 2023</h2>
-        <ul class="list-disc list-inside mb-6">
-          <li>Math 1151: Precalculus II - Graduate Teaching Assistant</li>
-        </ul>
-        <h2 class="font-display text-2xl">Spring 2022</h2>
-        <ul class="list-disc list-inside">
-          <li>Math 1271: Calculus I - Graduate Teaching Assistant</li>
+        <ul class="list-disc list-inside mb-12 text-2xl">
+          <li>
+            Math 1151: Precalculus II - Graduate Teaching Assistant <span
+              class="italic text-xl text-grey-400 mb-1">(Fall 2023)</span
+            >
+          </li>
+          <li>
+            Math 1271: Calculus I - Graduate Teaching Assistant <span
+              class="italic text-xl text-grey-400 mb-1">(Spring 2022)</span
+            >
+          </li>
         </ul>
       </div>
     </div>
@@ -69,7 +68,6 @@ import About from "../components/About.astro";
   window.addEventListener("scroll", function () {
     // TODO: Find a good breakpoint for this
     if (window.scrollY > 1000) {
-      console.log("getting scroll");
       toTopButtonDiv.style.right = "1.5rem";
     } else {
       toTopButtonDiv.style.right = "-3rem";
