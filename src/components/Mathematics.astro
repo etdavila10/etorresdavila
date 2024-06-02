@@ -9,25 +9,28 @@ import Card from "./Card.astro";
 import Publication from "./Publication.astro";
 ---
 
-<div id="mathematics-container" class="">
+<div id="mathematics-container">
   <h1 id="mathematics-heading" class="text-8xl p-24 font-display font-bold">
     Mathematics
   </h1>
   <div id="mathematics-specialties" class="px-24">
     <h2
       id="research-interest-header"
-      class="text-3xl font-bold mb-12 font-display"
+      class="text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit"
     >
       Research Interests
     </h2>
-    <div id="research-interests-container" class="flex justify-between mb-24">
+    <div
+      id="research-interests-container"
+      class="flex justify-between mb-24 flex-wrap"
+    >
       <Card
         title="Differential Operators"
-        details="Rings of differential operators play a crucial role in understanding complex commutative rings. Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is simply a map from one space to another satisfying the generalized Leibniz rule."
+        details="Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is simply a map from one space to another satisfying the general version of the product rule, called the Leibniz rule. Rings of differential operators offer a new perspective to ring structures and varieties."
       />
       <Card
-        title="Semigroup Rings"
-        details="A semigroup ring is constructed by associating a semigroup, $Q$, with a ring, usually denoted $k[Q]$. With this strong identification there is a rigid algebraic structure that is given to the semigroup. We can now use algebraic techniques on the semigroup ring to uncover new properties of the associated semigroup."
+        title="Free Resolutions"
+        details="A semigroup ring is constructed by associating a semigroup, $Q$, with a ring, usually denoted $k[Q]$. With this correspondence, we can use algebraic techniques to gain insight on semigroups and use combinatorial methods of the semigroup  We can now use algebraic techniques on the semigroup ring to uncover new properties of the associated semigroup."
       />
       <Card
         title="Toric Varieties"
@@ -36,7 +39,9 @@ import Publication from "./Publication.astro";
     </div>
   </div>
   <div id="latest-publication" class="font-display mx-24">
-    <h2 class="text-3xl font-bold mb-12">Latest Publication</h2>
+    <h2 class="text-3xl font-bold mb-12 border-b-2 border-grey-800 w-fit">
+      Latest Publication
+    </h2>
     <div>
       <Publication
         title="Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension"
