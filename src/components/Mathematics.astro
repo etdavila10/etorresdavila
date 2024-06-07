@@ -5,6 +5,8 @@
  *
  */
 
+import Accordion from "./Accordion.astro";
+import AccordionPanel from "./AccordionPanel.astro";
 import Card from "./Card.astro";
 import Publication from "./Publication.astro";
 ---
@@ -30,8 +32,9 @@ import Publication from "./Publication.astro";
       />
       <Card
         title="Free Resolutions"
-        details="A semigroup ring is constructed by associating a semigroup, $Q$, with a ring, usually denoted $k[Q]$. With this correspondence, we can use algebraic techniques to gain insight on semigroups and use combinatorial methods of the semigroup  We can now use algebraic techniques on the semigroup ring to uncover new properties of the associated semigroup."
+        details="Used to find syzygies of a desired module over a ring. When thinking about semigroup rings you can always make a free resolution. This is important because free modules are much easier to understand than generic ones. When computing the syzygies we also understand the relation between the chain of free modules."
       />
+      <Card title="Homological Algebra" details="" />
       <Card
         title="Toric Varieties"
         details="In algebraic geometry, a toric variety or torus embedding is an algebraic variety containing an algebraic torus as an open dense subset, such that the action of the torus on itself extends to the whole variety."
@@ -40,17 +43,47 @@ import Publication from "./Publication.astro";
   </div>
   <div id="latest-publication" class="font-display mx-24">
     <h2 class="text-3xl font-bold mb-12 border-b-2 border-grey-800 w-fit">
-      Latest Publication
+      Recent Papers
     </h2>
     <div>
-      <Publication
-        title="Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension"
-        authors={["Christopher O'Neill", "Tara Gomes"]}
+      <Accordion>
+        <AccordionPanel
+          title="Infinite free resolutions over numerical semigroup algebras via specialization"
+          details=`
+        authors={[Tara Gomes, Christopher O'Neill, Aleksandra Sobieska]}
+        arxivLink=https://arxiv.org/abs/2405.01700
+        Each numerical semigroup $S$ with smallest positive element $m$ corresponds to an integer point in a polyhedral cone $C_m$, known as the Kunz cone.\
+      The faces of $C_m$ form a stratification of numerical semigroups that has been shown to respect a number of algebraic properties of $S$,\
+      including the combinatorial structure of the minimal free resolution of the defining toric ideal $I_S$. In this work, we prove that the structure of the infinite\
+      free resolution of the ground field $\\Bbbk$ over the semigroup algebra $\\mathbb{k}[S]$ also respects this stratification, yielding a new combinatorial approach to\
+      classifying homological properties like Golodness and rationality of the poincare series in this setting. Additionally, we give a complete classification of such\
+      resolutions in the special case $m = 4$, and demonstrate that the associated graded algebras do not generally respect the same stratification.`
+        />
+        <AccordionPanel
+          title="The multigraded BGG correspondence in Macaulay2"
+          details=`
+        authors={[
+          Maya Banks,
+          Michael K. Brown,
+          Tara Gomes,
+          Prashanth Sridhar,
+          Alexandre Zotine,
+        ]}
         arxivLink="https://arxiv.org/abs/2009.05921"
-        journalTitle="The Electronic Journal of Combinatorics"
-        journalLink="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57"
-        articleAbstract="This paper is the third in a series of manuscripts that examine the combinatorics of the Kunz polyhedron $P_m$, whose positive integer points are in bijection with numerical semigroups (cofinite subsemigroups of $\\mathbb{Z} \\geq 0$) whose smallest positive element is $m$. The faces of $P_m$ are indexed by a family of finite posets (called Kunz posets) obtained from the divisibility posets of the numerical semigroups lying on a given face. In this paper, we characterize to what extent the minimal presentation of a numerical semigroup can be recovered from its Kunz poset. In doing so, we prove that all numerical semigroups lying on the interior of a given face of $P_m$ have identical minimal presentation cardinality, and we provide a combinatorial method of obtaining the dimension of a face from its corresponding Kunz poset."
-      />
+        articleAbstract="We give an overview of a Macaulay2 package for computing with the multigraded BGG correspondence. This software builds on the package BGG due to Abo-Decker-Eisenbud-Schreyer-Smith-Stillman, which concerns the standard graded BGG correspondence. In addition to implementing the multigraded BGG functors, this package includes an implementation of differential modules and their minimal free resolutions, and it contains a method for computing strongly linear strands of multigraded free resolutions."
+        `
+        />
+        <AccordionPanel
+          title="Numerical semigroups, polyhedra, and posets III: minimal presentations and face dimension"
+          details=`
+            authors={["Christopher O'Neill", "Tara Gomes"]}
+            arxivLink="https://arxiv.org/abs/2009.05921"
+            journalTitle="The Electronic Journal of Combinatorics"
+            journalLink="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v30i2p57"
+            articleAbstract="This paper is the third in a series of manuscripts that examine the combinatorics of the Kunz polyhedron $P_m$, whose positive integer points are in bijection with numerical semigroups (cofinite subsemigroups of $\\mathbb{Z} \\geq 0$) whose smallest positive element is $m$. The faces of $P_m$ are indexed by a family of finite posets (called Kunz posets) obtained from the divisibility posets of the numerical semigroups lying on a given face. In this paper, we characterize to what extent the minimal presentation of a numerical semigroup can be recovered from its Kunz poset. In doing so, we prove that all numerical semigroups lying on the interior of a given face of $P_m$ have identical minimal presentation cardinality, and we provide a combinatorial method of obtaining the dimension of a face from its corresponding Kunz poset."
+          `
+        />
+      </Accordion>
     </div>
     <!-- TODO: Create a page for all publications -->
     <!-- <a class="text-grey-800 text-lg font-display underline" href="publications"> -->

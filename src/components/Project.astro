@@ -35,7 +35,7 @@ const {
 const totalAuthors = authors?.length;
 ---
 <div class:list={[classNames, ""]}>
-  <div class="border-2 border-white rounded-xl p-6 self-start">
+  <div class="p-6 self-start">
     <div class="flex justify-between mb-6">
       <div class="flex gap-3">
         <h1 class="font-display text-2xl">
@@ -53,11 +53,11 @@ const totalAuthors = authors?.length;
           }
         </h1>
       </div>
-      <div class="flex gap-3">
+      <div class="flex gap-2">
         <!-- Languages -->
         {
           technologies.map((tech) => (
-            <TechCard gapClass="gap-0" paddingClass="p-3", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
+            <TechCard gapClass="gap-0" paddingClass="p-2", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
           ))
         }
         <!-- Frameworks -->
@@ -65,7 +65,7 @@ const totalAuthors = authors?.length;
           frameworks.map((framework) => (
             <TechCard
               gapClass="gap-0"
-              paddingClass="p-3"
+              paddingClass="p-2"
               widthClass="w-12"
               heightClass="h-12"
               logo={framework.logo}

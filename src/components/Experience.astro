@@ -37,7 +37,7 @@ const {
     <!-- TODO: Source this image from Astro props -->
     <img src="/amazon_icon.png" />
   </div>
-  <div class="border-2 border-white rounded-xl p-6 flex-1">
+  <div class="p-6 flex-1">
     <div class="flex justify-between mb-6">
       <div>
         <h1 class="font-display text-2xl mb-3">
@@ -62,11 +62,11 @@ const {
           </div>
         </div>
       </div>
-      <div class="flex gap-3 mb-3">
+      <div class="flex gap-2 mb-3">
         <!-- Languages -->
         {
           technologies.map((tech, i) => (
-            <TechCard gapClass="gap-0" paddingClass="p-3", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
+            <TechCard gapClass="gap-0" paddingClass="p-2", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
           ))
         }
         <!-- Frameworks -->
@@ -74,7 +74,7 @@ const {
           frameworks.map((framework, i) => (
             <TechCard
               gapClass="gap-0"
-              paddingClass="p-3"
+              paddingClass="p-2"
               widthClass="w-12"
               heightClass="h-12"
               logo={framework.logo}
