@@ -13,12 +13,12 @@ const { title, details } = Astro.props;
 
 <div>
   <button
-    class="accordion bg-grey-500 text-red-100 p-6 w-full text-left font-display text-2xl transition after:content-['\\002B'] after:text-red-100 after:float-right"
+    class="accordion p-6 w-full text-left font-display
+    text-2xl transition after:content-['+']
+    after:float-right border-b border-grey-800 hover:bg-grey-50"
     >{title}</button
   >
-  <div
-    class="bg-green-50 px-12 max-h-0 overflow-hidden transition-all duration-500"
-  >
+  <div class="px-12 max-h-0 overflow-hidden transition-all duration-500">
     <p class="py-12">{details}</p>
   </div>
 </div>
@@ -30,13 +30,19 @@ const { title, details } = Astro.props;
 </style>
 
 <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
+  let acc = document.getElementsByClassName("accordion");
 
-  for (i = 0; i < acc.length; i++) {
+  for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
+      let activeSections = document.getElementsByClassName("active");
+      if (activeSections.length != 0 && !this.isEqualNode(activeSections[0])) {
+        let activeSection = activeSections[0];
+        activeSection.classList.toggle("active");
+        let activePanel = activeSection.nextElementSibling;
+        activePanel.style.maxHeight = null;
+      }
       this.classList.toggle("active");
-      var panel = this.nextElementSibling;
+      let panel = this.nextElementSibling;
       if (panel.style.maxHeight) {
         panel.style.maxHeight = null;
       } else {
@@ -45,16 +51,3 @@ const { title, details } = Astro.props;
     });
   }
 </script>
-
-<!-- <style> -->
-<!--   .accordion:after { -->
-<!--     content: "\002B"; -->
-<!--     margin-left: 5px; -->
-<!--   } -->
-<!--   .accordion { -->
-<!--     transition: 0.4s; -->
-<!--   } -->
-<!--   .panel { -->
-<!--     transition: max-height 0.2s ease-out; -->
-<!--   } -->
-<!-- </style> -->
