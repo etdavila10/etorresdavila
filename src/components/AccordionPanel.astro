@@ -5,21 +5,22 @@
 
 interface Props {
   title: string;
-  details: string;
 }
 
-const { title, details } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <div>
   <button
     class="accordion p-6 w-full text-left font-display
     text-2xl transition after:content-['+']
-    after:float-right border-b border-grey-800 hover:bg-grey-50"
+    after:float-right hover:bg-grey-50"
     >{title}</button
   >
   <div class="px-12 max-h-0 overflow-hidden transition-all duration-500">
-    <p class="py-12">{details}</p>
+    <div>
+      <slot />
+    </div>
   </div>
 </div>
 
