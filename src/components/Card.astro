@@ -7,7 +7,7 @@ interface Props {
 const { title, details } = Astro.props;
 ---
 
-<div class="w-1/2 min-w-96 h-96 flex flex-col pr-6 justify-start">
+<div class="bg-green-50 flex-1 basis-1/2 min-w-96 flex flex-col justify-start">
   <div class="font-display text-2xl border-b border-grey-800">{title}</div>
-  <div class="">{details}</div>
+  <div class="border">{details}</div>
 </div>
