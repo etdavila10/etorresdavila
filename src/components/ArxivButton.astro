@@ -1,12 +1,13 @@
 ---
 interface Props {
+  title: string;
   arxivLink: string;
 }
 
-const { arxivLink } = Astro.props;
+const { title, arxivLink } = Astro.props;
 ---
 
-<div class="text-white font-display relative group w-fit m-3 text-sm">
+<div class="text-white font-display relative group w-fit text-sm mb-3">
   <div class="w-full h-full absolute bg-grey-900 translate-x-1 translate-y-1">
   </div>
   <a href={arxivLink}>
@@ -14,7 +15,7 @@ const { arxivLink } = Astro.props;
       class="bg-red-400 py-2 px-6 h-full w-full border-2 border-grey-900
         block relative transition group-hover:translate-y-1
         group-hover:translate-x-1"
-      >arXiv</span
+      >{title}</span
     >
   </a>
 </div>

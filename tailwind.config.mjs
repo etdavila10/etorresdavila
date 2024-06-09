@@ -89,6 +89,9 @@ export default {
         sans: ['"Satoshi-Variable"', ...defaultTheme.fontFamily.sans],
         display: ['"GeneralSans-Variable"', ...defaultTheme.fontFamily.sans],
       },
+      minWidth: {
+        '128': '32rem'
+      }
     },
   },
   plugins: [],
