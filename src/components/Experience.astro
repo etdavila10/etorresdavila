@@ -33,11 +33,11 @@ const {
 ---
 
 <div class={classNames}>
-  <div class="bg-white rounded-full border-2 border-white w-32 h-32">
+  <div class="rounded-full w-32 h-32 hidden lg:block">
     <!-- TODO: Source this image from Astro props -->
     <img src="/amazon_icon.png" />
   </div>
-  <div class="p-6 flex-1">
+  <div class="flex-1">
     <div class="flex justify-between mb-6">
       <div>
         <h1 class="font-display text-2xl mb-3">
@@ -62,7 +62,7 @@ const {
           </div>
         </div>
       </div>
-      <div class="flex gap-2 mb-3">
+      <div class="hidden gap-2 mb-3 lg:flex">
         <!-- Languages -->
         {
           technologies.map((tech, i) => (

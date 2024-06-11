@@ -35,24 +35,11 @@ const {
 const totalAuthors = authors?.length;
 ---
 <div class:list={[classNames, ""]}>
-  <div class="p-6 self-start">
-    <div class="flex justify-between mb-6">
-      <div class="flex gap-3">
-        <h1 class="font-display text-2xl">
-          {
-            websiteLink && (
-              <a
-                href={websiteLink}
-                target="_blank"
-                class="block rounded-xl bg-grey-500 px-3 py-1.5 hover:bg-white hover:text-grey-800"
-              >
-                {title}
-                <i class="fa-solid fa-arrow-up-right-from-square fa-sm" />
-              </a>
-            )
-          }
-        </h1>
-      </div>
+  <div class="self-start">
+    <div class="flex justify-between mb-6 items-center">
+      <h1 class="font-display text-2xl">
+        {title}
+      </h1>
       <div class="flex gap-2">
         <!-- Languages -->
         {
@@ -75,17 +62,17 @@ const totalAuthors = authors?.length;
       </div>
     </div>
     <div class="flex mb-6">
-      <div class="border-white border-l-2 pl-3 self-start flex-grow">
+      <div class="self-start flex-grow">
         <p id={`${id}-details`} class="leading-7 pr-12">
           {details}
         </p>
       </div>
     </div>
-    <div class="flex gap-3">
+    <div class="flex gap-6 flex-wrap">
       {
         projectImageFiles.map((image) => (
-          <div class="bg-white rounded-xl border-2 border-white self-start">
-            <img src={image} class="rounded-xl" alt="project image"/>
+          <div class="hidden w-96 sm:block">
+            <img src={image} class="object-contain" alt="project image"/>
           </div>
         ))
       }
