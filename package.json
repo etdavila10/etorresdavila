@@ -1,7 +1,7 @@
 {
   "name": "Eduardo Torres Davila",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "scripts": {
     "dev": "./update_date.sh && astro dev --host",
     "start": "astro dev",
