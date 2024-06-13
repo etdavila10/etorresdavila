@@ -5,18 +5,18 @@ import Project from "./Project.astro";
 ---
 
 <div id="software-container" class="pb-24">
-  <h1 id="software-heading" class="text-8xl p-24 font-display font-bold">
+  <h1 id="software-heading" class="text-4xl md:text-8xl font-display font-bold">
     Software
   </h1>
   <h2
     id="software-tech-heading"
-    class="text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit mx-24"
+    class="text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit md:mx-24"
   >
     Technologies
   </h2>
   <div
     id="software-tech-container"
-    class="flex flex-wrap justify-between mx-24 mb-24 gap-y-6"
+    class="flex flex-wrap justify-between md:mx-24 mb-24 gap-y-6"
   >
     <TechCard logo="/languages/python.svg" name="Python" />
     <TechCard logo="/languages/sagemath.svg" name="SageMath" />
@@ -27,13 +27,13 @@ import Project from "./Project.astro";
   </div>
   <h2
     id="software-frameworks-heading"
-    class="text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit mx-24"
+    class="text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit md:mx-24"
   >
     Frameworks/Libraries
   </h2>
   <div
     id="software-frameworks-container"
-    class="flex flex-wrap justify-between mx-24 mb-24 gap-y-6"
+    class="flex flex-wrap justify-between md:mx-24 mb-24 gap-y-6"
   >
     <TechCard logo="/frameworks/matplotlib.svg" name="Matplotlib" />
     <TechCard logo="/frameworks/numpy.svg" name="NumPy" />
@@ -44,12 +44,12 @@ import Project from "./Project.astro";
   </div>
   <h2
     id="latest-experience-heading"
-    class="text-3xl font-display font-bold mx-24 mb-12 border-b-2 border-grey-800 w-fit"
+    class="text-3xl font-display font-bold md:mx-24 mb-12 border-b-2 border-grey-800 w-fit"
   >
     Previous Work
   </h2>
   <Experience
-    class="font-display mx-24 mb-24 flex gap-12"
+    class="font-display md:mx-24 mb-24 flex gap-12"
     employer="Amazon"
     jobTitle="Software Engineer Intern"
     dates="June 2023 - September 2023"
@@ -65,13 +65,13 @@ import Project from "./Project.astro";
   />
   <h2
     id="latest-project-heading"
-    class="text-3xl font-display font-bold mx-24 mb-12 border-b-2 border-grey-800 w-fit"
+    class="text-3xl font-display font-bold md:mx-24 mb-12 border-b-2 border-grey-800 w-fit"
   >
     Latest Project
   </h2>
   <Project
     id="arxiv-game"
-    class="font-display mx-24 flex md:gap-12"
+    class="font-display md:mx-24 flex md:gap-12"
     title="ArXiv Game"
     websiteLink="https://tranquil-starship-92a3ed.netlify.app/"
     websiteLinkTitle=""
