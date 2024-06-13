@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git_last_commit_date="$(git log -1 --date=format:'%B %d, %Y' --pretty=format:'%ad')"
+git_last_commit_date="$(git log -1 --date=format:'%m/%d/%Y' --pretty=format:'%ad')"
 echo "Git last commit date: $git_last_commit_date"
 
 file="src/components/Footer.astro"

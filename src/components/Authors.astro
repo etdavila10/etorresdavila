@@ -1,6 +1,6 @@
 ---
 interface Props {
-  authors: string[];
+  authors: string[][];
 }
 
 const { authors } = Astro.props;
@@ -11,9 +11,8 @@ const totalAuthors = authors.length;
   <li class="inline text-xl">In collaboration with:</li><!--
   -->{
     authors.map((author, i) => (
-      <!-- TODO: Add support for linking to author websites -->
       <li class="inline text-xl">
-        {author}<!--
+      <a href={author[1]} class={ author[1] && "underline decoration-wavy hover:text-lightBlue-400 text-lightBlue-600"}>{author[0]}</a><!--
         -->{i < totalAuthors - 2 && ","}<!--
         -->{i === totalAuthors - 1 && ""}<!--
         -->{i === totalAuthors - 2 && totalAuthors !== 2 && ", and"}<!--

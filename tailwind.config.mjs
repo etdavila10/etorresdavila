@@ -91,6 +91,9 @@ export default {
       },
       minWidth: {
         '128': '32rem'
+      },
+      maxWidth: {
+        '128': '32rem'
       }
     },
   },

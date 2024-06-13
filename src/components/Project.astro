@@ -1,4 +1,5 @@
 ---
+import ArxivButton from './ArxivButton.astro';
 import TechCard from './TechCard.astro';
 
 
@@ -15,6 +16,7 @@ interface Props {
   frameworks?: { name: string, logo: string }[];
   projectImageFiles?: string[];
   githubLink?: string;
+  developer?: string[];
 }
 
 const {
@@ -28,6 +30,7 @@ const {
   authorWebsiteLinks,
   technologies,
   frameworks,
+  developer,
   projectImageFiles,
   githubLink
 } = Astro.props;
@@ -35,7 +38,16 @@ const {
 const totalAuthors = authors?.length;
 ---
 <div class:list={[classNames, ""]}>
-  <div class="self-start">
+  <div class="flex-1 gap-6 max-w-128 hidden md:block">
+    {
+      projectImageFiles.map((image) => (
+        <div class="">
+          <img src={image} class="object-contain" alt="project image"/>
+        </div>
+      ))
+    }
+  </div>
+  <div class="self-start flex-1">
     <div class="flex justify-between mb-6 items-center">
       <h1 class="font-display text-2xl">
         {title}
@@ -61,21 +73,19 @@ const totalAuthors = authors?.length;
         }
       </div>
     </div>
-    <div class="flex mb-6">
-      <div class="self-start flex-grow">
-        <p id={`${id}-details`} class="leading-7 pr-12">
+    <div class="flex">
+      <div class="flex-shrink">
+        <p id={`${id}-details`} class="leading-7 pr-12 mb-6">
           {details}
         </p>
+        <p id={`${id}-details`} class="leading-7 pr-12 mb-6">
+          Co-developed with: <a href={developer[1]} class="text-lightBlue-600 hover:text-lightBlue-400 underline decoration-wavy">{developer[0]}</a>
+        </p>
+        <div class="flex gap-6">
+          <ArxivButton title="Website" arxivLink="https://tranquil-starship-92a3ed.netlify.app/" />
+          <ArxivButton title="GitHub" arxivLink="https://github.com/etdavila10/arxiv-sandbox" />
+        </div>
       </div>
-    </div>
-    <div class="flex gap-6 flex-wrap">
-      {
-        projectImageFiles.map((image) => (
-          <div class="hidden w-96 sm:block">
-            <img src={image} class="object-contain" alt="project image"/>
-          </div>
-        ))
-      }
     </div>
   </div>
 </div>
