@@ -90,11 +90,15 @@ export default {
         display: ['"GeneralSans-Variable"', ...defaultTheme.fontFamily.sans],
       },
       minWidth: {
-        '128': '32rem'
+        128: "32rem",
       },
       maxWidth: {
-        '128': '32rem'
-      }
+        128: "32rem",
+      },
+      borderWidth: {
+        3: "3px",
+        3.5: "3.5px",
+      },
     },
   },
   plugins: [],
