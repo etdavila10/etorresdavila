@@ -12,24 +12,21 @@ import Authors from "./Authors.astro";
 import Card from "./Card.astro";
 ---
 
-<div id="mathematics-container" class="my-24">
+<div id="mathematics-container" class="p-6">
   <h1
     id="mathematics-heading"
-    class="text-4xl md:text-8xl md:p-24 font-display font-bold"
+    class="text-4xl md:text-8xl md:p-24 font-display font-bold mb-3"
   >
     Mathematics
   </h1>
-  <div id="mathematics-specialties" class="md:px-24">
+  <div id="mathematics-specialties" class="">
     <h2
       id="research-interest-header"
-      class="text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit"
+      class="text-xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit"
     >
       Research Interests
     </h2>
-    <div
-      id="research-interests-container"
-      class="flex flex-wrap justify-between gap-12"
-    >
+    <div id="research-interests-container" class="flex flex-wrap gap-12 mb-12">
       <Card
         title="Differential Operators"
         details="Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is a map from one space of functions to another satisfying the general version of the product rule, called the Leibniz rule. Rings of differential operators offer a new perspective to ring structures and varieties."
@@ -48,8 +45,8 @@ import Card from "./Card.astro";
       />
     </div>
   </div>
-  <div id="recent-papers" class="font-display md:mx-24 mt-24">
-    <h2 class="text-3xl font-bold mb-12 border-b-2 border-grey-800 w-fit">
+  <div id="recent-papers" class="font-display md:mx-24">
+    <h2 class="text-xl font-bold border-b-2 border-grey-800 w-fit mb-12">
       Recent Papers
     </h2>
     <AccordionPanel

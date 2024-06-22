@@ -12,12 +12,12 @@ const { title } = Astro.props;
 
 <div>
   <button
-    class="accordion py-6 w-full text-left font-display
-    text-2xl transition duration-200 after:content-['+'] border-b-2 border-white
+    class="accordion w-full text-left font-display
+    text-xl transition duration-200 after:content-['+'] border-b-2 border-white
     after:float-right hover:border-b-grey-800"
     >{title}</button
   >
-  <div class="mt-3 mb-6 max-h-0 overflow-hidden transition-all duration-500">
+  <div class="mb-6 max-h-0 overflow-hidden transition-all duration-500">
     <slot />
   </div>
 </div>
