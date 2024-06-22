@@ -1,6 +1,6 @@
 <div>
   <div
-    class="hamburger transition-all duration-300 fixed right-6 top-6 rounded-lg cursor-pointer bg-white p-0.5 w-10 h-10 group z-10 flex flex-col gap-1 justify-center items-center"
+    class="hamburger transition-all duration-300 fixed right-6 top-6 rounded-lg cursor-pointer bg-white p-0.5 w-10 h-10 group z-20 flex flex-col gap-1 justify-center items-center"
   >
     <span
       class="block rounded-xl w-6 h-1 transition bg-grey-800 group-[.active]:w-7 group-[.active]:rotate-45 group-[.active]:translate-y-2"
@@ -12,43 +12,59 @@
       class="block rounded-xl w-6 h-1 transition bg-grey-800 group-[.active]:w-7 group-[.active]:-rotate-45 group-[.active]:-translate-y-2"
     ></span>
   </div>
-  <div></div>
-  <!-- <button -->
-  <!--   class="hover:text-grey-500 hover:scale-110 cursor-pointer transition my-1 w-fit" -->
-  <!--   onclick="handleScroll('about-container')" -->
-  <!-- > -->
-  <!--   About -->
-  <!-- </button> -->
-  <!-- <button -->
-  <!--   class="hover:text-grey-500 hover:scale-110 cursor-pointer transition my-1 w-fit" -->
-  <!--   onclick="handleScroll('mathematics-container')" -->
-  <!-- > -->
-  <!--   Mathematics -->
-  <!-- </button> -->
-  <!-- <button -->
-  <!--   class="hover:text-grey-500 hover:scale-110 cursor-pointer transition my-1 w-fit" -->
-  <!--   onclick="handleScroll('software-container')" -->
-  <!-- > -->
-  <!--   Software -->
-  <!-- </button> -->
-  <!-- <button -->
-  <!--   class="hover:text-grey-500 hover:scale-110 cursor-pointer transition my-1 w-fit" -->
-  <!--   onclick="handleScroll('teaching-container')" -->
-  <!-- > -->
-  <!--   Teaching -->
-  <!-- </button> -->
+  <div
+    class="hamburgerNav group w-full h-full bg-grey-800 opacity-95 flex flex-col justify-center items-center gap-12 fixed -left-full transition-all duration-500 z-10 font-display font-bold underline decoration-2 text-lightBlue-400 text-3xl"
+  >
+    <button
+      class="cursor-pointer w-fit"
+      onclick="handleHamburgerScroll('about-container')"
+    >
+      About
+    </button>
+    <button
+      class="cursor-pointer w-fit"
+      onclick="handleHamburgerScroll('mathematics-container')"
+    >
+      Mathematics
+    </button>
+    <button
+      class="cursor-pointer w-fit"
+      onclick="handleHamburgerScroll('software-container')"
+    >
+      Software
+    </button>
+    <button
+      class="cursor-pointer w-fit"
+      onclick="handleHamburgerScroll('teaching-container')"
+    >
+      Teaching
+    </button>
+  </div>
 </div>
+
+<style>
+  .hamburgerNav.active {
+    left: 0;
+  }
+</style>
 
 <script is:inline>
   const hamburger = document.querySelector(".hamburger");
+  const hamburgerNav = document.querySelector(".hamburgerNav");
 
   hamburger.addEventListener("click", mobileMenu);
 
   function mobileMenu() {
     hamburger.classList.toggle("active");
+    hamburgerNav.classList.toggle("active");
+    document.body.classList.toggle("overflow-hidden");
   }
-  const handleScroll = (divId) => {
+
+  const handleHamburgerScroll = (divId) => {
     let divElement = document.getElementById(divId);
+    hamburger.classList.toggle("active");
+    hamburgerNav.classList.toggle("active");
+    document.body.classList.toggle("overflow-hidden");
     window.scrollTo(0, divElement.offsetTop);
   };
 </script>
