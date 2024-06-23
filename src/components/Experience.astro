@@ -1,9 +1,9 @@
 ---
 /*
-* Experience.astro
-* Props:
-* - classNames: classes which should be applied to returned div
-*/
+ * Experience.astro
+ * Props:
+ * - classNames: classes which should be applied to returned div
+ */
 
 import TechCard from "./TechCard.astro";
 
@@ -12,8 +12,8 @@ interface Props {
   employer: string;
   details: string;
   dates: string;
-  technologies: {logo: string, name: string}[]
-  frameworks: {logo: string, name: string}[]
+  technologies: { logo: string; name: string }[];
+  frameworks: { logo: string; name: string }[];
   class?: string;
   websiteLink?: string;
   websiteLinkTitle?: string;
@@ -62,21 +62,29 @@ const {
           </div>
         </div>
       </div>
-      <div class="hidden gap-2 mb-3 lg:flex">
+      <div class="hidden sm:flex gap-2">
         <!-- Languages -->
         {
-          technologies.map((tech, i) => (
-            <TechCard gapClass="gap-0" paddingClass="p-2", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
-          ))
-        }
-        <!-- Frameworks -->
-        {
-          frameworks.map((framework, i) => (
+          technologies.map((tech) => (
             <TechCard
               gapClass="gap-0"
               paddingClass="p-2"
               widthClass="w-12"
               heightClass="h-12"
+              flexClasses=" "
+              logo={tech.logo}
+            />
+          ))
+        }
+        <!-- Frameworks -->
+        {
+          frameworks.map((framework) => (
+            <TechCard
+              gapClass="gap-0"
+              paddingClass="p-2"
+              widthClass="w-12"
+              heightClass="h-12"
+              flexClasses=" "
               logo={framework.logo}
             />
           ))

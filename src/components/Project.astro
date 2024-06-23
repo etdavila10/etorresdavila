@@ -56,7 +56,7 @@ const totalAuthors = authors?.length;
         <!-- Languages -->
         {
           technologies.map((tech) => (
-            <TechCard gapClass="gap-0" paddingClass="p-2", widthClass="w-12" heightClass="h-12" logo={tech.logo} />
+            <TechCard gapClass="gap-0" paddingClass="p-2", widthClass="w-12" heightClass="h-12" flexClasses=" " logo={tech.logo} />
           ))
         }
         <!-- Frameworks -->
@@ -67,6 +67,7 @@ const totalAuthors = authors?.length;
               paddingClass="p-2"
               widthClass="w-12"
               heightClass="h-12"
+              flexClasses=" "
               logo={framework.logo}
             />
           ))
