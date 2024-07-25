@@ -7,4 +7,4 @@ This website is created using the following technologies/frameworks:
 - [Astro](https://astro.build/)
 - [TailwindCSS](https://tailwindcss.com/)
 
-This website was last updated on March 16, 2024.
+This website was last updated on July 24, 2024.
