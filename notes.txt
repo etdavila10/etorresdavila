@@ -1,0 +1,5 @@
+Some nice ideas to liven the website:
+* Create a toggle on the welcome component which switches between mathematics and software.
+  * The math toggle will show the mathematics component and teaching
+  * The software toggle will show the software component. A page doesn't have to be filled out.
+* More visuals over words. This is what the better portfolios have in common.
