@@ -12,21 +12,21 @@ import Authors from "./Authors.astro";
 import Card from "./Card.astro";
 ---
 
-<div id="mathematics-container" class="p-6 sm:p-12 lg:px-24">
+<div id="mathematics-container" class="bg-red-100">
   <h1
     id="mathematics-heading"
-    class="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-12"
+    class="font-display"
   >
     Mathematics
   </h1>
   <div id="mathematics-specialties" class="">
     <h2
       id="research-interest-header"
-      class="text-xl sm:text-2xl lg:text-3xl font-bold mb-12 font-display border-b-2 border-grey-800 w-fit"
+      class="font-display"
     >
       Research Interests
     </h2>
-    <div id="research-interests-container" class="flex flex-wrap gap-12 mb-12">
+    <div id="research-interests-container" class="">
       <Card
         title="Differential Operators"
         details="Differential operators are a generalization to derivatives studied in Calculus. Specifically, a differential operator is a map from one space of functions to another satisfying the general version of the product rule, called the Leibniz rule. Rings of differential operators offer a new perspective to ring structures and varieties."
@@ -45,12 +45,8 @@ import Card from "./Card.astro";
       />
     </div>
   </div>
-  <div id="recent-papers" class="font-display">
-    <h2
-      class="text-xl sm:text-2xl lg:text-3xl font-bold border-b-2 border-grey-800 w-fit mb-12"
-    >
-      Recent Papers
-    </h2>
+  <div id="recent-papers">
+    <h2 class="font-display">Recent Papers</h2>
     <AccordionPanel
       title="Infinite free resolutions over numerical semigroup algebras via specialization"
     >

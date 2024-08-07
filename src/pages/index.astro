@@ -22,10 +22,10 @@ import HamburgerMenu from "../components/HamburgerMenu.astro";
     <About />
     <Mathematics />
     <Software />
-    <div id="teaching-container" class="font-display p-6 sm:p-12 lg:px-24">
+    <div id="teaching-container">
       <h1
         id="teaching-heading"
-        class="text-4xl sm:text-5xl md:text-6xl font-bold mb-12"
+        class="font-display"
       >
         Teaching
       </h1>
@@ -46,36 +46,24 @@ import HamburgerMenu from "../components/HamburgerMenu.astro";
       <!-- </div> -->
       <h2
         id="prev-courses-heading"
-        class="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 font-display border-b-2 border-grey-800 w-fit"
+        class="font-display"
       >
         Previous Courses
       </h2>
-      <div id="prev-courses-container" class="lg:text-xl">
-        <ul class="list-disc list-inside mb-24">
-          <li class="mb-6">
-            Math 1151: Precalculus II - Graduate Teaching Assistant <span
-              class="italic text-grey-400 mb-1">(Spring 2024)</span
-            >
-          </li>
-          <li class="mb-6">
-            Math 1151: Precalculus II - Graduate Teaching Assistant <span
-              class="italic text-grey-400">(Fall 2023)</span
-            >
+      <div id="prev-courses-container">
+        <ul>
+          <li>
+            Math 1151: Precalculus II - Graduate Teaching Assistant <span>(Spring 2024)</span>
           </li>
           <li>
-            Math 1271: Calculus I - Graduate Teaching Assistant <span
-              class="italic text-grey-400">(Spring 2022)</span
-            >
+            Math 1151: Precalculus II - Graduate Teaching Assistant <span>(Fall 2023)</span>
+          </li>
+          <li>
+            Math 1271: Calculus I - Graduate Teaching Assistant <span>(Spring 2022)</span>
           </li>
         </ul>
       </div>
     </div>
-    <!-- TODO: Add a community section to the page -->
-    <!-- <div id="community-container"> -->
-    <!--   <h1 id="community-heading" class="text-8xl p-24 font-display font-bold"> -->
-    <!--     Community -->
-    <!--   </h1> -->
-    <!-- </div> -->
   </main>
   <Footer class="bg-grey-800 text-white" />
 </Layout>
